@@ -3,365 +3,448 @@
 
 
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Corona Statistics" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Corona Statistics" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://corona.iinerds.com" />
-  <meta property="og:image" content="https://corona.iinerds.com/img/coronavirus_640.jpg" />
-  <meta property="og:description" content="Live statistics tracking the number of confirmed cases, recovered patients, and death toll by country due to the novel coronavirus from Wuhan, China." />
-<link rel="icon" href="img/fav-icon.png" type="image/x-icon" />
+  <meta property="og:url" content="http://planetvitals.iinerds.com" />
+  <meta property="og:image" content="https://planetvitals.iinerds.com/img/coronavirus_640.jpg" />
+  <meta property="og:description"
+    content="Live statistics tracking the number of confirmed cases, recovered patients, and death toll by country due to the novel coronavirus from Wuhan, China." />
+  <link rel="icon" href="img/fav-icon.png" type="image/x-icon" />
 
-<title>IIA-Planet Vitals</title>
-<link href="css/sb-admin-2.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/icofont.css" rel="stylesheet">
+  <title>IIA-Planet Vitals</title>
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/icofont.css" rel="stylesheet">
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-<link href="vendors/revolution/css/settings.css" rel="stylesheet">
-<link href="vendors/revolution/css/layers.css" rel="stylesheet">
-<link href="vendors/revolution/css/navigation.css" rel="stylesheet">
-<link href="vendors/animate-css/animate.css" rel="stylesheet">
+  <link href="vendors/revolution/css/settings.css" rel="stylesheet">
+  <link href="vendors/revolution/css/layers.css" rel="stylesheet">
+  <link href="vendors/revolution/css/navigation.css" rel="stylesheet">
+  <link href="vendors/animate-css/animate.css" rel="stylesheet">
 
-<link href="vendors/magnific-popup/magnific-popup.css" rel="stylesheet">
-<link href="vendors/owl-carousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
+  <link href="vendors/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="vendors/owl-carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  <link href="vendors/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <!-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+  <style>
+    #map {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 500px;
+    }
+  </style>
 
-<!-- Custom styles for this template-->
-<!-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
-<script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
-<link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
-<style>
-#map { position: relative; top: 0; bottom: 0; width: 100%; height: 500px; }
-</style>
 
-
-<!--[if lt IE 9]>
+  <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 </head>
+
 <body data-spy="scroll" data-target="#bs-example-navbar-collapse-1" data-offset="90">
-<div id="preloader">
-<div id="preloader_spinner">
-<div class="pre_inner">
-<div class="dot dot-1"></div>
-<div class="dot dot-2"></div>
-<div class="dot dot-3"></div>
-</div>
-</div>
-</div>
-
-<header class="dash_tp_menu_area">
-<nav class="navbar navbar-default">
-
-<div class="navbar-header">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="index.html"><img src="img/planetvital.png" alt="Planet Vitals"></a>
-</div>
-
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<ul class="nav navbar-nav">
-  <li><a href="#about">About</a></li>
-  <li class="active"><a href="health.html">Health</a></li>
-  <li><a href="#">Agriculture</a></li>
-  <li><a href="#">Politics</a></li>
-  <li><a href="#">Education</a></li>
-</ul>
-</div>
-</nav>
-</header>
-
-
-<section class="main_slider_area">
-<div id="dash_slider" class="rev_slider" data-version="5.3.1.6">
-<ul>
-<li data-index="rs-2972" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="img/home-slider/slider-1.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-
-<div class="slider_text_box">
-<div class="tp-caption ds_first_text" data-x="['left','left','left','left','left']" data-y="['middle','middle','middle','middle']" data-hoffset="['0','0','0','15','10']" data-voffset="['-50','-100','-100','-100','-100']" data-fontsize="['60','60','60','50','30']" data-lineheight="['85','85','85','60','40']" data-width="['none','none','none','none']" data-height="none" data-whitespace="['nowrap','nowrap','nowrap','nowrap','nowrap']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":1500,"to":"o:1;","delay":1700,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"x:left(R);","ease":"Power3.easeIn"}]' data-textAlign="['left','left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]">CORONA/COVIT'19</div>
-<div class="tp-caption ds_secand_text" data-x="['left','left','left','left','left']" data-y="['middle','middle','middle','middle']" data-hoffset="['0','0','0','15','10']" data-voffset="['130','80','80','50','30']" data-fontsize="['16','16','16','16','14']" data-lineheight="['28','28','28','28','28']" data-width="['500','500','500','500','100%']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1750,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">Curated, Uptodate Data of CORONA/COVIT'19 including analytics and scientific representations.</div>
-<div class="tp-caption video_text" data-x="['left','left','left','left','left']" data-y="['middle','middle','middle','middle']" data-hoffset="['-40','-40','-40','-20','-15']" data-voffset="['250','200','200','150','150']" data-fontsize="['16','16','16','16']" data-lineheight="['28','28','28','28']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1750,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><a href="#Categories" style="color:white;"><img src="img/icon/play-video.png" alt="">Know more</div></a>
-<div class="tp-caption right_img" data-x="['right','right','right','right']" data-y="['middle','middle','middle','middle']" data-hoffset="['-350','0','0','0']" data-voffset="['100','40','40','0']" data-fontsize="['16','16','16','16']" data-lineheight="['28','28','28','28']" data-width="['none','400']" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive="on" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1750,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><img src="img/home-slider/slider-right-img.png" alt=""></div>
-</div>
-</li>
-<li data-index="rs-2973" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="img/home-slider/slider-1.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-
-<div class="slider_text_box">
-<div class="tp-caption ds_first_text" data-x="['left','left','left','left','left']" data-y="['middle','middle','middle','middle']" data-hoffset="['0','0','0','15','10']" data-voffset="['-50','-100','-100','-100','-100']" data-fontsize="['60','60','60','50','30']" data-lineheight="['85','85','85','60','40']" data-width="['none','none','none','none']" data-height="none" data-whitespace="['nowrap','nowrap','nowrap','nowrap','nowrap']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":1500,"to":"o:1;","delay":1700,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"x:left(R);","ease":"Power3.easeIn"}]' data-textAlign="['left','left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]">CORONA/COVIT'19</div>
-<div class="tp-caption ds_secand_text" data-x="['left','left','left','left','left']" data-y="['middle','middle','middle','middle']" data-hoffset="['0','0','0','15','10']" data-voffset="['130','80','80','50','30']" data-fontsize="['16','16','16','16','14']" data-lineheight="['28','28','28','28','28']" data-width="['500','500','500','500','100%']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1750,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">Curated, Uptodate Data of CORONA/COVIT'19 including analytics and scientific representations.</div>
-<div class="tp-caption video_text" data-x="['left','left','left','left','left']" data-y="['middle','middle','middle','middle']" data-hoffset="['-40','-40','-40','-20','-15']" data-voffset="['250','200','200','150','150']" data-fontsize="['16','16','16','16']" data-lineheight="['28','28','28','28']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1750,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><a href="#Categories" style="color:white;"><img src="img/icon/play-video.png" alt="">Know more</div></a>
-<div class="tp-caption right_img" data-x="['right','right','right','right']" data-y="['middle','middle','middle','middle']" data-hoffset="['-350','0','0','0']" data-voffset="['100','40','40','0']" data-fontsize="['16','16','16','16']" data-lineheight="['28','28','28','28']" data-width="['none','400']" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive="on" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1750,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><img src="img/home-slider/slider-right-img.png" alt=""></div>
-</div>
-</li>
-</ul>
-</div>
-</section>
-<section class="powerfull_area" id="about" style="padding-top: 50px;">
-  <div class="row pawerfull_area_inner">
-  <div class="col-md-5">
-  <div class="power_left_img">
-  <img src="img/power-ds-img.png" alt="">
+  <div id="preloader">
+    <div id="preloader_spinner">
+      <div class="pre_inner">
+        <div class="dot dot-1"></div>
+        <div class="dot dot-2"></div>
+        <div class="dot dot-3"></div>
+      </div>
+    </div>
   </div>
-  </div>
-  <div class="col-md-7">
-  <div class="power_right_content">
-  <div class="power_right_content_inner">
-  <h3 class="single_title">Corona Virus</h3>
-  <p>A coronavirus is one of a number of viruses that cause diseases in mammals and birds. In humans, the viruses cause respiratory infections, including the common cold, which are typically mild, though rarer forms such as SARS, MERS and COVID-19 can be lethal. Symptoms vary in other species: in chickens, they cause an upper respiratory disease, while in cows and pigs coronaviruses cause diarrhea. There are no vaccines or antiviral drugs to prevent or treat human coronavirus infections. </p>
-  </div>
-  </div>
-  </div>
-  </div>
+
+  <header class="dash_tp_menu_area">
+    <nav class="navbar navbar-default">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/planetvital.png" alt=""></a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#about">About</a></li>
+          <li><a href="#">Health</a></li>
+          <li><a href="#">Agriculture</a></li>
+          <li><a href="#">Politics</a></li>
+          <li><a href="#">Education</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="main_slider_area">
+    <div id="dash_slider" class="rev_slider" data-version="5.3.1.6">
+      <ul>
+        <li data-index="rs-2972" data-transition="slidingoverlayhorizontal" data-slotamount="default"
+          data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default"
+          data-masterspeed="default" data-thumb="img/home-slider/slider-1.jpg" data-rotate="0"
+          data-saveperformance="off" data-title="Web Show" data-param1="" data-param2="" data-param3="" data-param4=""
+          data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
+          data-description="">
+
+          <div class="slider_text_box">
+            <div class="tp-caption ds_first_text" data-x="['left','left','left','left','left']"
+              data-y="['middle','middle','middle','middle']" data-hoffset="['0','0','0','15','10']"
+              data-voffset="['-50','-100','-100','-100','-100']" data-fontsize="['60','60','60','50','30']"
+              data-lineheight="['85','85','85','60','40']" data-width="['none','none','none','none']" data-height="none"
+              data-whitespace="['nowrap','nowrap','nowrap','nowrap','nowrap']" data-type="text"
+              data-responsive_offset="on"
+              data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":1500,"to":"o:1;","delay":1700,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"x:left(R);","ease":"Power3.easeIn"}]'
+              data-textAlign="['left','left','left','left','left']" data-paddingtop="[0,0,0,0]"
+              data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]">Vitals of
+              "Planet Earth" </div>
+            <div class="tp-caption ds_secand_text" data-x="['left','left','left','left','left']"
+              data-y="['middle','middle','middle','middle']" data-hoffset="['0','0','0','15','10']"
+              data-voffset="['130','80','80','50','30']" data-fontsize="['16','16','16','16','14']"
+              data-lineheight="['28','28','28','28','28']" data-width="['500','500','500','500','100%']"
+              data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on"
+              data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1750,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+              data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+              data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">We curate and represent the vitals of planet
+              earth scientifically and meaningfully in a single platform realtime with least errors utilising Innovation
+              Incubators Data Analytics, AI/ML and Development capabilities.</div>
+            <div class="tp-caption video_text" data-x="['left','left','left','left','left']"
+              data-y="['middle','middle','middle','middle']" data-hoffset="['-40','-40','-40','-20','-15']"
+              data-voffset="['250','200','200','150','150']" data-fontsize="['16','16','16','16']"
+              data-lineheight="['28','28','28','28']" data-width="none" data-height="none" data-whitespace="nowrap"
+              data-type="text" data-responsive_offset="on"
+              data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1750,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+              data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+              data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><a href="#Categories"
+                style="color:white;"><img src="img/icon/play-video.png" alt="">Know more</div></a>
+            <div class="tp-caption right_img" data-x="['right','right','right','right']"
+              data-y="['middle','middle','middle','middle']" data-hoffset="['-350','0','0','0']"
+              data-voffset="['100','40','40','0']" data-fontsize="['16','16','16','16']"
+              data-lineheight="['28','28','28','28']" data-width="['none','400']" data-height="none"
+              data-whitespace="nowrap" data-type="text" data-responsive="on"
+              data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1750,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+              data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+              data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><img
+                src="img/home-slider/slider-right-img.png" alt=""></div>
+          </div>
+        </li>
+        <li data-index="rs-2973" data-transition="slidingoverlayhorizontal" data-slotamount="default"
+          data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default"
+          data-masterspeed="default" data-thumb="img/home-slider/slider-1.jpg" data-rotate="0"
+          data-saveperformance="off" data-title="Web Show" data-param1="" data-param2="" data-param3="" data-param4=""
+          data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
+          data-description="">
+
+          <div class="slider_text_box">
+            <div class="tp-caption ds_first_text" data-x="['left','left','left','left','left']"
+              data-y="['middle','middle','middle','middle']" data-hoffset="['0','0','0','15','10']"
+              data-voffset="['-50','-100','-100','-100','-100']" data-fontsize="['60','60','60','50','30']"
+              data-lineheight="['85','85','85','60','40']" data-width="['none','none','none','none']" data-height="none"
+              data-whitespace="['nowrap','nowrap','nowrap','nowrap','nowrap']" data-type="text"
+              data-responsive_offset="on"
+              data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":1500,"to":"o:1;","delay":1700,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"x:left(R);","ease":"Power3.easeIn"}]'
+              data-textAlign="['left','left','left','left','left']" data-paddingtop="[0,0,0,0]"
+              data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]">Vitals of
+              "Planet Earth"</div>
+            <div class="tp-caption ds_secand_text" data-x="['left','left','left','left','left']"
+              data-y="['middle','middle','middle','middle']" data-hoffset="['0','0','0','15','10']"
+              data-voffset="['130','80','80','50','30']" data-fontsize="['16','16','16','16','14']"
+              data-lineheight="['28','28','28','28','28']" data-width="['500','500','500','500','100%']"
+              data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on"
+              data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1750,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+              data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+              data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">We curate and represent the vitals of planet
+              earth scientifically and meaningfully in a single platform realtime with least errors utilising Innovation
+              Incubators Data Analytics, AI/ML and Development capabilities.</div>
+            <div class="tp-caption video_text" data-x="['left','left','left','left','left']"
+              data-y="['middle','middle','middle','middle']" data-hoffset="['-40','-40','-40','-20','-15']"
+              data-voffset="['250','200','200','150','150']" data-fontsize="['16','16','16','16']"
+              data-lineheight="['28','28','28','28']" data-width="none" data-height="none" data-whitespace="nowrap"
+              data-type="text" data-responsive_offset="on"
+              data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1750,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+              data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+              data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><a href="#Categories"
+                style="color:white;"><img src="img/icon/play-video.png" alt="">Know more</div></a>
+            <div class="tp-caption right_img" data-x="['right','right','right','right']"
+              data-y="['middle','middle','middle','middle']" data-hoffset="['-350','0','0','0']"
+              data-voffset="['100','40','40','0']" data-fontsize="['16','16','16','16']"
+              data-lineheight="['28','28','28','28']" data-width="['none','400']" data-height="none"
+              data-whitespace="nowrap" data-type="text" data-responsive="on"
+              data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1750,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+              data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+              data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><img
+                src="img/home-slider/slider-right-img.png" alt=""></div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
-<section class="" id="Categories">
-   <!-- Page Wrapper -->
-   <div id="wrapper">
+  <section class="" id="Categories">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
 
 
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-      <!-- Main Content -->
-      <div id="content" style="width: 95%; margin: 0 auto;">
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content" style="width: 95%; margin: 0 auto;">
 
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4 pt-5">
-            <h1 class="h3 my-4 text-gray-800">Statistics</h1>
-            <a href="#" onclick="generateCsv()" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-          </div>
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 my-4 text-gray-800">Corona Statistics</h1>
+              <a href="#" onclick="generateCsv()" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                  class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            </div>
 
-          <!-- Content Row -->
-          <div class="row">
+            <!-- Content Row -->
+            <div class="row">
 
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow py-2" style="border-left-width: 5px !important;">
-                <div class="card-body pl-5">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="font-weight-bold text-primary text-uppercase mb-1">Confirmed</div>
-                      <div id="totalConfirmed" class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow py-2" style="border-left-width: 5px !important;">
+                  <div class="card-body pl-5">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <div class="font-weight-bold text-primary text-uppercase mb-1">Confirmed</div>
+                        <div id="totalConfirmed" class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-1 mb-4"></div>
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-danger shadow py-2" style="border-left-width: 5px !important;">
+                  <div class="card-body pl-5">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <div class="font-weight-bold text-danger text-uppercase mb-1">Deaths</div>
+                        <div id="totalDeaths" class="h5 mb-0 font-weight-bold text-gray-800">0</div id="totalConfirmed">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-1 mb-4"></div>
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-info shadow py-2" style="border-left-width: 5px !important;">
+                  <div class="card-body pl-5">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <div class="font-weight-bold text-success text-uppercase mb-1">Recovered</div>
+                        <div id="totalRecovered" class="h5 mb-0 font-weight-bold text-gray-800">0</div
+                          id="totalConfirmed">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Content Row -->
+
+            <div class="row">
+              <!-- Area Chart -->
+              <div class="col-xl-8 col-lg-7">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Regions Overview</h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                    <div class="chart-area" style="height: 300px;">
+                      <canvas id="myAreaChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pie Chart -->
+              <div class="col-xl-4 col-lg-5">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Total Counts Chart </h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                    <div class="chart-pie" style="height: 262px !important;">
+                      <canvas id="myPieChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                      <span class="mr-2">
+                        <i class="fas fa-circle text-primary"></i> Confirmed
+                      </span>
+                      <span class="mr-2">
+                        <i class="fas fa-circle text-danger"></i> Died
+                      </span>
+                      <span class="mr-2">
+                        <i class="fas fa-circle text-info"></i> Recovered
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xl-1 mb-4"></div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-danger shadow py-2" style="border-left-width: 5px !important;">
-                <div class="card-body pl-5">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="font-weight-bold text-danger text-uppercase mb-1">Deaths</div>
-                      <div id="totalDeaths" class="h5 mb-0 font-weight-bold text-gray-800">0</div id="totalConfirmed">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-1 mb-4"></div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info shadow py-2" style="border-width: 3px;">
-                <div class="card-body pl-5">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="font-weight-bold text-success text-uppercase mb-1">Recovered</div>
-                      <div id="totalRecovered" class="h5 mb-0 font-weight-bold text-gray-800">0</div
-                        id="totalConfirmed">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-          </div>
-
-          <!-- Content Row -->
-
-          <div class="row">
-            <!-- Area Chart -->
-            <div class="col-xl-8 col-lg-7">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Regions Overview</h6>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-area" style="height: 300px;">
-                    <canvas id="myAreaChart"></canvas>
+            <div class="row">
+              <div class="col">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Map View</h6>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Total Counts Chart </h6>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-pie" style="height: 262px !important;">
-                    <canvas id="myPieChart"></canvas>
-                  </div>
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> Confirmed
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-danger"></i> Died
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> Recovered
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Map View</h6>
-                </div>
-                <div class="card-body">
-                  <!-- <div class="map-container" style="overflow-x: scroll;">
+                  <div class="card-body">
+                    <!-- <div class="map-container" style="overflow-x: scroll;">
                     <iframe width="942" height="587" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQllaJ0gGr0AvQhtYwJ1-TPh8cuuqj3GP5ofXWw3AebywqXJKsyLCVJjQjh-k14OA05IRmUD8eJKpUl/pubchart?oid=976899081&amp;format=interactive"></iframe>
                   </div> -->
-                  <div id="map"></div>
+                    <div id="map"></div>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
+          <!-- /.container-fluid -->
 
         </div>
-        <!-- /.container-fluid -->
+        <!-- End of Main Content -->
 
       </div>
-      <!-- End of Main Content -->
+      <!-- End of Content Wrapper -->
 
     </div>
-    <!-- End of Content Wrapper -->
-
-  </div>
-  <!-- End of Page Wrapper -->
+    <!-- End of Page Wrapper -->
   </section>
 
-  
+
   <section class="update_blog_area" id="blog">
     <div class="container">
-    <h2 class="single_title_center">Latest happenings around us</h2>
-    <div class="row update_blog_inner" id="newsWrapper">
+      <h2 class="single_title_center">Latest happenings around us</h2>
+      <div class="row update_blog_inner" id="newsWrapper">
 
+      </div>
     </div>
+  </section>
+
+
+  <footer class="pink_footer">
+    <div class="pink_footer_wedget_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-md-offset-1 col-xs-6">
+            <aside class="f_widget p_menu_widget">
+              <div class="p_f_w_title">
+                <h3>Categories</h3>
+              </div>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Health</a></li>
+                <li><a href="#">Agriculture</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Education</a></li>
+              </ul>
+            </aside>
+          </div>
+          <div class="col-md-2 col-md-offset-1 col-xs-6">
+            <aside class="f_widget p_support_widget">
+              <div class="p_f_w_title">
+
+              </div>
+
+            </aside>
+          </div>
+          <div class="col-md-3 col-md-offset-1 col-xs-6">
+            <aside class="f_widget p_contact_widget">
+              <div class="p_f_w_title">
+                <h3>Contact information</h3>
+              </div>
+              <ul class="contact_info">
+                <li>Phone :<a href="#"> 91-471-2700216</a></li>
+                <li>Address :<a href="https://innovationincubator.com"> Innovation Incubator, L-1 Thejaswini, Technopark
+                    Campus, Karyavattam Kerala, India</a></li>
+              </ul>
+              <ul class="pink_social">
+                <li><a href="https://www.facebook.com/innovationincubatorholding"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a href="https://www.linkedin.com/company/innovation-incubator-inc-/"><i
+                      class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://twitter.com/InnovationIncu"><i class="fa fa-twitter"></i></a></li>
+              </ul>
+            </aside>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
     </div>
-    </section>
+    <div class="pink_copyright">
+      <div class="container">
+        <div class="pull-left">
+          <a href="#"><img src="img/iia-white.png" alt="innovationincubator-logo" width="50%"></a>
+        </div>
+        <div class="pull-right">
+          <p class="copyright" style="color:white;" data-textAlign="centre">
+            Copyright &copy;2020. Innovation Incubator .All rights reserved
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
-<footer class="pink_footer">
-<div class="pink_footer_wedget_area">
-<div class="container">
-<div class="row">
-<div class="col-md-2 col-md-offset-1 col-xs-6">
-<aside class="f_widget p_menu_widget">
-<div class="p_f_w_title">
-<h3>Categories</h3>
-</div>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="health.html">Health</a></li>
-<li><a href="#">Agriculture</a></li>
-<li><a href="#">Politics</a></li>
-<li><a href="#">Education</a></li>
-</ul>
-</aside>
-</div>
-<div class="col-md-2 col-md-offset-1 col-xs-6">
-<aside class="f_widget p_support_widget">
-<div class="p_f_w_title">
+  <script src="js/jquery-2.2.4.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
 
-</div>
+  <script src="js/bootstrap.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
 
-</aside>
-</div>
-<div class="col-md-3 col-md-offset-1 col-xs-6">
-<aside class="f_widget p_contact_widget">
-<div class="p_f_w_title">
-<h3>Contact information</h3>
-</div>
-<ul class="contact_info">
-<li>Phone :<a href="#"> 91-471-2700216</a></li>
-<li>Address :<a href="https://innovationincubator.com"> Innovation Incubator, L-1 Thejaswini, Technopark Campus, Karyavattam Kerala, India</a></li>
-</ul>
-<ul class="pink_social">
-<li><a href="https://www.facebook.com/innovationincubatorholding"><i class="fa fa-facebook"></i></a></li>
-<li><a href="https://www.linkedin.com/company/innovation-incubator-inc-/"><i class="fa fa-linkedin"></i></a></li>
-<li><a href="https://twitter.com/InnovationIncu"><i class="fa fa-twitter"></i></a></li>
-</ul>
-</aside>
-</div>
-<div class="col-md-2"></div>
-</div>
-</div>
-</div>
-<div class="pink_copyright">
-<div class="container">
-<div class="pull-left">
-<a href="https//www.innovationincubator.com"><img src="img/iia-white.png" alt="innovationincubator-logo" width="50%"></a>
-</div>
-<div class="pull-right" >
-<p class="copyright" style="color:white;" data-textAlign="centre">
-Copyright &copy;2020. Innovation Incubator .All rights reserved
-</p>
-</div>
-</div>
-</div>
-</footer>
+  <script src="vendors/revolution/js/jquery.themepunch.tools.min.js"
+    type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"
+    type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/revolution/js/extensions/revolution.extension.video.min.js"
+    type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"
+    type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"
+    type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"
+    type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+
+  <script src="vendors/parallax/jquery.parallax-scroll.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/magnific-popup/jquery.magnific-popup.min.js"
+    type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/counterup/waypoints.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/counterup/jquery.counterup.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/isotope/imagesloaded.pkgd.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/isotope/isotope.pkgd.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/flexslider/flex-slider.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/flexslider/mixitup.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/swiper/js/swiper.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/flipster-slider/jquery.flipster.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="vendors/nice-selector/jquery.nice-select.min.js"
+    type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
+  <script src="js/theme.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
 
 
-<script src="js/jquery-2.2.4.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-
-<script src="js/bootstrap.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-
-<script src="vendors/revolution/js/jquery.themepunch.tools.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/revolution/js/jquery.themepunch.revolution.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/revolution/js/extensions/revolution.extension.video.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-
-<script src="vendors/parallax/jquery.parallax-scroll.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/magnific-popup/jquery.magnific-popup.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/owl-carousel/owl.carousel.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/counterup/waypoints.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/counterup/jquery.counterup.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/isotope/imagesloaded.pkgd.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/isotope/isotope.pkgd.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/flexslider/flex-slider.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/flexslider/mixitup.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/swiper/js/swiper.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/flipster-slider/jquery.flipster.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="vendors/nice-selector/jquery.nice-select.min.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-<script src="js/theme.js" type="f9e216bf5a50a4e1a705108a-text/javascript"></script>
-
-
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="f9e216bf5a50a4e1a705108a-|49" defer=""></script></body>
+  <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js"
+    data-cf-settings="f9e216bf5a50a4e1a705108a-|49" defer=""></script>
+</body>
 
 <!-- Bootstrap core JavaScript-->
 <script src="vendors/jquery/jquery.min.js"></script>
@@ -417,30 +500,30 @@ Copyright &copy;2020. Innovation Incubator .All rights reserved
 
       drawAreaChart(areaChartLabels, confirmedChartValues, diedChartValues, recoveredChartValues)
       drawPieChart([confirmedCount, deathsCount, recoverdCount])
-      
+
       $.each(articles, function (i) {
         var newsCard = '<div class="col-md-4 col-xs-6">\
         <div class="up_blog_item">\
         <div class="blog_img"><img src="' + articles[i].urlToImage + '" alt=""></div>\
         <div class="up_blog_text">\
         <h5>' + new Date(articles[i].publishedAt).toDateString() + '</h5>\
-        <a href="#"><h4>' + articles[i].title.substring(0,60)  + '...</h4></a>\
+        <a href="#"><h4>' + articles[i].title.substring(0, 60) + '...</h4></a>\
         <a target="_blank" class="read_c" href="' + articles[i].url + '">Read Continue <i class="fa fa-angle-right"></i></a>\
         </div></div></div>';
         $('#newsWrapper').append(newsCard);
       })
     });
 
-    var generateCsv = function(){
-        downloadCsv(regionsTotal)
-      }
+  var generateCsv = function () {
+    downloadCsv(regionsTotal)
+  }
 
-      mapboxgl.accessToken = 'pk.eyJ1IjoiaWlhLXBsYW5ldCIsImEiOiJjazZrY3RyeWgwMzB0M2RxZmIwcnp0cXFhIn0.4KlBCBispcZFokPHivJZOQ';
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaWlhLXBsYW5ldCIsImEiOiJjazZrY3RyeWgwMzB0M2RxZmIwcnp0cXFhIn0.4KlBCBispcZFokPHivJZOQ';
   var map = new mapboxgl.Map({
-      container: 'map',
-      zoom: 0.3,
-      center: [0, 20],
-      style: 'mapbox://styles/mapbox/light-v10'
+    container: 'map',
+    zoom: 0.3,
+    center: [0, 20],
+    style: 'mapbox://styles/mapbox/light-v10'
   });
 
   map.addControl(new mapboxgl.NavigationControl());
@@ -454,217 +537,235 @@ Copyright &copy;2020. Innovation Incubator .All rights reserved
 
   // colors to use for the categories
   var colors = ['#fed976', '#feb24c', '#fd8d3c', '#fc4e2a', '#e31a1c'];
-
-  map.on('load', function() {
-      // add a clustered GeoJSON source for a sample set of earthquakes
-      map.addSource('earthquakes', {
-          'type': 'geojson',
-          'data':
-              'https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson',
-          'cluster': true,
-          'clusterRadius': 80,
-          'clusterProperties': {
-              // keep separate counts for each magnitude category in a cluster
-              'mag1': ['+', ['case', mag1, 1, 0]],
-              'mag2': ['+', ['case', mag2, 1, 0]],
-              'mag3': ['+', ['case', mag3, 1, 0]],
-              'mag4': ['+', ['case', mag4, 1, 0]],
-              'mag5': ['+', ['case', mag5, 1, 0]]
-          }
-      });
-      // circle and symbol layers for rendering individual earthquakes (unclustered points)
-      map.addLayer({
-          'id': 'earthquake_circle',
-          'type': 'circle',
-          'source': 'earthquakes',
-          'filter': ['!=', 'cluster', true],
-          'paint': {
-              'circle-color': [
-                  'case',
-                  mag1,
-                  colors[0],
-                  mag2,
-                  colors[1],
-                  mag3,
-                  colors[2],
-                  mag4,
-                  colors[3],
-                  colors[4]
-              ],
-              'circle-opacity': 0.6,
-              'circle-radius': 12
-          }
-      });
-      map.addLayer({
-          'id': 'earthquake_label',
-          'type': 'symbol',
-          'source': 'earthquakes',
-          'filter': ['!=', 'cluster', true],
-          'layout': {
-              'text-field': [
-                  'number-format',
-                  ['get', 'mag'],
-                  { 'min-fraction-digits': 1, 'max-fraction-digits': 1 }
-              ],
-              'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-              'text-size': 10
-          },
-          'paint': {
-              'text-color': [
-                  'case',
-                  ['<', ['get', 'mag'], 3],
-                  'black',
-                  'white'
-              ]
-          }
-      });
-
-      // objects for caching and keeping track of HTML marker objects (for performance)
-      var markers = {};
-      var markersOnScreen = {};
-
-      function updateMarkers() {
-          var newMarkers = {};
-          var features = map.querySourceFeatures('earthquakes');
-
-          // for every cluster on the screen, create an HTML marker for it (if we didn't yet),
-          // and add it to the map if it's not there already
-          for (var i = 0; i < features.length; i++) {
-              var coords = features[i].geometry.coordinates;
-              var props = features[i].properties;
-              if (!props.cluster) continue;
-              var id = props.cluster_id;
-
-              var marker = markers[id];
-              if (!marker) {
-                  var el = createDonutChart(props);
-                  marker = markers[id] = new mapboxgl.Marker({
-                      element: el
-                  }).setLngLat(coords);
-              }
-              newMarkers[id] = marker;
-
-              if (!markersOnScreen[id]) marker.addTo(map);
-          }
-          // for every marker we've added previously, remove those that are no longer visible
-          for (id in markersOnScreen) {
-              if (!newMarkers[id]) markersOnScreen[id].remove();
-          }
-          markersOnScreen = newMarkers;
+  let eventgeos = {
+    "type": "FeatureCollection",
+    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+    "features": [
+      { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3 }, "geometry": { "type": "Point", "coordinates": [-151.5129, 63.1016] } },
+      { "type": "Feature", "properties": { "id": "ak16994519", "mag": 1.7 }, "geometry": { "type": "Point", "coordinates": [-150.4048, 63.1224] } },
+      { "type": "Feature", "properties": { "id": "ak16994517", "mag": 1.6 }, "geometry": { "type": "Point", "coordinates": [-151.3597, 63.0781] } },
+      { "type": "Feature", "properties": { "id": "ci38021336", "mag": 1.4 }, "geometry": { "type": "Point", "coordinates": [-118.497, 34.299667] } },
+      { "type": "Feature", "properties": { "id": "us2000b2nn", "mag": 4.2 }, "geometry": { "type": "Point", "coordinates": [-87.6901, 12.0623] } },
+      { "type": "Feature", "properties": { "id": "ak16994510", "mag": 1.6 }, "geometry": { "type": "Point", "coordinates": [-151.5053, 63.0719] } },
+      { "type": "Feature", "properties": { "id": "us2000b2nb", "mag": 4.6 }, "geometry": { "type": "Point", "coordinates": [-178.4576, -20.2873] } },
+      { "type": "Feature", "properties": { "id": "ak16994298", "mag": 2.4 }, "geometry": { "type": "Point", "coordinates": [-148.789, 63.1725] } },
+      { "type": "Feature", "properties": { "id": "nc72905861", "mag": 1.3 }, "geometry": { "type": "Point", "coordinates": [-120.993164, 36.421833] } },
+      { "type": "Feature", "properties": { "id": "ci38021304", "mag": 1.1 }, "geometry": { "type": "Point", "coordinates": [-117.0155, 33.656333] } },
+      { "type": "Feature", "properties": { "id": "ak16994293", "mag": 1.5 }, "geometry": { "type": "Point", "coordinates": [-151.512, 63.0879] } },
+      { "type": "Feature", "properties": { "id": "ak16994287", "mag": 2.0 }, "geometry": { "type": "Point", "coordinates": [-151.4378, 63.0933] } },
+      { "type": "Feature", "properties": { "id": "hv61900626", "mag": 2.9 }, "geometry": { "type": "Point", "coordinates": [-155.011833, 19.399333] } }
+    ]
+  }
+  map.on('load', function () {
+    // add a clustered GeoJSON source for a sample set of earthquakes
+    map.addSource('earthquakes', {
+      'type': 'geojson',
+      'data': eventgeos,
+      'cluster': true,
+      'clusterRadius': 80,
+      'clusterProperties': {
+        // keep separate counts for each magnitude category in a cluster
+        'mag1': ['+', ['case', mag1, 1, 0]],
+        'mag2': ['+', ['case', mag2, 1, 0]],
+        'mag3': ['+', ['case', mag3, 1, 0]],
+        'mag4': ['+', ['case', mag4, 1, 0]],
+        'mag5': ['+', ['case', mag5, 1, 0]]
       }
+    });
+    // circle and symbol layers for rendering individual earthquakes (unclustered points)
+    map.addLayer({
+      'id': 'earthquake_circle',
+      'type': 'circle',
+      'source': 'earthquakes',
+      'filter': ['!=', 'cluster', true],
+      'paint': {
+        'circle-color': [
+          'case',
+          mag1,
+          colors[0],
+          mag2,
+          colors[1],
+          mag3,
+          colors[2],
+          mag4,
+          colors[3],
+          colors[4]
+        ],
+        'circle-opacity': 0.6,
+        'circle-radius': 12
+      }
+    });
+    map.addLayer({
+      'id': 'earthquake_label',
+      'type': 'symbol',
+      'source': 'earthquakes',
+      'filter': ['!=', 'cluster', true],
+      'layout': {
+        'text-field': [
+          'number-format',
+          ['get', 'mag'],
+          { 'min-fraction-digits': 1, 'max-fraction-digits': 1 }
+        ],
+        'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+        'text-size': 10
+      },
+      'paint': {
+        'text-color': [
+          'case',
+          ['<', ['get', 'mag'], 3],
+          'black',
+          'white'
+        ]
+      }
+    });
 
-      // after the GeoJSON data is loaded, update markers on the screen and do so on every map move/moveend
-      map.on('data', function(e) {
-          if (e.sourceId !== 'earthquakes' || !e.isSourceLoaded) return;
+    // objects for caching and keeping track of HTML marker objects (for performance)
+    var markers = {};
+    var markersOnScreen = {};
 
-          map.on('move', updateMarkers);
-          map.on('moveend', updateMarkers);
-          updateMarkers();
-      });
+    function updateMarkers() {
+      var newMarkers = {};
+      var features = map.querySourceFeatures('earthquakes');
+
+      // for every cluster on the screen, create an HTML marker for it (if we didn't yet),
+      // and add it to the map if it's not there already
+      for (var i = 0; i < features.length; i++) {
+        var coords = features[i].geometry.coordinates;
+        var props = features[i].properties;
+        if (!props.cluster) continue;
+        var id = props.cluster_id;
+
+        var marker = markers[id];
+        if (!marker) {
+          var el = createDonutChart(props);
+          marker = markers[id] = new mapboxgl.Marker({
+            element: el
+          }).setLngLat(coords);
+        }
+        newMarkers[id] = marker;
+
+        if (!markersOnScreen[id]) marker.addTo(map);
+      }
+      // for every marker we've added previously, remove those that are no longer visible
+      for (id in markersOnScreen) {
+        if (!newMarkers[id]) markersOnScreen[id].remove();
+      }
+      markersOnScreen = newMarkers;
+    }
+
+    // after the GeoJSON data is loaded, update markers on the screen and do so on every map move/moveend
+    map.on('data', function (e) {
+      if (e.sourceId !== 'earthquakes' || !e.isSourceLoaded) return;
+
+      map.on('move', updateMarkers);
+      map.on('moveend', updateMarkers);
+      updateMarkers();
+    });
   });
 
   // code for creating an SVG donut chart from feature properties
   function createDonutChart(props) {
-      var offsets = [];
-      var counts = [
-          props.mag1,
-          props.mag2,
-          props.mag3,
-          props.mag4,
-          props.mag5
-      ];
-      var total = 0;
-      for (var i = 0; i < counts.length; i++) {
-          offsets.push(total);
-          total += counts[i];
-      }
-      var fontSize =
-          total >= 1000 ? 22 : total >= 100 ? 20 : total >= 10 ? 18 : 16;
-      var r = total >= 1000 ? 50 : total >= 100 ? 32 : total >= 10 ? 24 : 18;
-      var r0 = Math.round(r * 0.6);
-      var w = r * 2;
+    var offsets = [];
+    var counts = [
+      props.mag1,
+      props.mag2,
+      props.mag3,
+      props.mag4,
+      props.mag5
+    ];
+    var total = 0;
+    for (var i = 0; i < counts.length; i++) {
+      offsets.push(total);
+      total += counts[i];
+    }
+    var fontSize =
+      total >= 1000 ? 22 : total >= 100 ? 20 : total >= 10 ? 18 : 16;
+    var r = total >= 1000 ? 50 : total >= 100 ? 32 : total >= 10 ? 24 : 18;
+    var r0 = Math.round(r * 0.6);
+    var w = r * 2;
 
-      var html =
-          '<div><svg width="' +
-          w +
-          '" height="' +
-          w +
-          '" viewbox="0 0 ' +
-          w +
-          ' ' +
-          w +
-          '" text-anchor="middle" style="font: ' +
-          fontSize +
-          'px sans-serif">';
+    var html =
+      '<div><svg width="' +
+      w +
+      '" height="' +
+      w +
+      '" viewbox="0 0 ' +
+      w +
+      ' ' +
+      w +
+      '" text-anchor="middle" style="font: ' +
+      fontSize +
+      'px sans-serif">';
 
-      for (i = 0; i < counts.length; i++) {
-          html += donutSegment(
-              offsets[i] / total,
-              (offsets[i] + counts[i]) / total,
-              r,
-              r0,
-              colors[i]
-          );
-      }
-      html +=
-          '<circle cx="' +
-          r +
-          '" cy="' +
-          r +
-          '" r="' +
-          r0 +
-          '" fill="white" /><text dominant-baseline="central" transform="translate(' +
-          r +
-          ', ' +
-          r +
-          ')">' +
-          total.toLocaleString() +
-          '</text></svg></div>';
+    for (i = 0; i < counts.length; i++) {
+      html += donutSegment(
+        offsets[i] / total,
+        (offsets[i] + counts[i]) / total,
+        r,
+        r0,
+        colors[i]
+      );
+    }
+    html +=
+      '<circle cx="' +
+      r +
+      '" cy="' +
+      r +
+      '" r="' +
+      r0 +
+      '" fill="white" /><text dominant-baseline="central" transform="translate(' +
+      r +
+      ', ' +
+      r +
+      ')">' +
+      total.toLocaleString() +
+      '</text></svg></div>';
 
-      var el = document.createElement('div');
-      el.innerHTML = html;
-      return el.firstChild;
+    var el = document.createElement('div');
+    el.innerHTML = html;
+    return el.firstChild;
   }
 
   function donutSegment(start, end, r, r0, color) {
-      if (end - start === 1) end -= 0.00001;
-      var a0 = 2 * Math.PI * (start - 0.25);
-      var a1 = 2 * Math.PI * (end - 0.25);
-      var x0 = Math.cos(a0),
-          y0 = Math.sin(a0);
-      var x1 = Math.cos(a1),
-          y1 = Math.sin(a1);
-      var largeArc = end - start > 0.5 ? 1 : 0;
+    if (end - start === 1) end -= 0.00001;
+    var a0 = 2 * Math.PI * (start - 0.25);
+    var a1 = 2 * Math.PI * (end - 0.25);
+    var x0 = Math.cos(a0),
+      y0 = Math.sin(a0);
+    var x1 = Math.cos(a1),
+      y1 = Math.sin(a1);
+    var largeArc = end - start > 0.5 ? 1 : 0;
 
-      return [
-          '<path d="M',
-          r + r0 * x0,
-          r + r0 * y0,
-          'L',
-          r + r * x0,
-          r + r * y0,
-          'A',
-          r,
-          r,
-          0,
-          largeArc,
-          1,
-          r + r * x1,
-          r + r * y1,
-          'L',
-          r + r0 * x1,
-          r + r0 * y1,
-          'A',
-          r0,
-          r0,
-          0,
-          largeArc,
-          0,
-          r + r0 * x0,
-          r + r0 * y0,
-          '" fill="' + color + '" />'
-      ].join(' ');
+    return [
+      '<path d="M',
+      r + r0 * x0,
+      r + r0 * y0,
+      'L',
+      r + r * x0,
+      r + r * y0,
+      'A',
+      r,
+      r,
+      0,
+      largeArc,
+      1,
+      r + r * x1,
+      r + r * y1,
+      'L',
+      r + r0 * x1,
+      r + r0 * y1,
+      'A',
+      r0,
+      r0,
+      0,
+      largeArc,
+      0,
+      r + r0 * x0,
+      r + r0 * y0,
+      '" fill="' + color + '" />'
+    ].join(' ');
   }
 
 </script>
+
 </html>
