@@ -559,7 +559,7 @@
   }
   function save_data(data) {
     return new Promise(function (resolve, reject) {
-      fetch('http://ec2-54-226-221-66.compute-1.amazonaws.com:3000/api/user', {
+      fetch('https://planetvitals.iinerds.com/api/user', {
         method: 'post',
         headers: {
           'Content-Type': 'application/json;charset=utf-8'
