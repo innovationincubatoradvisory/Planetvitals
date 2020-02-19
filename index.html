@@ -340,7 +340,10 @@
   <section class="update_blog_area" id="blog">
     <div class="container">
       <h2 class="single_title_center">Latest happenings around us</h2>
-      <div class="row update_blog_inner">
+      <div class="row update_blog_inner" id="newsWrapper">
+
+      </div>
+      <!-- <div class="row update_blog_inner">
         <div class="col-md-4 col-xs-6">
           <div class="up_blog_item">
             <div class="blog_img"><img src="img/blog/update-blog/up-blog-1.jpg" alt=""></div>
@@ -377,7 +380,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="more_post">
         <a href="#">More Post...</a>
       </div>
@@ -518,6 +521,29 @@
 </body>
 
 <script>
+
+let articles = []
+
+fetch("https://planetvitals.iinerds.com/api/generalNews")
+    .then(response => {
+      return response.json();
+    })
+    .then(json => {
+      console.log(json);
+      articles = json.articles;
+
+      $.each(articles, function (i) {
+        var newsCard = '<div class="col-md-4 col-xs-6">\
+        <div class="up_blog_item">\
+        <div class="blog_img"><img src="' + articles[i].urlToImage + '" alt=""></div>\
+        <div class="up_blog_text">\
+        <h5>' + new Date(articles[i].publishedAt).toDateString() + '</h5>\
+        <a href="#"><h4>' + articles[i].title.substring(0, 60) + '...</h4></a>\
+        <a target="_blank" class="read_c" href="' + articles[i].url + '">Read Continue <i class="fa fa-angle-right"></i></a>\
+        </div></div></div>';
+        $('#newsWrapper').append(newsCard);
+      })
+    });
 
   function subscribe(event) {
     event.preventDefault()
