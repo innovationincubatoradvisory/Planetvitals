@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description"
+        content="Curated, Uptodate Data of CORONA/COVID'19 including analytics and scientific representations. Day by day there is a lot going on around the globe in multiple domains which requires attention and vital analysis. We at Innovation Incubator believe in representing the right data, in best capturable and understandable representations, while ensuring they are validated and usable to researchers, public and companies alike. Lets change the world with these insights and analysis.">
+    <meta name="keywords"
+        content="planetvitals,innovation incubator,corona death count,coronavirus update, corona virus india, corona virus symptoms,coronavirus latest news,coronavirus china,corona virus news,corona optus,corona effect,corona beer price,corona beer,corona alcohol,corona alcohol percentage,corona beer price in india, corona beer stock,coronavirus death toll,coronavirus oregon,coronavirus italy,corona california,corona spread,corona latest update,corona virus death rate,coronavirus cure,corona virus mexico, corona virus kerala, latest corona reports,corona virus brazil,corona virus australia,corona virus vaccine,corona virus air born ">
+    <meta name="author" content="innovation incubator">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <meta property="og:title" content="Corona Statistics" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://planetvitals.iinerds.com" />
+    <meta property="og:image" content="https://planetvitals.iinerds.com/assets/img/coronavirus_640.jpg" />
+    <meta property="og:description"
+        content="Live statistics tracking the number of confirmed cases, recovered patients, and death toll by country due to the novel coronavirus from Wuhan, China." />
+
+    <title>Corona Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--mapbox gl-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+    <!--google analytics-->
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href=" assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="myProjects/webProject/icofont/css/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!--Holaa Bot-->
+    <!-- <script id="unique-embedder-id" type="text/javascript">
+        (function () { var widget_token_val = 'token'; var widget_id_val = '5e653b37843734e711fd59ee'; var WidgetSettings = { widget_token: widget_token_val, widget_id: widget_id_val }; function async_load() { var s = document.createElement('script'); var d = document.createElement('div'); d.id = 'app'; document.getElementsByTagName('body')[0].appendChild(d); s.setAttribute('widget_id', WidgetSettings['widget_id'] && WidgetSettings['widget_id']); s.setAttribute('welcome-msg', WidgetSettings['welcome-msg'] && WidgetSettings['welcome-msg']); s.setAttribute('auto-invoke', WidgetSettings['auto-invoke'] && WidgetSettings['auto-invoke']); s.setAttribute('app-color', WidgetSettings['app-color'] && WidgetSettings['app-color']); s.setAttribute('widget_token', WidgetSettings['widget_token'] && WidgetSettings['widget_token']); s.setAttribute('app-name', WidgetSettings['app-name'] && WidgetSettings['app-name']); s.type = 'text/javascript'; s.async = true; s.id = 'app-hola-owl'; var theUrl = 'https://prod.holaa.ai/build.js'; s.src = theUrl; var embedder = document.getElementById('unique-embedder-id'); embedder.parentNode.insertBefore(s, embedder) } (window.attachEvent) ? window.attachEvent('onload', async_load) : window.addEventListener('load', async_load, false) })();  
+    </script> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158798381-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158798381-1');
+    </script>
+
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+
+            <div class="logo float-left">
+
+                <h1 class="text-light"> <a href="index.html"><span>PLANET VITALS</span><img
+                            src="assets/img/iia-black.png" style="float:right;"></a></h1>
+            </div>
+
+            <nav class="nav-menu float-right d-none d-lg-block">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#country">Country View</a></li>
+                    <li class="active"><a class="nav-link" href="health.html">Health</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#">Agriculture</a></li>
+                    <li class="disabled"><a class="nav-link disabled" href="#">Politics</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#">Education</a></li>
+                </ul>
+            </nav>
+            <!-- .nav-menu -->
+
+        </div>
+    </header><br><br><br>
+
+    <!-- trial section -->
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Stat')">Stat</button>
+        <button class="tablinks" onclick="openCity(event, 'FAQ')">FAQ</button>
+        <button class="tablinks" onclick="openCity(event, 'NewsL')">News</button>
+    </div>
+
+
+
+
+    <div id="Stat" class="tabcontent">
+
+        <div class="container-fluid">
+            <div class="row pt-1 px-5">
+                <h3 style="color: slategrey;">
+                    Countries with highest no of confirmed cases
+                </h3>
+            </div>
+            <div class="row">
+                <div class="chart-area h-80" style="height:300px;width: 100%;">
+                    <canvas id="myAreaChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-subtitle row px-5">
+                <p style="color: lightgrey;">*The above chart is being update based on hourly curated data from multiple
+                    sources.
+                </p>
+            </div>
+            <div class="row pt-2 px-5">
+                <h3 style="color:grey;">
+                    Corona Virus Cases:
+                </h3>
+            </div>
+            <div class="row text-center px-5">
+                <a href="#countries" style="color: #699A21;">View by Country</a>
+            </div>
+            <div class="row counts">
+                <div class="card col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                    <h4>Confirmed Cases</h4>
+                    <p id="totalConfirmed" class="pt-3" style="color: #aaa;font-weight: 700;font-size: 54px;"></p>
+                </div>
+                <div class="card col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                    <h4>Confirmed Death</h4>
+                    <p id="totalDeaths" class="pt-3" style="color:red;font-weight: 700;font-size: 54px;"></p>
+                </div>
+                <div class="card col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                    <h4>Recovered</h4>
+                    <p id="totalRecovered" class="pt-3" style="color:green;font-weight: 700;font-size: 54px;"></p>
+                </div>
+                <div class="card col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                    <h4>Active Cases</h4>
+                    <p id="totalSick" class="pt-3" style="color:orange;font-weight: 700;font-size: 54px;"></p>
+                </div>
+            </div> 
+            <div class="row d-flex justify-content-center pt-2">
+                <div class="col-md-6">
+                    <canvas id="doughnut-chart" width="100%"></canvas>
+                </div>
+            </div>
+
+
+            <!-- table start -->
+            <div class="row d-flex justify-content-center pt-2" id="country">
+                <div class="col-sm-12 col-md-8 ">
+                    <div class="row float-right mr-1 mb-1"><input id="myInput" type="text"
+                            placeholder="Search by location">
+                    </div>
+                    <table class="table text-center table-striped table-bordered table-responsive-sm">
+
+                        <thead class="thead-dark">
+                            <tr class="text-center">
+                                <th style="color:whitesmoke">Country</th>
+                                <th style="color:whitesmoke">Confirmed Cases</th>
+                                <th style="color:red;">Total Death</th>
+                                <th style="color:green;">Total Recovered</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb-content">
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- faq section in tab -->
+    <div id="FAQ" class="tabcontent">
+
+        <section id="faq" class="faq section-bg">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+
+                <div class="row  d-flex align-items-stretch">
+
+                    <div class="col-lg-6 faq-item" data-aos="">
+                        <h4>What is a coronavirus?</h4>
+                        <p>
+                            Coronaviruses are a large family of viruses which may cause illness in animals or
+                            humans. In
+                            humans,
+                            several coronaviruses are known to cause respiratory infections ranging from the common
+                            cold
+                            to more
+                            severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute
+                            Respiratory
+                            Syndrome
+                            (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="100">
+                        <h4>What is COVID-19?</h4>
+                        <p>
+                            COVID-19 is the infectious disease caused by the most recently discovered coronavirus.
+                            This
+                            new virus and
+                            disease were unknown before the outbreak began in Wuhan, China, in December 2019.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="200">
+                        <h4>What are the symptoms of COVID-19?</h4>
+                        <p>
+                            The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients
+                            may
+                            have aches and
+                            pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually
+                            mild and begin
+                            gradually. Some people become infected but don’t develop any symptoms and don't feel
+                            unwell.
+                            Most people
+                            (about 80%) recover from the disease without needing special treatment. Around 1 out of
+                            every 6 people who
+                            gets COVID-19 becomes seriously ill and develops difficulty breathing. Older people, and
+                            those with
+                            underlying medical problems like high blood pressure, heart problems or diabetes, are
+                            more
+                            likely to
+                            develop serious illness. People with fever, cough and difficulty breathing should seek
+                            medical attention.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="300">
+                        <h4>How does COVID-19 spread?</h4>
+                        <p>
+                            People can catch COVID-19 from others who have the virus. The disease can spread from
+                            person
+                            to person
+                            through small droplets from the nose or mouth which are spread when a person with
+                            COVID-19
+                            coughs or
+                            exhales. These droplets land on objects and surfaces around the person. Other people
+                            then
+                            catch COVID-19
+                            by touching these objects or surfaces, then touching their eyes, nose or mouth. People
+                            can
+                            also catch
+                            COVID-19 if they breathe in droplets from a person with COVID-19 who coughs out or
+                            exhales
+                            droplets. This
+                            is why it is important to stay more than 1 meter (3 feet) away from a person who is
+                            sick.
+                            WHO is assessing
+                            ongoing research on the ways COVID-19 is spread and will continue to share updated
+                            findings.
+                            Dolor sit
+                            amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit
+                            laoreet id donec
+                            ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est
+                            pellentesque
+                            elit
+                            ullamcorper dignissim.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>How long is the incubation period for COVID-19?</h4>
+                        <p>
+                            The “incubation period” means the time between catching the virus and beginning to have
+                            symptoms of the
+                            disease. Most estimates of the incubation period for COVID-19 range from 1-14 days, most
+                            commonly around
+                            five days. These estimates will be updated as more data become available. 11
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>Are children more susceptible to the virus that causes COVID-19 compared with the
+                            general
+                            population and
+                            how can infection be prevented?</h4>
+                        <p>
+                            No, there is no evidence that children are more susceptible. In fact, most confirmed
+                            cases
+                            of COVID-19
+                            reported from China have occurred in adults. Infections in children have been reported,
+                            including in very
+                            young children. From limited information published from past Severe Acute Respiratory
+                            Syndrome coronavirus
+                            (SARS-CoV) and Middle East respiratory syndrome coronavirus (MERS-CoV) outbreaks,
+                            infection
+                            among children
+                            was relatively uncommon.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>Are pregnant women more susceptible to infection, or at increased risk for severe
+                            illness,
+                            morbidity, or
+                            mortality with COVID-19, compared with the general public?</h4>
+                        <p>
+                            We do not have information on adverse pregnancy outcomes in pregnant women with
+                            COVID-19.
+                            Pregnancy loss,
+                            including miscarriage and stillbirth, has been observed in cases of infection with other
+                            related
+                            coronaviruses [SARS-CoV and MERS-CoV] during pregnancy. High fevers during the first
+                            trimester of
+                            pregnancy can increase the risk of certain birth defects.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>What are the recommendations on use of chlorine for nCoV hand hygiene and
+                            decontamination?
+                        </h4>
+                        <p>
+                            Weak chlorine solution (0.05%) can be used to disinfect hands when there is no alcohol
+                            based
+                            hand rub
+                            (ABHR) or soap. However, weak chlorine solutions are not recommended when alcohol based
+                            hand
+                            rub or soap
+                            and water are available as there is a higher risk of hand irritation and ill health
+                            effects
+                            from making
+                            and diluting chlorine solutions. Further chlorine solutions must be made daily, stored
+                            in a
+                            cool dry place
+                            with a lid away from sunlight, otherwise they have the potential to lose potency and
+                            efficacy at
+                            disinfection. Chlorine is effective as a decontamination (at 0.5%) for environmental
+                            cleaning when
+                            preceded by cleaning with soap and water.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>Is it safe to receive a package from any area where COVID-19 has been reported?</h4>
+                        <p>
+                            Yes. The likelihood of an infected person contaminating commercial goods is low and the
+                            risk
+                            of catching
+                            the virus that causes COVID-19 from a package that has been moved, travelled, and
+                            exposed to
+                            different
+                            conditions and temperature is also low.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>How long does the virus survive on surfaces ?</h4>
+                        <p>
+                            It is not certain how long the virus that causes COVID-19 survives on surfaces, but it
+                            seems
+                            to behave
+                            like other coronaviruses. Studies suggest that coronaviruses (including preliminary
+                            information on the
+                            COVID-19 virus) may persist on surfaces for a few hours or up to several days. This may
+                            vary
+                            under
+                            different conditions (e.g. type of surface, temperature or humidity of the environment).
+                            If
+                            you think a
+                            surface may be infected, clean it with simple disinfectant to kill the virus and protect
+                            yourself and
+                            others. Clean your hands with an alcohol-based hand rub or wash them with soap and
+                            water.
+                            Avoid touching
+                            your eyes, mouth, or nose.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>Can humans become infected with the COVID-19 from an animal source?</h4>
+                        <p>
+                            Coronaviruses are a large family of viruses that are common in animals. Occasionally,
+                            people
+                            get infected
+                            with these viruses which may then spread to other people. For example, SARS-CoV was
+                            associated with civet
+                            cats and MERS-CoV is transmitted by dromedary camels. Possible animal sources of
+                            COVID-19
+                            have not yet
+                            been confirmed. To protect yourself, such as when visiting live animal markets, avoid
+                            direct
+                            contact with
+                            animals and surfaces in contact with animals. Ensure good food safety practices at all
+                            times. Handle raw
+                            meat, milk or animal organs with care to avoid contamination of uncooked foods and avoid
+                            consuming raw or
+                            undercooked animal products.
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>Should I wear a mask to protect myself?</h4>
+                        <p>
+                            Only wear a mask if you are ill with COVID-19 symptoms (especially coughing) or looking
+                            after someone who
+                            may have COVID-19. Disposable face mask can only be used once. If you are not ill or
+                            looking
+                            after someone
+                            who is ill then you are wasting a mask. There is a world-wide shortage of masks, so WHO
+                            urges people to
+                            use masks wisely. WHO advises rational use of medical masks to avoid unnecessary wastage
+                            of
+                            precious
+                            resources and mis-use of masks (see Advice on the use of masks). The most effective ways
+                            to
+                            protect
+                            yourself and others against COVID-19 are to frequently clean your hands, cover your
+                            cough
+                            with the bend of
+                            elbow or tissue and maintain a distance of at least 1 meter (3 feet) from people who are
+                            coughing or
+                            sneezing. See basic protective measures against the new coronavirus for more
+                            information.
+                    </div>
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="500">
+                        <h4>Can pregnant women with COVID-19 pass the virus to their fetus or newborn ?
+                        </h4>
+                        <p>
+                            The virus that causes COVID-19 is thought to spread mainly by close contact with an
+                            infected
+                            person
+                            through respiratory droplets. Whether a pregnant woman with COVID-19 can transmit the
+                            virus
+                            that causes
+                            COVID-19 to her fetus or neonate by other routes of vertical transmission (before,
+                            during,
+                            or after
+                            delivery) is still unknown. However, in limited recent case series of infants born to
+                            mothers with
+                            COVID-19 published in the peer-reviewed literature, none of the infants have tested
+                            positive
+                            for the virus
+                            that causes COVID-19. Additionally, virus was not detected in samples of amniotic fluid
+                            or
+                            breastmilk.
+                            Limited information is available about vertical transmission for other coronaviruses
+                            (MERS-CoV and
+                            SARS-CoV) but vertical transmission has not been reported for these infections.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>Is COVID-19 the same as SARS?</h4>
+                        <p>
+                            No. The virus that causes COVID-19 and the one that caused the outbreak of Severe Acute
+                            Respiratory
+                            Syndrome (SARS) in 2003 are related to each other genetically, but the diseases they
+                            cause
+                            are quite
+                            different. SARS was more deadly but much less infectious than COVID-19. There have been
+                            no
+                            outbreaks of
+                            SARS anywhere in the world since 2003.
+                    </div>
+
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>Is there a vaccine, drug or treatment for COVID-19? </h4>
+                        <p>
+                            Not yet. To date, there is no vaccine and no specific antiviral medicine to prevent or
+                            treat
+                            COVID-2019.
+                            However, those affected should receive care to relieve symptoms. People with serious
+                            illness
+                            should be
+                            hospitalized. Most patients recover thanks to supportive care. Possible vaccines and
+                            some
+                            specific drug
+                            treatments are under investigation. They are being tested through clinical trials. WHO
+                            is
+                            coordinating
+                            efforts to develop vaccines and medicines to prevent and treat COVID-19. The most
+                            effective
+                            ways to
+                            protect yourself and others against COVID-19 are to frequently clean your hands, cover
+                            your
+                            cough with the
+                            bend of elbow or tissue, and maintain a distance of at least 1 meter (3 feet) from
+                            people
+                            who are coughing
+                            or sneezing.
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>Can CoVID-19 be caught from a person who has no symptoms? </h4>
+                        <p>
+                            The main way the disease spreads is through respiratory droplets expelled by someone who
+                            is
+                            coughing. The
+                            risk of catching COVID-19 from someone with no symptoms at all is very low. However,
+                            many
+                            people with
+                            COVID-19 experience only mild symptoms. This is particularly true at the early stages of
+                            the
+                            disease. It
+                            is therefore possible to catch COVID-19 from someone who has, for example, just a mild
+                            cough
+                            and does not
+                            feel ill. WHO is assessing ongoing research on the period of transmission of COVID-19
+                            and
+                            will continue to
+                            share updated findings.
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>Can the virus that causes COVID-19 be transmitted through the air?</h4>
+                        <p>
+                            Studies to date suggest that the virus that causes COVID-19 is mainly transmitted
+                            through
+                            contact with
+                            respiratory droplets rather than through the air. See previous answer on “How does
+                            COVID-19
+                            spread?”
+                    </div>
+                    <div class="col-lg-6 faq-item" data-aos="" data-aos-delay="400">
+                        <h4>Is COVID-19 the same as SARS?</h4>
+                        <p>
+                            No. The virus that causes COVID-19 and the one that caused the outbreak of Severe Acute
+                            Respiratory
+                            Syndrome (SARS) in 2003 are related to each other genetically, but the diseases they
+                            cause
+                            are quite
+                            different. SARS was more deadly but much less infectious than COVID-19. There have been
+                            no
+                            outbreaks of
+                            SARS anywhere in the world since 2003.
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!-- FAQ section ending -->
+
+    <div id="NewsL" class="tabcontent">
+        <!-- ======= News Lists Section ======= -->
+        <section class="about-lists">
+            <div class="container">
+                <h1 class="text-center">Latest News</h1>
+                <div class="row no-gutters" id="news-row">
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- End News Lists Section -->
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+        <script>
+            let dt = '<div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">'
+            fetch('https://newsapi.org/v2/top-headlines?q=corona&sources=bbc-news&apiKey=5b67480ba15d44889bbfcbf108d596ef')
+                .then(response => {
+                    return response.json()
+                })
+                .then(data => {
+                    console.log(data)
+                    articles = data.articles
+                    if (articles && articles.length) {
+                        articles.forEach(item => {
+                            document.getElementById("news-row").innerHTML += dt + '<span><img src="' + item.urlToImage + '"width="80%"><h4>' + item.title + "</h4><p>" + item.description + '<a href="' + item.url + '">Read More</a></p></div>';
+                        });
+                    }
+
+                })
+                .catch(err => {
+                    // Do something for an error here
+                })
+        </script>
+
+    </div>
+    <!-- trial section ending -->
+
+
+
+
+
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" style="margin-left: -18px;margin-right: -18px;">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row d-flex justify-content-around">
+
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <h3>Contact Information</h3>
+                        <p>
+                            Innovation Incubator <br>L-1 Thejaswini, Technopark
+                            Campus<br> Kazhakkutam Kerala, India<br><br>
+                            <strong>Email:</strong> info@iinerds.com<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="https://twitter.com/InnovationIncu" class="twitter"><i
+                                    class="bx bxl-twitter"></i></a>
+                            <a href="https://www.facebook.com/innovationincubatorholding" class="facebook"><i
+                                    class="bx bxl-facebook"></i></a>
+                            <a href="https://www.instagram.com/innovationincubator/" class="instagram"><i
+                                    class="bx bxl-instagram"></i></a>
+                            <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+                            <a href="https://www.linkedin.com/company/innovation-incubator-inc-/" class="linkedin"><i
+                                    class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-links">
+                        <ul>
+                            <li><a href="index.html"><img src="assets/img/planetvital.png" width="100%"></a></li>
+                            <li> <a href="https://innovationincubator.com/"><img src="assets/img/iia-white.png"
+                                        width="80%"></a></li>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                Copyright &copy;2020. Innovation Incubator. All rights reserved.
+            </div>
+            <div class="credits">
+                Designed by Team X
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="js/chart.js/Chart.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+
+
+
+
+
+    <!-- tab js -->
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+    <!-- end of tab js -->
+
+    <!-- Page level custom scripts -->
+    <script src="js/helper1.js"></script>
+
+    <script>
+        function drawDonut(p1, p2, p3) {
+            new Chart(document.getElementById("doughnut-chart"), {
+                type: 'doughnut',
+                data: {
+                    labels: ["Dead", "Recovered", "Active"],
+                    datasets: [
+                        {
+                            label: "Population (millions)",
+                            backgroundColor: ["red", "green", "orange"],
+                            data: [p1, p2, p3]
+                        }
+                    ]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'CORONA/COVID19 Overview'
+                    }
+                }
+            });
+        }
+    </script>
+
+    <script>
+        let areaChartLabels = []
+        let areaChartValues = []
+        let confirmedChartValues = []
+        let diedChartValues = []
+        let recoveredChartValues = []
+        let confirmedCount = 0
+        let deathsCount = 0
+        let recoverdCount = 0
+
+        fetch('https://planetvitals-backend.iinerds.com/api/v1/covid-worldmeters/totalCount')
+            .then(response => {
+                return response.json()
+            })
+            .then(dat => {
+                confirmedCount = dat.totalconfirmed;
+                deathsCount = dat.totaldeath;
+                recoverdCount = dat.totalrecovered;
+                document.getElementById("totalConfirmed").innerHTML = confirmedCount;
+                document.getElementById("totalDeaths").innerHTML = deathsCount;
+                document.getElementById("totalRecovered").innerHTML = recoverdCount;
+                document.getElementById("totalSick").innerHTML = confirmedCount - deathsCount - recoverdCount;
+                drawDonut(deathsCount, recoverdCount, confirmedCount - deathsCount - recoverdCount)
+            })
+            .catch(err => {
+                // Do something for an error here
+            })
+
+        fetch('https://planetvitals-backend.iinerds.com/api/v1/covid-worldmeters/listAllMapData')
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                // Work with JSON data here
+                console.log(data)
+                regionsTotal = data.responseReport
+
+                if (regionsTotal && regionsTotal.length) {
+                    regionsTotal.forEach(item => {
+                        areaChartLabels.push(item.country)
+                        confirmedChartValues.push(parseFloat(item.confirmed))
+                        diedChartValues.push(parseFloat(item.deaths))
+                        recoveredChartValues.push(parseFloat(item.recovered))
+                        let itemactive = item.confirmed - item.deaths - item.recovered;
+                        if (itemactive == 0) {
+                            document.getElementById("tb-content").innerHTML += "<tr>" + "<td>" + item.country + "</td>" + "<td>" + item.confirmed + "</td>" + "<td>" + item.deaths + "</td>" + "<td>" + item.recovered + "</td>" + "</tr>";
+
+                        }
+                        else {
+                            document.getElementById("tb-content").innerHTML += "<tr>" + "<td table-sucess>" + item.country + "</td>" + "<td>" + item.confirmed + "</td>" + "<td>" + item.deaths + "</td>" + "<td>" + item.recovered + "</td>" + "</tr>";
+
+                        }
+
+                    });
+                }
+                console.log(areaChartLabels)
+                console.log(confirmedChartValues)
+                console.log(diedChartValues)
+                console.log(recoveredChartValues)
+                console.log(data.dataForMap)
+                drawAreaChart(areaChartLabels.slice(0, 10), confirmedChartValues.slice(0, 10), diedChartValues.slice(0, 10), recoveredChartValues.slice(0, 10))
+            })
+            .catch(err => {
+                // Do something for an error here
+            })
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#tb-content tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
