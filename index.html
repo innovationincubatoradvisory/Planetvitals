@@ -461,51 +461,10 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-    let dt = '<div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">'
-    fetch('https://newsapi.org/v2/top-headlines?q=corona&sources=bbc-news&apiKey=5b67480ba15d44889bbfcbf108d596ef')
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        console.log(data)
-        articles = data.articles
-        if (articles && articles.length) {
-          articles.forEach(item => {
-            document.getElementById("news-row").innerHTML += dt + '<span><img src="' + item.urlToImage + '"width="80%"><h4>' + item.title + "</h4><p>" + item.description + '<a href="' + item.url + '">Read More</a></p></div>';
-          });
-        }
-
-      })
-      .catch(err => {
-        // Do something for an error here
-      })
-  </script>
-
+<!--news script-->
+  <script src="js/news_corona.js"></script>
   <!--COunt Script-->
-  <script>
-    let confirmedCount = 0
-    let deathsCount = 0
-    let recoverdCount = 0
-    fetch('https://planetvitals-backend.iinerds.com/api/v1/covid-worldmeters/totalCount')
-      .then(response => {
-        return response.json()
-      })
-      .then(dat => {
-        confirmedCount = dat.totalconfirmed;
-        deathsCount = dat.totaldeath;
-        recoverdCount = dat.totalrecovered;
-        document.getElementById("totalConfirmed").innerHTML = confirmedCount;
-        document.getElementById("totalDeaths").innerHTML = deathsCount;
-        document.getElementById("totalRecovered").innerHTML = recoverdCount;
-        document.getElementById("totalSick").innerHTML = confirmedCount - deathsCount - recoverdCount;
-      })
-      .catch(err => {
-        // Do something for an error here
-      })
-  </script>
-
+  <script src="js/stat-all.js"> </script>
 </body>
 
 </html>
