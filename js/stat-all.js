@@ -1,6 +1,27 @@
 let confirmedCount = 0
 let deathsCount = 0
 let recoverdCount = 0
+function drawDonut(p1, p2, p3) {
+    new Chart(document.getElementById("doughnut-chart"), {
+        type: 'doughnut',
+        data: {
+            labels: ["Dead", "Recovered", "Active"],
+            datasets: [
+                {
+                    label: "Population (millions)",
+                    backgroundColor: ["red", "green", "orange"],
+                    data: [p1, p2, p3]
+                }
+            ]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'CORONA/COVID19 Overview'
+            }
+        }
+    });
+}
 
 fetch('https://planetvitals-backend.iinerds.com/api/v1/covid-worldmeters/totalCount')
     .then(response => {
