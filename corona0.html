@@ -88,9 +88,9 @@
         </div>
     </header><br><br><br>
 
-    <!-- trial section -->
+    <!-- tab section -->
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'Stat')">Stat</button>
+        <button class="tablinks" onclick="openCity(event, 'Stat')">Stats</button>
         <button class="tablinks" onclick="openCity(event, 'FAQ')">FAQ</button>
         <button class="tablinks" onclick="openCity(event, 'NewsL')">News</button>
     </div>
@@ -387,27 +387,47 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <a> </a>
+                    <a> Is there a vaccine, drug or treatment for COVID-19?</a>
                     <div class="content">
-                        <p> </p>
+                        <p>Not yet. To date, there is no vaccine and no specific antiviral medicine to prevent or treat
+                            COVID-2019. However, those affected should receive care to relieve symptoms. People with
+                            serious illness should be hospitalized. Most patients recover thanks to supportive care.
+                            Possible vaccines and some specific drug treatments are under investigation. They are being
+                            tested through clinical trials. WHO is coordinating efforts to develop vaccines and
+                            medicines to prevent and treat COVID-19. The most effective ways to protect yourself and
+                            others against COVID-19 are to frequently clean your hands, cover your cough with the bend
+                            of elbow or tissue, and maintain a distance of at least 1 meter (3 feet) from people who are
+                            coughing or sneezing. </p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <a> </a>
+                    <a>Can CoVID-19 be caught from a person who has no symptoms?
+                    </a>
                     <div class="content">
-                        <p> </p>
+                        <p>The main way the disease spreads is through respiratory droplets expelled by someone who is
+                            coughing. The risk of catching COVID-19 from someone with no symptoms at all is very low.
+                            However, many people with COVID-19 experience only mild symptoms. This is particularly true
+                            at the early stages of the disease. It is therefore possible to catch COVID-19 from someone
+                            who has, for example, just a mild cough and does not feel ill. WHO is assessing ongoing
+                            research on the period of transmission of COVID-19 and will continue to share updated
+                            findings. </p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <a> </a>
+                    <a>Can the virus that causes COVID-19 be transmitted through the air? </a>
                     <div class="content">
-                        <p> </p>
+                        <p>Studies to date suggest that the virus that causes COVID-19 is mainly transmitted through
+                            contact with respiratory droplets rather than through the air. See previous answer on “How
+                            does COVID-19 spread?” </p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <a> </a>
+                    <a> Is COVID-19 the same as SARS?</a>
                     <div class="content">
-                        <p> </p>
+                        <p> No. The virus that causes COVID-19 and the one that caused the outbreak of Severe Acute
+                            Respiratory Syndrome (SARS) in 2003 are related to each other genetically, but the diseases
+                            they cause are quite different. SARS was more deadly but much less infectious than COVID-19.
+                            There have been no outbreaks of SARS anywhere in the world since 2003.</p>
                     </div>
                 </div>
             </div>
@@ -445,32 +465,10 @@
         </section>
 
         <!-- End News Lists Section -->
-        <!-- Template Main JS File -->
-        <script src="assets/js/main.js"></script>
 
-        <script>
-            let dt = '<div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">'
-            fetch('https://newsapi.org/v2/top-headlines?q=corona&sources=bbc-news&apiKey=5b67480ba15d44889bbfcbf108d596ef')
-                .then(response => {
-                    return response.json()
-                })
-                .then(data => {
-                    console.log(data)
-                    articles = data.articles
-                    if (articles && articles.length) {
-                        articles.forEach(item => {
-                            document.getElementById("news-row").innerHTML += dt + '<span><img src="' + item.urlToImage + '"width="80%"><h4>' + item.title + "</h4><p>" + item.description + '<a href="' + item.url + '">Read More</a></p></div>';
-                        });
-                    }
-
-                })
-                .catch(err => {
-                    // Do something for an error here
-                })
-        </script>
 
     </div>
-    <!-- trial section ending -->
+    <!-- tab section ending -->
 
 
 
