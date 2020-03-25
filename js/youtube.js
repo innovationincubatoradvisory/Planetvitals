@@ -1,6 +1,3 @@
-<script src="https://apis.google.com/js/api.js"></script>
-<script>
-  
 
   function authenticate() {
     return gapi.auth2.getAuthInstance()
@@ -30,6 +27,5 @@
   gapi.load("client:auth2", function() {
     gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
   });
-</script>
-<button onclick="authenticate().then(loadClient)">authorize and load</button>
-<button onclick="execute()">execute</button>
+  authenticate().then(loadClient)
+  execute()
