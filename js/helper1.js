@@ -7,8 +7,8 @@ window.randomScalingFactor = function() {
   return Math.floor(Math.random() * 100);
 };
 window.chartColors = {
-  red: "rgb(255, 99, 132)",
-  orange: "rgb(255, 159, 64)",
+  red: "rgb(255, 0, 0)",
+  orange: "rgb(255, 165, 0)",
   yellow: "rgb(255, 205, 86)",
   green: "rgb(75, 192, 192)",
   blue: "rgb(54, 162, 235)",
@@ -117,43 +117,6 @@ let drawAreaChart = function(
   });
 };
 
-let drawPieChart = function(values) {
-  console.log("valuesvaluesvaluesvalues", values);
-
-  var ctx = document.getElementById("myPieChart");
-  var myPieChart = new Chart(ctx, {
-    type: "doughnut",
-    data: {
-      labels: ["Confirmed", "Died", "Recovered"],
-      datasets: [
-        {
-          data: values,
-          backgroundColor: ["#4e73df", "#e74a3b", "#36b9cc"],
-          hoverBackgroundColor: ["#2e59d9", "#ef301e", "#2c9faf"],
-          hoverBorderColor: "rgba(234, 236, 244, 1)"
-        }
-      ]
-    },
-    options: {
-      maintainAspectRatio: false,
-      tooltips: {
-        backgroundColor: "rgb(255,255,255)",
-        bodyFontColor: "#858796",
-        borderColor: "#dddfeb",
-        borderWidth: 1,
-        xPadding: 15,
-        yPadding: 15,
-        displayColors: false,
-        caretPadding: 10
-      },
-      legend: {
-        display: false
-      },
-      cutoutPercentage: 80
-    }
-  });
-};
-
 let downloadCsv = function(items) {
   let csv = "";
   // Loop the array of objects
@@ -167,7 +130,6 @@ let downloadCsv = function(items) {
       for (let key in items[row]) {
         // This is to not add a comma at the last cell
         // The '\r\n' adds a new line
-        console.log(key);
 
         csv += key + (keysCounter + 1 < keysAmount ? "," : "\r\n");
         keysCounter++;
@@ -329,7 +291,6 @@ var initializeMap = function (geoData){
   });
 
   map.on('click', 'corona_circle', function (e) {
-    console.log(e.features[0]);
     
     var coordinates = e.features[0].geometry.coordinates.slice();
     var description =

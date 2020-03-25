@@ -5,7 +5,6 @@
             return response.json()
         })
         .then(data => {
-            console.log(data)
             articles = data.articles
             if (articles && articles.length) {
                 articles.forEach(item => {

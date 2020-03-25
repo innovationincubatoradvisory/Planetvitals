@@ -4,7 +4,6 @@ fetch('https://newsapi.org/v2/top-headlines?q=corona&sources=bbc-news&apiKey=5b6
     return response.json()
   })
   .then(data => {
-    console.log(data)
     articles = data.articles
     if (articles && articles.length) {
       articles.forEach(item => {
