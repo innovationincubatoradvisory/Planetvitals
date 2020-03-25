@@ -31,6 +31,8 @@ fetch('https://planetvitals-backend.iinerds.com/api/v1/covid-worldmeters/totalCo
         confirmedCount = dat.totalconfirmed;
         deathsCount = dat.totaldeath;
         recoverdCount = dat.totalrecovered;
+        console.log(dat.totalseriouscases)
+        console.log(dat.totalpp)
         document.getElementById("totalConfirmed").innerHTML = confirmedCount;
         document.getElementById("totalDeaths").innerHTML = deathsCount;
         document.getElementById("totalRecovered").innerHTML = recoverdCount;
