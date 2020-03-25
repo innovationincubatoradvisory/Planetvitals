@@ -9,7 +9,6 @@ fetch('https://planetvitals-backend.iinerds.com/api/v1/covid-worldmeters/listAll
     })
     .then(data => {
         // Work with JSON data here
-        console.log(data)
         regionsTotal = data.responseReport
 
         if (regionsTotal && regionsTotal.length) {
@@ -29,11 +28,6 @@ fetch('https://planetvitals-backend.iinerds.com/api/v1/covid-worldmeters/listAll
 
             });
         }
-        console.log(areaChartLabels)
-        console.log(confirmedChartValues)
-        console.log(diedChartValues)
-        console.log(recoveredChartValues)
-        console.log(data.dataForMap)
         drawAreaChart(areaChartLabels.slice(0, 10), confirmedChartValues.slice(0, 10), diedChartValues.slice(0, 10), recoveredChartValues.slice(0, 10))
     })
     .catch(err => {
