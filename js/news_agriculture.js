@@ -1,5 +1,5 @@
 let dt = '<div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">'
-fetch('https://newsapi.org/v2/top-headlines?q=agriculture&sources=bbc-news&language=en&apiKey=5b67480ba15d44889bbfcbf108d596ef')
+fetch('https://newsapi.org/v2/everything?q=agriculture,food&language=en&apiKey=5b67480ba15d44889bbfcbf108d596ef')
   .then(response => {
     return response.json()
   })
