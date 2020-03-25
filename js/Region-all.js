@@ -10,7 +10,6 @@ fetch('https://planetvitals-backend.iinerds.com/api/v1/covid-worldmeters/listAll
     .then(data => {
         // Work with JSON data here
         regionsTotal = data.responseReport
-
         if (regionsTotal && regionsTotal.length) {
             regionsTotal.forEach(item => {
                 areaChartLabels.push(item.country)
