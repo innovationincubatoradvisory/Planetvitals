@@ -18,10 +18,10 @@ fetch('https://planetvitals-backend.iinerds.com/api/v1/covid-worldmeters/listAll
                 recoveredChartValues.push(parseFloat(item.recovered))
                 let itemactive = item.confirmed - item.deaths - item.recovered;
                 if (itemactive == 0) {
-                    document.getElementById("tb-content").innerHTML += '<tr class="table-success">' + "<td>" + item.country + "</td>" + "<td>" + item.confirmed + "</td>" + "<td>" + item.deaths + "</td>" + "<td>" + item.recovered + "</td>" + "<td>" + itemactive + "</td>" + "<td>" + item.serious_cases + "</td>" + "<td>" + item.totalcases_pp + "</td>" +"</tr>";
+                    document.getElementById("tb-content").innerHTML += '<tr class="table-info">' + "<td>" + item.country + "</td>" + '<td>' + item.confirmed + "</td>" + '<td style="color:darkred;">' + item.deaths + "</td>" + '<td style="color:red;">' + item.serious_cases + "</td>" +'<td style="color:orange;">' + itemactive + "</td>" +'<td style="color:green;">'  + item.recovered + "</td>" +   "<td>" + item.totalcases_pp + "</td>" +"</tr>";
 
                 } else {
-                    document.getElementById("tb-content").innerHTML += "<tr>" + "<td>" + item.country + "</td>" + "<td>" + item.confirmed + "</td>" + "<td>" + item.deaths + "</td>" + "<td>" + item.recovered + "</td>" + "<td>" + itemactive + "</td>" + "<td>" + item.serious_cases + "</td>" + "<td>" + item.totalcases_pp + "</td>" +"</tr>";
+                    document.getElementById("tb-content").innerHTML += "<tr>" + "<td>" + item.country + "</td>" + "<td>" + item.confirmed + "</td>" + '<td style="color:darkred;">'  + item.deaths + "</td>" + '<td style="color:red;">' + item.serious_cases + "</td>"  + '<td style="color:orange;">' + itemactive + "</td>" +'<td style="color:green;">' + item.recovered + "</td>" +  '<td>' + item.totalcases_pp + "</td>" +"</tr>";
 
                 }
 
