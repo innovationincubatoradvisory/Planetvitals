@@ -16,145 +16,6 @@ window.chartColors = {
   grey: "rgb(201, 203, 207)"
 };
 
-// Area Chart
-let drawAreaChart = function(
-  lables,
-  confirmedChartValues,
-  diedChartValues,
-  recoveredChartValues
-) {
-  var ctx = document.getElementById("myAreaChart");
-
-  var myChart = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: lables,
-      datasets: [
-        {
-          type: "line",
-          label: "Confirmed: ",
-          borderColor: window.chartColors.blue,
-          borderWidth: 2,
-          fill: false,
-          data: confirmedChartValues
-        },
-        {
-          type: "bar",
-          label: "Died: ",
-          backgroundColor: window.chartColors.red,
-          stack: "Stack 0",
-          data: diedChartValues
-        },
-        {
-          type: "bar",
-          label: "Recovered: ",
-          backgroundColor: window.chartColors.green,
-          stack: "Stack 0",
-          data: recoveredChartValues
-        }
-      ]
-    },
-    options: {
-      maintainAspectRatio: false,
-      layout: {
-        padding: {
-          left: 10,
-          right: 25,
-          top: 25,
-          bottom: 0
-        }
-      },
-      scales: {
-        xAxes: [
-          {
-            time: {
-              unit: "date"
-            },
-            gridLines: {
-              display: false,
-              drawBorder: false
-            }
-            // ticks: {
-            //   maxTicksLimit: 7
-            // }
-          }
-        ],
-        yAxes: [
-          {
-            ticks: {
-              maxTicksLimit: 10,
-              padding: 10
-            },
-            gridLines: {
-              color: "rgb(234, 236, 244)",
-              zeroLineColor: "rgb(234, 236, 244)",
-              drawBorder: false,
-              borderDash: [2],
-              zeroLineBorderDash: [2]
-            }
-          }
-        ]
-      },
-      legend: {
-        display: false
-      },
-      tooltips: {
-        backgroundColor: "rgb(255,255,255)",
-        bodyFontColor: "#858796",
-        titleMarginBottom: 10,
-        titleFontColor: "#6e707e",
-        titleFontSize: 14,
-        borderColor: "#dddfeb",
-        borderWidth: 1,
-        xPadding: 15,
-        yPadding: 15,
-        displayColors: false,
-        intersect: false,
-        mode: "index",
-        caretPadding: 10
-      }
-    }
-  });
-};
-
-let downloadCsv = function(items) {
-  let csv = "";
-  // Loop the array of objects
-  for (let row = 0; row < items.length; row++) {
-    let keysAmount = Object.keys(items[row]).length;
-    let keysCounter = 0;
-
-    // If this is the first row, generate the headings
-    if (row === 0) {
-      // Loop each property of the object
-      for (let key in items[row]) {
-        // This is to not add a comma at the last cell
-        // The '\r\n' adds a new line
-
-        csv += key + (keysCounter + 1 < keysAmount ? "," : "\r\n");
-        keysCounter++;
-      }
-    } else {
-      for (let key in items[row]) {
-        csv += items[row][key] + (keysCounter + 1 < keysAmount ? "," : "\r\n");
-        keysCounter++;
-      }
-    }
-    keysCounter = 0;
-  }
-  // Once we are done looping, download the .csv by creating a link
-  let link = document.createElement("a");
-  link.id = "download-csv";
-  link.setAttribute(
-    "href",
-    "data:text/plain;charset=utf-8," + encodeURIComponent(csv)
-  );
-  link.setAttribute("download", "corona-report.csv");
-  document.body.appendChild(link);
-  document.querySelector("#download-csv").click();
-};
-
-
 var initializeMap = function (geoData){  
   let geojson_data = {
     "type": "FeatureCollection",
@@ -162,11 +23,11 @@ var initializeMap = function (geoData){
     "features": geoData
   }
   // filters for classifying corona_spots into five categories based on confirmed reports
-  var confirmed1 = ['<', ['get', 'confirmed'], 10];
-  var confirmed2 = ['all', ['>=', ['get', 'confirmed'], 2], ['<', ['get', 'confirmed'], 50]];
-  var confirmed3 = ['all', ['>=', ['get', 'confirmed'], 3], ['<', ['get', 'confirmed'], 100]];
-  var confirmed4 = ['all', ['>=', ['get', 'confirmed'], 4], ['<', ['get', 'confirmed'], 500]];
-  var confirmed5 = ['>=', ['get', 'confirmed'], 1000];
+  var confirmed1 = ['<', ['get', 'confirmed'], 1000];
+  var confirmed2 = ['all', ['>=', ['get', 'confirmed'], 2], ['<', ['get', 'confirmed'], 5000]];
+  var confirmed3 = ['all', ['>=', ['get', 'confirmed'], 3], ['<', ['get', 'confirmed'], 10000]];
+  var confirmed4 = ['all', ['>=', ['get', 'confirmed'], 4], ['<', ['get', 'confirmed'], 50000]];
+  var confirmed5 = ['>=', ['get', 'confirmed'], 50000];
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiaWlhLXBsYW5ldCIsImEiOiJjazZrY3RyeWgwMzB0M2RxZmIwcnp0cXFhIn0.4KlBCBispcZFokPHivJZOQ';
   var map = new mapboxgl.Map({
