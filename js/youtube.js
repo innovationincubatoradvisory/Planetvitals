@@ -29,3 +29,11 @@
   });
   authenticate().then(loadClient)
   execute()
+
+  <div class="col-md-4 video-box no-gutters">
+                                <img src="assets/img/thumb.jpg" class="img-fluid" alt="">
+                                <a href="https://www.youtube.com/watch?v=wKX1PQTz5_M" class="venobox play-btn mb-4"
+                                    data-vbtype="video" data-autoplay="true"></a>
+                                <p>Surgeon General Social Distancing</p>
+                            </div>
+  
