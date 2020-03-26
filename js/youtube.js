@@ -6,7 +6,7 @@
               function(err) { console.error("Error signing in", err); });
   }
   function loadClient() {
-    gapi.client.setApiKey("YOUR_API_KEY");
+    gapi.client.setApiKey("AIzaSyBookWUweU6U8vwjZfY_ziRJETSjWCK9B4");
     return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
         .then(function() { console.log("GAPI client loaded for API"); },
               function(err) { console.error("Error loading GAPI client for API", err); });
@@ -30,10 +30,5 @@
   authenticate().then(loadClient)
   execute()
 
-  <div class="col-md-4 video-box no-gutters">
-                                <img src="assets/img/thumb.jpg" class="img-fluid" alt="">
-                                <a href="https://www.youtube.com/watch?v=wKX1PQTz5_M" class="venobox play-btn mb-4"
-                                    data-vbtype="video" data-autoplay="true"></a>
-                                <p>Surgeon General Social Distancing</p>
-                            </div>
-  
+ 
+
