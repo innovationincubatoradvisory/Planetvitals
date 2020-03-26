@@ -32,6 +32,7 @@ fetch('https://planetvitals-backend.iinerds.com/api/v1/covid-worldmeters/listAll
         affected=affected-1;
         drawAreaChart(areaChartLabels.slice(0, 10), confirmedChartValues.slice(0, 10), diedChartValues.slice(0, 10), recoveredChartValues.slice(0, 10))
         document.getElementById("count-country").innerHTML +=affected+" countries and territories";
+        new Tablesort(document.getElementById('country-table'));
     })
     .catch(err => {
         // Do something for an error here
