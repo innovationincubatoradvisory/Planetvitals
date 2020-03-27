@@ -64,6 +64,8 @@
         function showPosition(position) {
           x.innerHTML = "Latitude: " + position.coords.latitude +
           "<br>Longitude: " + position.coords.longitude;
+            console.log(position.coords.latitude);
+            console.log(position.coords.longitude);
         }
         </script> 
 </head>
@@ -99,9 +101,9 @@
 
         </div>
     </header><br><br><br>
+    <div id="demo"></div>
 
     <div class="container">
-        <div id="demo"></div>
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active" id="corona-stats-tab" data-toggle="tab" href="#corona-stats"
