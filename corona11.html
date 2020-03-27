@@ -51,6 +51,21 @@
 
         gtag('config', 'UA-158798381-1');
     </script>
+     <script>
+        var x = document.getElementById("demo");
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+        
+        function showPosition(position) {
+          x.innerHTML = "Latitude: " + position.coords.latitude +
+          "<br>Longitude: " + position.coords.longitude;
+        }
+        </script> 
 </head>
 
 <body>
@@ -86,6 +101,7 @@
     </header><br><br><br>
 
     <div class="container">
+        <div id="demo"></div>
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active" id="corona-stats-tab" data-toggle="tab" href="#corona-stats"
