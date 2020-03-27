@@ -1505,3 +1505,11 @@ section {
 #footer .credits a {
   color: #9eccf4;
 }
+@media (max-width: 400px) {
+  #second-nav{
+    top: 85px!important;
+  }
+  #header{
+    height:80px;
+  }
+}
