@@ -1,3 +1,5 @@
+
+
 // colors to use for the map categories
 var colors = ["#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c"];
 (Chart.defaults.global.defaultFontFamily = "Nunito"),
@@ -32,24 +34,29 @@ var initializeMap = function (geoData){
   mapboxgl.accessToken = 'pk.eyJ1IjoiaWlhLXBsYW5ldCIsImEiOiJjazZrY3RyeWgwMzB0M2RxZmIwcnp0cXFhIn0.4KlBCBispcZFokPHivJZOQ';
   var map = new mapboxgl.Map({
     container: 'map',
-    zoom: 0.3,
+    zoom: 3,
     center: [0, 20],
-    style: 'mapbox://styles/mapbox/light-v10'
+    style: 'mapbox://styles/mapbox/dark-v10'
   });
 
   map.addControl(new mapboxgl.NavigationControl());
+  map.addControl(
+new mapboxgl.GeolocateControl({
+positionOptions: {
+enableHighAccuracy: true
+},
+trackUserLocation: true
+})
+);
 
-  map.fitBounds([
-    [-4.65, 51.03457],
-    [134.28917, 18.24306]
-  ]);
+ 
   map.on('load', function () {
     // add a clustered GeoJSON source for a sample set of corona_spots
     map.addSource('corona_spots', {
       'type': 'geojson',
       'data': geojson_data,
       'cluster': true,
-      'clusterRadius': 80,
+      'clusterRadius': 1,
       'clusterProperties': {
         // keep separate counts for each confirmed category in a cluster
         "sum": ['+', ['get', 'confirmed']],
@@ -80,7 +87,7 @@ var initializeMap = function (geoData){
           colors[4]
         ],
         'circle-opacity': 1.0,
-        'circle-radius': 12
+        'circle-radius': 20
       }
     });
     map.addLayer({
