@@ -34,7 +34,7 @@ var initializeMap = function (geoData){
   var map = new mapboxgl.Map({
     container: 'map',
     zoom: 3,
-    center: [0, 20],
+    center: [78, 20],
     style: 'mapbox://styles/mapbox/dark-v10'
   });
 
