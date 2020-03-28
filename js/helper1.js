@@ -162,7 +162,7 @@ trackUserLocation: true
     var coordinates = e.features[0].geometry.coordinates.slice();
     var description =
     "<br><p>Country:"+
-    e.features[0].properties
+    e.features[0].properties.country+
       "<br><p>Confirmed: " +
       e.features[0].properties.confirmed +
       "</p><p>Died: " +
