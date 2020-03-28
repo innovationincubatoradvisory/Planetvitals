@@ -131,8 +131,19 @@
                             Corona Virus Cases:
                         </h3>
                     </div>
-                    <div class="row text-center px-5">
-                        <a href="#country" style="color: #699A21;">View by Country</a>
+                    <div class="row px-5">
+                        <div class="col-md-3">
+                        <a href="#country" style="color: #699A21;"><u>View by Country</u></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#by-age" style="color: #699A21;"><u>View Fatality by Age</u></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#by-sex" style="color: #699A21;"><u>View Fatality by Sex</u></a>
+                    </div>
+                    <div class="col-md-3 p-0">
+                        <a href="#by-comorbidity" style="color: #699A21;"><u>View Fatality by COMORBIDITY</u></a>
+                    </div>
                     </div>
                     <div class="row counts">
                         <div class="card col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
@@ -257,8 +268,8 @@
 
 
 
-                    <section id="portfolio" class="portfolio section-bg">
-                        <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <section id="Table-datas" class="portfolio">
+                        <div class="row" id="by-age">
 
                             <div class="section-title">
                                 <h2>COVID-19 Fatality Rate by AGE:</h2>
@@ -386,7 +397,8 @@
                                         by the virus (%).</strong> The percentages do not have to add up to 100%, as
                                     they <strong> do NOT
                                         represent share of deaths by age</strong> group.</p><br><br>
-
+                            </div>
+                            <div class="row" id="by-sex">
 
                                 <h2>COVID-19 Fatality Rate by SEX: </h2>
                                 <p> <strong> *Death Rate</strong> = (number of deaths / number of cases) = <strong>
@@ -430,10 +442,11 @@
                                         </tr>
                                     </tbody>
                                 </table><br><br>
-                                <p>*Death Rate = (number of deaths / number of cases) = probability of dying if infected
+                                <p>*<strong>Death Rate</strong> = (number of deaths / number of cases) = probability of dying if infected
                                     by the virus (%). The percentages do not have to add up to 100%, as they do NOT
                                     represent share of deaths by sex.</p><br><br>
-
+                            </div>
+                            <div class="row" id="by-comorbidity">
                                 <h2>Pre-existing medical conditions (comorbidities)</h2>
                                 <p>Patients who reported no pre-existing ("comorbid") medical conditions had a case
                                     fatality rate of 0.9%. Pre-existing illnesses that put patients at higher risk of
@@ -533,7 +546,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <p>*<strong>Death Rat</strong>e = (number of deaths / number of cases) =
+                                <p>*<strong>Death Rate</strong> = (number of deaths / number of cases) =
                                     <strong>probability of dying if infected by the virus</strong> (%). The percentages
                                     <span style="color: red;"> do not have to add up to 100%</span>, as they<strong> do
                                         NOT
