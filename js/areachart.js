@@ -14,7 +14,7 @@ let drawAreaChart = function(
         datasets: [
           {
             type: "line",
-            label: "Confirmed: ",
+            label: "Confirmed ",
             borderColor: window.chartColors.grey,
             borderWidth: 2,
             fill: false,
@@ -22,21 +22,21 @@ let drawAreaChart = function(
           },
           {
             type: "bar",
-            label: "Recovered: ",
+            label: "Recovered ",
             backgroundColor: window.chartColors.green,
             stack: "Stack 0",
             data: recoveredChartValues
           },
           {
             type: "bar",
-            label: "Died: ",
+            label: "Died ",
             backgroundColor: window.chartColors.red,
             stack: "Stack 0",
             data: diedChartValues
           },
           {
             type: "bar",
-            label: "Active: ",
+            label: "Active ",
             backgroundColor: window.chartColors.orange,
             stack: "Stack 0",
             data: activeChartValues
@@ -88,7 +88,7 @@ let drawAreaChart = function(
         legend: {
           display: true,
           labels:{
-            fontColor: 'rgb(255, 99, 132)'
+            fontColor: 'rgb(112, 128, 144)'
           }
         },
         tooltips: {
