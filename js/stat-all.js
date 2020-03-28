@@ -31,12 +31,22 @@ fetch('https://planetvitals-backend-py.iinerds.com/count')
         confirmedCount = dat.confirmed;
         deathsCount = dat.deaths;
         recoverdCount = dat.recovered;
-        seriouscount=dat.seriouscases;
+        seriouscount=dat.serious_cases;
         case_ppcount=dat.totalcases_pp;
+        closedCount=deathsCount+recoverdCount;
+        activeCount=confirmedCount - closedCount;
+        mildCount=activeCount-seriouscount;
+        
         document.getElementById("totalConfirmed").innerHTML = confirmedCount;
         document.getElementById("totalDeaths").innerHTML = deathsCount;
         document.getElementById("totalRecovered").innerHTML = recoverdCount;
-        document.getElementById("totalSick").innerHTML = confirmedCount - deathsCount - recoverdCount;
+        document.getElementById("totalSick").innerHTML =  activeCount;
+        document.getElementById("card-closed-count").innerHTML='<strong>'+closedCount+'</strong>';
+        document.getElementById("card-closed-death").innerHTML='<strong>'+deathsCount+'('+((deathsCount/(closedCount))*100).toFixed(1)+'%)'+'</strong>';
+        document.getElementById("card-closed-recovered").innerHTML='<strong>'+recoverdCount+'('+((recoverdCount/(closedCount))*100).toFixed(1)+'%)'+'</strong>';
+        document.getElementById("card-infected-count").innerHTML='<strong>'+activeCount+'</strong>';
+        document.getElementById("card-infected-mild").innerHTML='<strong>'+mildCount+'('+((mildCount/activeCount)*100).toFixed(1)+'%)'+'</strong>';
+        document.getElementById("card-infected-serious").innerHTML='<strong>'+seriouscount+'('+((seriouscount/activeCount)*100).toFixed(1)+'%)'+'</strong>';
         drawDonut(deathsCount, recoverdCount, confirmedCount - deathsCount - recoverdCount)
     })
     .catch(err => {

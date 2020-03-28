@@ -44,7 +44,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158798381-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-158798381-1');
@@ -152,9 +155,55 @@
                         </div>
                     </div> 
                     <div class="row d-flex justify-content-center pt-2">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header text-center">
+                                    Active Cases
+                                </div>
+                                <div class="card-body text">
+                                    <h3 class="card-title text-center" id="card-infected-count" style="color:orange;">
+                                        </h3>
+                                    <p class="card-text text-center">Currently Infected patients</p>
+                                    <div class="row">
+                                        <div class="float-left col-md-6">
+                                            <h6 class="text-center" id="card-infected-mild" style="color:lawngreen">
+                                                </h6>
+                                            <p class="text-center">in mild condition</p>
+                                        </div>
+                                        <div class="float-right col-md-6">
+                                            <h6 class="text-center" id="card-infected-serious"style="color:red;"></h6>
+                                            <p class="text-center">in critical condition</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 p-0 m-0">
                             <canvas id="doughnut-chart" width="100%"></canvas>
                         </div>
+                        <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                closed Cases
+                            </div>
+                            <div class="card-body text">
+                                <h3 class="card-title text-center" id="card-closed-count" style="color:orange;">
+                                    </h3>
+                                <p class="card-text text-center">cases with outcomes</p>
+                                <div class="row">
+                                    <div class="float-left col-md-6">
+                                        <h6 class="text-center" id="card-closed-recovered" style="color:green">
+                                            </h6>
+                                        <p class="text-center">Recovered</p>
+                                    </div>
+                                    <div class="float-right col-md-6">
+                                        <h6 class="text-center" id="card-closed-death"style="color:darkred;"></h6>
+                                        <p class="text-center">in critical condition</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                     <!--table Headline-->
                     <div class="row pt-5 px-5">
@@ -167,23 +216,27 @@
                     </div>
                     <!-- STATS table start -->
                     <div class="row d-flex justify-content-center py-2" id="country">
-                        <div class="col-sm-12 col-md-8 ">
+                        <div class="col-sm-12 col-md-12 ">
                             <div class="row float-right mr-1 mb-1"><input id="myInput" type="text"
                                     placeholder="Search by location">
                             </div>
                             <table class="table text-center table-striped table-bordered table-responsive-sm"
                                 id="country-table">
 
-                                <thead class="thead-dark ">
+                                <thead class="thead-dark">
                                     <tr class="text-center">
                                         <th style="color:whitesmoke"><i class="icofont-sort"></i>Country</th>
                                         <th style="color:whitesmoke"><i class="icofont-sort"></i>Confirmed Cases</th>
-                                        <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total Death</th>
+                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>New cases</th>
+                                        <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total Deaths</th>
+                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>New Deaths</th>
                                         <th style="color:whitesmoke"><i class="icofont-sort"></i>Serious Cases</th>
                                         <th style="color:whitesmoke"><i class="icofont-sort"></i>Active Cases</th>
                                         <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total Recovered</th>
-                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>Cases/Million
-                                            Population</th>
+                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>Cases/M Population</th>
+                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>Deaths/M Population
+                                        </th>
+                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>First Case</th>
                                     </tr>
                                 </thead>
                                 <tbody id="tb-content">
@@ -1100,14 +1153,14 @@
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 
 
     <!--Custom Page JS-->
