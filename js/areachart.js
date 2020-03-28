@@ -86,7 +86,10 @@ let drawAreaChart = function(
           ]
         },
         legend: {
-          display: false
+          display: true,
+          labels:{
+            fontColor: 'rgb(255, 99, 132)'
+          }
         },
         tooltips: {
           backgroundColor: "rgb(255,255,255)",
