@@ -2,7 +2,8 @@ let drawAreaChart = function(
     lables,
     confirmedChartValues,
     diedChartValues,
-    recoveredChartValues
+    recoveredChartValues,
+    activeChartValues
   ) {
     var ctx = document.getElementById("myAreaChart");
   
@@ -21,6 +22,13 @@ let drawAreaChart = function(
           },
           {
             type: "bar",
+            label: "Recovered: ",
+            backgroundColor: window.chartColors.green,
+            stack: "Stack 0",
+            data: recoveredChartValues
+          },
+          {
+            type: "bar",
             label: "Died: ",
             backgroundColor: window.chartColors.red,
             stack: "Stack 0",
@@ -28,11 +36,12 @@ let drawAreaChart = function(
           },
           {
             type: "bar",
-            label: "Recovered: ",
-            backgroundColor: window.chartColors.green,
+            label: "Active: ",
+            backgroundColor: window.chartColors.orange,
             stack: "Stack 0",
-            data: recoveredChartValues
+            data: activeChartValues
           }
+          
         ]
       },
       options: {
