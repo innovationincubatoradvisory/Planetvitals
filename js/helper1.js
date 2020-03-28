@@ -1,5 +1,4 @@
 
-
 // colors to use for the map categories
 var colors = ["#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c"];
 (Chart.defaults.global.defaultFontFamily = "Nunito"),
@@ -162,6 +161,8 @@ trackUserLocation: true
     
     var coordinates = e.features[0].geometry.coordinates.slice();
     var description =
+    "<br><p>Country:"+
+    e.features[0].properties
       "<br><p>Confirmed: " +
       e.features[0].properties.confirmed +
       "</p><p>Died: " +
