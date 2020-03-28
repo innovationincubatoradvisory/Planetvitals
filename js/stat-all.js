@@ -23,16 +23,16 @@ function drawDonut(p1, p2, p3) {
     });
 }
 
-fetch('https://planetvitals-backend.iinerds.com/api/v1/covid-worldmeters/totalCount')
+fetch('https://planetvitals-backend-py.iinerds.com/count')
     .then(response => {
         return response.json()
     })
     .then(dat => {
-        confirmedCount = dat.totalconfirmed;
-        deathsCount = dat.totaldeath;
-        recoverdCount = dat.totalrecovered;
-        console.log(dat.totalseriouscases)
-        console.log(dat.totalpp)
+        confirmedCount = dat.confirmed;
+        deathsCount = dat.deaths;
+        recoverdCount = dat.recovered;
+        seriouscount=dat.seriouscases;
+        case_ppcount=dat.totalcases_pp;
         document.getElementById("totalConfirmed").innerHTML = confirmedCount;
         document.getElementById("totalDeaths").innerHTML = deathsCount;
         document.getElementById("totalRecovered").innerHTML = recoverdCount;

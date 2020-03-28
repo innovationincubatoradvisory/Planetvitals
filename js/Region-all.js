@@ -4,15 +4,15 @@ let confirmedChartValues = []
 let diedChartValues = []
 let recoveredChartValues = []
 let affected= 0
-fetch('https://planetvitals-backend.iinerds.com/api/v1/covid-worldmeters/listAllMapData')
+fetch('https://planetvitals-backend-py.iinerds.com/')
     .then(response => {
         return response.json()
     })
     .then(data => {
         // Work with JSON data here
-        regionsTotal = data.responseReport
-        if (regionsTotal && regionsTotal.length) {
-            regionsTotal.forEach(item => {
+        regions = data.data
+        if (regions && regions.length) {
+            regions.forEach(item => {
                 areaChartLabels.push(item.country)
                 confirmedChartValues.push(parseFloat(item.confirmed))
                 diedChartValues.push(parseFloat(item.deaths))
