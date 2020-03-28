@@ -34,7 +34,7 @@ var initializeMap = function (geoData){
   var map = new mapboxgl.Map({
     container: 'map',
     zoom: 3,
-    center: [0, 20],
+    center: [78, 20],
     style: 'mapbox://styles/mapbox/dark-v10'
   });
 
@@ -162,7 +162,7 @@ trackUserLocation: true
     var coordinates = e.features[0].geometry.coordinates.slice();
     var description =
     "<br><p>Country:"+
-    e.features[0].properties
+    e.features[0].properties.country+
       "<br><p>Confirmed: " +
       e.features[0].properties.confirmed +
       "</p><p>Died: " +
