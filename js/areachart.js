@@ -14,7 +14,7 @@ let drawAreaChart = function(
           {
             type: "line",
             label: "Confirmed: ",
-            borderColor: window.chartColors.blue,
+            borderColor: window.chartColors.grey,
             borderWidth: 2,
             fill: false,
             data: confirmedChartValues
