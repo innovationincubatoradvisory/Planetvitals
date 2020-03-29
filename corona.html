@@ -121,9 +121,7 @@
                         </div>
                     </div>
                     <div class="chart-subtitle row px-5">
-                        <p style="color: lightgrey;">*The above chart is being updated based on hourly curated data from
-                            multiple
-                            sources.
+                        <p style="color: lightgrey;">*The above chart is being updated based on hourly curated data from multiple sources.
                         </p>
                     </div>
                     <div class="row pt-2 px-5">
@@ -225,9 +223,6 @@
                                     style="color:darkred;"></span></strong> around the world and the Diamond Princess
                             cruise ship harbored in Yokohama, Japan </p>
                     </div>
-                    <div class="row">
-                        <iframe src="https://planetvitals.com/map.html" width="100%" height="450px"></iframe>
-                    </div>
 
                     <nav id="fourth-nav">
                         <div class="nav nav-pills pl-3 py-3 d-flex justify-content-center" style="background: white;"
@@ -237,7 +232,7 @@
                                 aria-selected="true">Table view</a>
                             <a class="nav-item nav-link" id="corona-mapview-tab" data-toggle="tab"
                                 href="#corona-mapview" role="tab" aria-controls="corona-mapview"
-                                aria-selected="false">Map view</a>
+                                aria-selected="false">Graphical/Map view</a>
                         </div>
                     </nav>
 
@@ -387,6 +382,8 @@
 
                                         </div>
                                     </div>
+                                    <p style="background-color: #bee5eb;">*Highlighted in green all cases have had an outcome.</p>
+                                    <p style="color: lightgrey;">*The above table is being updated based on hourly curated data from multiple sources and new cases are computed based on changes from previous day and are updated at GMT +0</p>
 
                                 </div>
 
@@ -724,7 +721,11 @@
 
                         <div class="tab-pane fade show " id="corona-mapview" role="tabpane02"
                             aria-labelledby="corona-mapview-tab">
-                            <h1>HERE COMES THE MAP VIEW</h1>
+                            <div class="container-fluid">
+                            <div class="row">
+                                <iframe src="https://planetvitals.com/map.html" width="100%" height="450px"></iframe>
+                            </div>
+                        </div>
                         </div>
                     </div>
 
