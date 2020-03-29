@@ -108,7 +108,7 @@ trackUserLocation: true
           'case',
           ['<', ['get', 'confirmed'], 100],
           'black',
-          'white'
+          'black'
         ]
       }
     });
