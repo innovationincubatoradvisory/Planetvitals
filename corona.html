@@ -245,80 +245,94 @@
 
 
                             </nav>
-                            <!-- <ul class="nav nav-pills float-left pb-2">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#">Today</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#">Yesterday</a>
-                                </li>
-                            </ul> -->
+                            <!--Table TABs  BEGIN-->
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="corona-todaytable" role="tabpanel"
+                                    aria-labelledby="corona-todaytable-tab">
+                                    <div class="container">
+                                        <div class="row float-right mr-1 mb-1"><input id="myInput-1" type="text"
+                                                placeholder="Search by location">
+                                        </div>
+                                        <table
+                                            class="table text-center table-striped table-bordered table-responsive-sm"
+                                            id="country-table-1">
 
-                            <div class="tab-pane fade show active" id="corona-todaytable" role="tabpanel"
-                                aria-labelledby="corona-todaytable-tab">
-                                <div class="row float-right mr-1 mb-1"><input id="myInput" type="text"
-                                        placeholder="Search by location">
+                                            <thead class="thead-dark">
+                                                <tr class="text-center">
+                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>Country
+                                                    </th>
+                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>Confirmed
+                                                        Cases
+                                                    </th>
+                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>New cases
+                                                    </th>
+                                                    <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total
+                                                        Deaths
+                                                    </th>
+                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>New Deaths
+                                                    </th>
+                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>Serious
+                                                        Cases
+                                                    </th>
+                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>Active
+                                                        Cases
+                                                    </th>
+                                                    <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total
+                                                        Recovered
+                                                    </th>
+                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>Cases/M
+                                                        Population
+                                                    </th>
+                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>Deaths/M
+                                                        Population
+                                                    </th>
+                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>First Case
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tb-content-1">
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                <table class="table text-center table-striped table-bordered table-responsive-sm"
-                                    id="country-table">
-
-                                    <thead class="thead-dark">
-                                        <tr class="text-center">
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>Country</th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>Confirmed Cases
-                                            </th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>New cases</th>
-                                            <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total Deaths</th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>New Deaths</th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>Serious Cases</th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>Active Cases</th>
-                                            <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total Recovered
-                                            </th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>Cases/M Population
-                                            </th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>Deaths/M Population
-                                            </th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>First Case</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tb-content">
-                                    </tbody>
-                                </table>
-                            </div>
 
 
 
-                            <div class="tab-pane fade" id="corona-ystrdytable" role="tabpanel"
-                                aria-labelledby="corona-ystrdytable-tab">
+                                <div class="tab-pane fade" id="corona-ystrdytable" role="tabpanel"
+                                    aria-labelledby="corona-ystrdytable-tab">
+                                    <div class="container">
+                                        <div class="row float-right mr-1 mb-1"><input id="myInput-2" type="text"
+                                            placeholder="Search by location">
+                                    </div>
+                                    <table class="table text-center table-striped table-bordered table-responsive-sm"
+                                        id="country-table-2">
+    
+                                        <thead class="thead-dark">
+                                            <tr class="text-center">
+                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>COUNTRY</th>
+                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>Confirmed Cases
+                                                </th>
+                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>New cases</th>
+                                                <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total Deaths</th>
+                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>New Deaths</th>
+                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>Serious Cases</th>
+                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>Active Cases</th>
+                                                <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total Recovered
+                                                </th>
+                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>Cases/M Population
+                                                </th>
+                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>Deaths/M Population
+                                                </th>
+                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>First Case</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tb-content-2">
+                                        </tbody>
+                                    </table>
 
-                                <div class="row float-right mr-1 mb-1"><input id="myInput" type="text"
-                                        placeholder="Search by location">
+                                    </div>
+
                                 </div>
-                                <table class="table text-center table-striped table-bordered table-responsive-sm"
-                                    id="country-table">
-
-                                    <thead class="thead-dark">
-                                        <tr class="text-center">
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>COUNTRY</th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>Confirmed Cases
-                                            </th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>New cases</th>
-                                            <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total Deaths</th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>New Deaths</th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>Serious Cases</th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>Active Cases</th>
-                                            <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total Recovered
-                                            </th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>Cases/M Population
-                                            </th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>Deaths/M Population
-                                            </th>
-                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>First Case</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tb-content">
-                                    </tbody>
-                                </table>
                             </div>
 
 
@@ -1548,13 +1562,13 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-        </script>
+    </script>
 
 
     <!--Custom Page JS-->
@@ -1564,14 +1578,26 @@
     <script src="js/news_corona_all.js"></script>
     <!--content Script-->
     <script src="js/stat-all.js"></script>
+    <script src="js/region-all-yesterday.js"></script>
     <script src="js/Region-all.js"></script>
+
 
     <!--search Script-->
     <script>
         $(document).ready(function () {
-            $("#myInput").on("keyup", function () {
+            $("#myInput-1").on("keyup", function () {
                 var value = $(this).val().toLowerCase();
-                $("#tb-content tr").filter(function () {
+                $("#tb-content-1 tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#myInput-2").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#tb-content-2 tr").filter(function () {
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });

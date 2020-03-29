@@ -22,10 +22,10 @@ fetch('https://planetvitals-backend-py.iinerds.com/')
                 activeChartValues.push(parseFloat(itemactive))
                 affected= affected+1;
                 if (itemactive == 0) {
-                    document.getElementById("tb-content").innerHTML += '<tr class="table-info">' + "<td>" + item.country + "</td>" + '<td>' + item.confirmed + "</td>" + '<td>' + item.change_confirmed + "</td>" + '<td style="color:darkred;">' + item.deaths + "</td>" + '<td style="color:darkred;">' + item.change_deaths + "</td>" +  '<td style="color:red;">' + item.serious_cases + "</td>" +'<td style="color:orange;">' + itemactive + "</td>" +'<td style="color:green;">'  + item.recovered + "</td>" +   "<td>" + item.totalcases_pp + "</td>" +"<td>" + item.deaths_pp + "</td>" +"<td>" + item.first_case + "</td>" +"</tr>";
+                    document.getElementById("tb-content-1").innerHTML += '<tr class="table-info">' + "<td>" + item.country + "</td>" + '<td>' + item.confirmed + "</td>" + '<td>' + item.change_confirmed + "</td>" + '<td style="color:darkred;">' + item.deaths + "</td>" + '<td style="color:darkred;">' + item.change_deaths + "</td>" +  '<td style="color:red;">' + item.serious_cases + "</td>" +'<td style="color:orange;">' + itemactive + "</td>" +'<td style="color:green;">'  + item.recovered + "</td>" +   "<td>" + item.totalcases_pp + "</td>" +"<td>" + item.deaths_pp + "</td>" +"<td>" + item.first_case + "</td>" +"</tr>";
 
                 } else {
-                    document.getElementById("tb-content").innerHTML += "<tr>"  + "<td>" + item.country + "</td>" + '<td>' + item.confirmed + "</td>" + '<td>' + item.change_confirmed + "</td>" + '<td style="color:darkred;">' + item.deaths + "</td>" + '<td style="color:darkred;">' + item.change_deaths + "</td>" +  '<td style="color:red;">' + item.serious_cases + "</td>" +'<td style="color:orange;">' + itemactive + "</td>" +'<td style="color:green;">'  + item.recovered + "</td>" +   "<td>" + item.totalcases_pp + "</td>" +"<td>" + item.deaths_pp + "</td>" +"<td>" + item.first_case + "</td>" +"</tr>";
+                    document.getElementById("tb-content-1").innerHTML += "<tr>"  + "<td>" + item.country + "</td>" + '<td>' + item.confirmed + "</td>" + '<td>' + item.change_confirmed + "</td>" + '<td style="color:darkred;">' + item.deaths + "</td>" + '<td style="color:darkred;">' + item.change_deaths + "</td>" +  '<td style="color:red;">' + item.serious_cases + "</td>" +'<td style="color:orange;">' + itemactive + "</td>" +'<td style="color:green;">'  + item.recovered + "</td>" +   "<td>" + item.totalcases_pp + "</td>" +"<td>" + item.deaths_pp + "</td>" +"<td>" + item.first_case + "</td>" +"</tr>";
 
                 }
 
@@ -34,7 +34,7 @@ fetch('https://planetvitals-backend-py.iinerds.com/')
         affected=affected-1;
         drawAreaChart(areaChartLabels.slice(0, 10), confirmedChartValues.slice(0, 10), diedChartValues.slice(0, 10), recoveredChartValues.slice(0, 10),activeChartValues.slice(0,10))
         document.getElementById("count-country").innerHTML +=affected+" countries and territories";
-        new Tablesort(document.getElementById('country-table'));
+        new Tablesort(document.getElementById('country-table-1'));
     })
     .catch(err => {
         // Do something for an error here
