@@ -229,414 +229,483 @@
                         <iframe src="https://planetvitals.com/map.html" width="100%" height="450px"></iframe>
                     </div>
 
-
-                    <!-- STATS table start -->
-                    <div class="row d-flex justify-content-center py-4" id="country">
-                        <div class="col-sm-12 col-md-12 ">
-                            <nav id="third-nav">
-                                <div class="nav nav-pills pl-3 py-3" style="background: white;" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active" id="corona-todaytable-tab" data-toggle="tab"
-                                        href="#corona-todaytable" role="tab" aria-controls="corona-todaytable"
-                                        aria-selected="true">Today</a>
-                                    <a class="nav-item nav-link" id="corona-ystrdytable-tab" data-toggle="tab"
-                                        href="#corona-ystrdytable" role="tab" aria-controls="corona-ystrdytable"
-                                        aria-selected="false">Yesterday</a>
-                                </div>
+                    <nav id="fourth-nav">
+                        <div class="nav nav-pills pl-3 py-3" style="background: white;" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="corona-tableview-tab" data-toggle="tab"
+                                href="#corona-tableview" role="tab" aria-controls="corona-tableview"
+                                aria-selected="true">Table view</a>
+                            <a class="nav-item nav-link" id="corona-mapview-tab" data-toggle="tab"
+                                href="#corona-mapview" role="tab" aria-controls="corona-mapview"
+                                aria-selected="false">Map view</a>
+                        </div>
+                    </nav>
 
 
-                            </nav>
-                            <!--Table TABs  BEGIN-->
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="corona-todaytable" role="tabpanel"
-                                    aria-labelledby="corona-todaytable-tab">
-                                    <div class="container">
-                                        <div class="row float-right mr-1 mb-1"><input id="myInput-1" type="text"
-                                                placeholder="Search by location">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="corona-tableview" role="tabpane01"
+                            aria-labelledby="corona-tableview-tab">
+
+                            <!-- STATS table start -->
+                            <div class="row d-flex justify-content-center py-4" id="country">
+                                <div class="col-sm-12 col-md-12 ">
+                                    <nav id="third-nav">
+                                        <div class="nav nav-pills pl-3 py-3" style="background: white;" id="nav-tab"
+                                            role="tablist">
+                                            <a class="nav-item nav-link active" id="corona-todaytable-tab"
+                                                data-toggle="tab" href="#corona-todaytable" role="tab"
+                                                aria-controls="corona-todaytable" aria-selected="true">Today</a>
+                                            <a class="nav-item nav-link" id="corona-ystrdytable-tab" data-toggle="tab"
+                                                href="#corona-ystrdytable" role="tab" aria-controls="corona-ystrdytable"
+                                                aria-selected="false">Yesterday</a>
                                         </div>
-                                        <table
-                                            class="table text-center table-striped table-bordered table-responsive-sm"
-                                            id="country-table-1">
 
-                                            <thead class="thead-dark">
-                                                <tr class="text-center">
-                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>Country
-                                                    </th>
-                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>Confirmed
-                                                        Cases
-                                                    </th>
-                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>New cases
-                                                    </th>
-                                                    <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total
-                                                        Deaths
-                                                    </th>
-                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>New Deaths
-                                                    </th>
-                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>Serious
-                                                        Cases
-                                                    </th>
-                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>Active
-                                                        Cases
-                                                    </th>
-                                                    <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total
-                                                        Recovered
-                                                    </th>
-                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>Cases/M
-                                                        Population
-                                                    </th>
-                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>Deaths/M
-                                                        Population
-                                                    </th>
-                                                    <th style="color:whitesmoke"><i class="icofont-sort"></i>First Case
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tb-content-1">
-                                            </tbody>
-                                        </table>
+
+                                    </nav>
+                                    <!--Table TABs  BEGIN-->
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="corona-todaytable" role="tabpanel"
+                                            aria-labelledby="corona-todaytable-tab">
+                                            <div class="container">
+                                                <div class="row float-right mr-1 mb-1"><input id="myInput-1" type="text"
+                                                        placeholder="Search by location">
+                                                </div>
+                                                <table
+                                                    class="table text-center table-striped table-bordered table-responsive-sm"
+                                                    id="country-table-1">
+
+                                                    <thead class="thead-dark">
+                                                        <tr class="text-center">
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>Country
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>Confirmed
+                                                                Cases
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>New
+                                                                cases
+                                                            </th>
+                                                            <th style="color:whitesmoke;"><i
+                                                                    class="icofont-sort"></i>Total
+                                                                Deaths
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>New
+                                                                Deaths
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>Serious
+                                                                Cases
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>Active
+                                                                Cases
+                                                            </th>
+                                                            <th style="color:whitesmoke;"><i
+                                                                    class="icofont-sort"></i>Total
+                                                                Recovered
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>Cases/M
+                                                                Population
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>Deaths/M
+                                                                Population
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>First
+                                                                Case
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="tb-content-1">
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="tab-pane fade" id="corona-ystrdytable" role="tabpanel"
+                                            aria-labelledby="corona-ystrdytable-tab">
+                                            <div class="container">
+                                                <div class="row float-right mr-1 mb-1"><input id="myInput-2" type="text"
+                                                        placeholder="Search by location">
+                                                </div>
+                                                <table
+                                                    class="table text-center table-striped table-bordered table-responsive-sm"
+                                                    id="country-table-2">
+
+                                                    <thead class="thead-dark">
+                                                        <tr class="text-center">
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>COUNTRY
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>Confirmed
+                                                                Cases
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>New
+                                                                cases
+                                                            </th>
+                                                            <th style="color:whitesmoke;"><i
+                                                                    class="icofont-sort"></i>Total
+                                                                Deaths</th>
+                                                            <th style="color:whitesmoke"><i class="icofont-sort"></i>New
+                                                                Deaths
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>Serious
+                                                                Cases</th>
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>Active
+                                                                Cases</th>
+                                                            <th style="color:whitesmoke;"><i
+                                                                    class="icofont-sort"></i>Total
+                                                                Recovered
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>Cases/M
+                                                                Population
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>Deaths/M
+                                                                Population
+                                                            </th>
+                                                            <th style="color:whitesmoke"><i
+                                                                    class="icofont-sort"></i>First
+                                                                Case
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="tb-content-2">
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+
+                                        </div>
                                     </div>
+
                                 </div>
 
-
-
-                                <div class="tab-pane fade" id="corona-ystrdytable" role="tabpanel"
-                                    aria-labelledby="corona-ystrdytable-tab">
-                                    <div class="container">
-                                        <div class="row float-right mr-1 mb-1"><input id="myInput-2" type="text"
-                                            placeholder="Search by location">
-                                    </div>
-                                    <table class="table text-center table-striped table-bordered table-responsive-sm"
-                                        id="country-table-2">
-    
-                                        <thead class="thead-dark">
-                                            <tr class="text-center">
-                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>COUNTRY</th>
-                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>Confirmed Cases
-                                                </th>
-                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>New cases</th>
-                                                <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total Deaths</th>
-                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>New Deaths</th>
-                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>Serious Cases</th>
-                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>Active Cases</th>
-                                                <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total Recovered
-                                                </th>
-                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>Cases/M Population
-                                                </th>
-                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>Deaths/M Population
-                                                </th>
-                                                <th style="color:whitesmoke"><i class="icofont-sort"></i>First Case</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="tb-content-2">
-                                        </tbody>
-                                    </table>
-
-                                    </div>
-
-                                </div>
                             </div>
 
+                            <!-- fatality table starting -->
+                            <section id="Table-datas" class="portfolio">
+                                <div class="row" id="by-age">
 
-
-
-
-
-                        </div>
-
-                    </div>
-
-
-
-                    <section id="Table-datas" class="portfolio">
-                        <div class="row" id="by-age">
-
-                            <div class="section-title">
-                                <h2>COVID-19 Fatality Rate by AGE:</h2>
-                                <p> <strong> *Death Rate</strong> = (number of deaths / number of cases) = <strong>
-                                        probability
-                                        of dying if infected
-                                        by the virus (%).</strong> This probability differs depending on the age group.
-                                    The
-                                    percentages shown below <span style="color: red;">do not have to add up to
-                                        100%</span> , as they <strong> do NOT represent
-                                        share of deaths by age group.</strong> Rather, it represents, for a person in a
-                                    given age
-                                    group, the <strong> risk of dying </strong>if infected with COVID-19.</p>
-                                <table class="table table-hover table-bordered table-condensed table-list">
-                                    <tbody>
-                                        <tr class="scrollable bordered" bgcolor="#FCF8F8">
-                                            <td height="33">
-                                                <div>AGE</div>
-                                            </td>
-                                            <td>DEATH RATE<br> confirmed cases <br></td>
-                                            <td>DEATH RATE<br> all cases</td>
-                                        </tr>
-                                        <tr class=" scrollable bordered text-center">
-                                            <td width="244">
-                                                <div><strong>80+ years old </strong></div>
-                                            </td>
-                                            <td width="125">
-                                                <div><strong>21.9%</strong></div>
-                                            </td>
-                                            <td width="125">
-                                                <div><strong>14.8%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td>
-                                                <div><strong>70-79 years old </strong></div>
-                                            </td>
-                                            <td>
-                                                <div></div>
-                                            </td>
-                                            <td>
-                                                <div "><strong>8.0%</strong></div>
+                                    <div class="section-title">
+                                        <h2>COVID-19 Fatality Rate by AGE:</h2>
+                                        <p> <strong> *Death Rate</strong> = (number of deaths / number of cases) =
+                                            <strong>
+                                                probability
+                                                of dying if infected
+                                                by the virus (%).</strong> This probability differs depending on the age
+                                            group.
+                                            The
+                                            percentages shown below <span style="color: red;">do not have to add up to
+                                                100%</span> , as they <strong> do NOT represent
+                                                share of deaths by age group.</strong> Rather, it represents, for a
+                                            person
+                                            in a
+                                            given age
+                                            group, the <strong> risk of dying </strong>if infected with COVID-19.</p>
+                                        <table class="table table-hover table-bordered table-condensed table-list">
+                                            <tbody>
+                                                <tr class="scrollable bordered" bgcolor="#FCF8F8">
+                                                    <td height="33">
+                                                        <div>AGE</div>
+                                                    </td>
+                                                    <td>DEATH RATE<br> confirmed cases <br></td>
+                                                    <td>DEATH RATE<br> all cases</td>
+                                                </tr>
+                                                <tr class=" scrollable bordered text-center">
+                                                    <td width="244">
+                                                        <div><strong>80+ years old </strong></div>
+                                                    </td>
+                                                    <td width="125">
+                                                        <div><strong>21.9%</strong></div>
+                                                    </td>
+                                                    <td width="125">
+                                                        <div><strong>14.8%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td>
+                                                        <div><strong>70-79 years old </strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div></div>
+                                                    </td>
+                                                    <td>
+                                                        <div "><strong>8.0%</strong></div>
                                             </td>
                                         </tr>
                                         <tr class=" scrollable bordered">
-                                            <td>
-                                                <div><strong>60-69 years old </strong></div>
-                                            </td>
-                                            <td>
-                                                <div></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>3.6%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td>
-                                                <div><strong>50-59 years old </strong></div>
-                                            </td>
-                                            <td>
-                                                <div></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>1.3%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td>
-                                                <div><strong>40-49 years old </strong></div>
-                                            </td>
-                                            <td>
-                                                <div></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>0.4%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td>
-                                                <div><strong>30-39 years old </strong></div>
-                                            </td>
-                                            <td>
-                                                <div></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>0.2%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td>
-                                                <div><strong>20-29 years old </strong></div>
-                                            </td>
-                                            <td>
-                                                <div></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>0.2%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td>
-                                                <div><strong>10-19 years old </strong></div>
-                                            </td>
-                                            <td>
-                                                <div></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>0.2%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td><strong>0-9 years old </strong></td>
-                                            <td>
-                                                <div></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>no fatalities </strong></div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table><br><br>
-                                <p> <strong> *Death Rate </strong>= (number of deaths / number of cases) = <strong>
-                                        probability
-                                        of dying if infected
-                                        by the virus (%).</strong> The percentages do not have to add up to 100%, as
-                                    they <strong> do NOT
-                                        represent share of deaths by age</strong> group.</p><br><br>
-                            </div>
-                            <div class="row" id="by-sex">
+                                                    <td>
+                                                        <div><strong>60-69 years old </strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>3.6%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td>
+                                                        <div><strong>50-59 years old </strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>1.3%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td>
+                                                        <div><strong>40-49 years old </strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>0.4%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td>
+                                                        <div><strong>30-39 years old </strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>0.2%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td>
+                                                        <div><strong>20-29 years old </strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>0.2%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td>
+                                                        <div><strong>10-19 years old </strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>0.2%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td><strong>0-9 years old </strong></td>
+                                                    <td>
+                                                        <div></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>no fatalities </strong></div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table><br><br>
+                                        <p> <strong> *Death Rate </strong>= (number of deaths / number of cases) =
+                                            <strong>
+                                                probability
+                                                of dying if infected
+                                                by the virus (%).</strong> The percentages do not have to add up to
+                                            100%, as
+                                            they <strong> do NOT
+                                                represent share of deaths by age</strong> group.</p><br><br>
+                                    </div>
+                                    <div class="row" id="by-sex">
 
-                                <h2>COVID-19 Fatality Rate by SEX: </h2>
-                                <p> <strong> *Death Rate</strong> = (number of deaths / number of cases) = <strong>
-                                        probability of dying if infected
-                                        by the virus (%).</strong> This probability differs depending on sex. When
-                                    reading these
-                                    numbers, it must be taken into account that <strong> smoking </strong>in China is
-                                    much more prevalent
-                                    among males. Smoking increases the risks of respiratory complications.</p>
+                                        <h2>COVID-19 Fatality Rate by SEX: </h2>
+                                        <p> <strong> *Death Rate</strong> = (number of deaths / number of cases) =
+                                            <strong>
+                                                probability of dying if infected
+                                                by the virus (%).</strong> This probability differs depending on sex.
+                                            When
+                                            reading these
+                                            numbers, it must be taken into account that <strong> smoking </strong>in
+                                            China
+                                            is
+                                            much more prevalent
+                                            among males. Smoking increases the risks of respiratory complications.</p>
 
-                                <table class="table table-hover table-bordered table-condensed table-list">
-                                    <tbody>
-                                        <tr class="scrollable bordered" bgcolor="#FCF8F8">
-                                            <td height="33">
-                                                <div>SEX</div>
-                                            </td>
-                                            <td>DEATH RATE<br> confirmed cases <br></td>
-                                            <td>DEATH RATE<br> all cases</td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td width="209">
-                                                <div><strong>Male</strong></div>
-                                            </td>
-                                            <td width="151">
-                                                <div><strong>4.7%</strong></div>
-                                            </td>
-                                            <td width="142">
-                                                <div><strong>2.8%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td>
-                                                <div><strong>Female</strong></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>2.8%</strong></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>1.7%</strong></div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table><br><br>
-                                <p>*<strong>Death Rate</strong> = (number of deaths / number of cases) = probability of
-                                    dying if infected
-                                    by the virus (%). The percentages do not have to add up to 100%, as they do NOT
-                                    represent share of deaths by sex.</p><br><br>
-                            </div>
-                            <div class="row" id="by-comorbidity">
-                                <h2>Pre-existing medical conditions (comorbidities)</h2>
-                                <p>Patients who reported no pre-existing ("comorbid") medical conditions had a case
-                                    fatality rate of 0.9%. Pre-existing illnesses that put patients at higher risk of
-                                    dying from a COVID-19 infection are:
-                                </p><br>
-                                <h2>COVID-19 Fatality Rate by COMORBIDITY: </h2>
-                                <p> <strong>*Death Rate</strong> = (number of deaths / number of cases) =
-                                    <strong>probability of
-                                        dying if infected
-                                        by the virus (%).</strong> This probability differs depending on pre-existing
-                                    condition. The
-                                    percentage shown below does <strong> NOT represent in any way the share of deaths by
-                                        pre-existing condition.</strong> Rather, it represents, for a patient with a
-                                    given
-                                    pre-existing condition, the <strong> risk of dying</strong> if infected by COVID-19.
-                                </p>
-                                <table class="table table-hover table-bordered table-condensed table-list">
-                                    <tbody>
-                                        <tr class="scrollable bordered" bgcolor="#FCF8F8">
-                                            <td height="33">
-                                                <div>PRE-EXISTING CONDITION</div>
-                                            </td>
-                                            <td>DEATH RATE<br> confirmed cases <br></td>
-                                            <td>DEATH RATE<br> all cases</td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td width="252">
-                                                <div><strong><span class="story-body__list-item">Cardiovascular
-                                                            disease</span></strong></div>
-                                            </td>
-                                            <td width="141">
-                                                <div><strong>13.2%</strong></div>
-                                            </td>
-                                            <td width="122">
-                                                <div><strong>10.5%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td>
-                                                <div><strong><span
-                                                            class="story-body__list-item">Diabetes</span></strong>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div><strong>9.2%</strong></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>7.3%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td>
-                                                <div><span class="story-body__list-item"><strong>Chronic
-                                                            respiratory disease</strong></span></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>8.0%</strong></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>6.3%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td>
-                                                <div><strong><span
-                                                            class="story-body__list-item">Hypertension</span></strong>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div><strong>8.4%</strong></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>6.0%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered">
-                                            <td>
-                                                <div><strong>Cancer</strong></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>7.6%</strong></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>5.6%</strong></div>
-                                            </td>
-                                        </tr>
-                                        <tr class="scrollable bordered" bgcolor="#F9F9F9">
-                                            <td>
-                                                <div><strong><em>no pre-existing conditions </em></strong>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div></div>
-                                            </td>
-                                            <td>
-                                                <div><strong>0.9%</strong></div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <p>*<strong>Death Rate</strong> = (number of deaths / number of cases) =
-                                    <strong>probability of dying if infected by the virus</strong> (%). The percentages
-                                    <span style="color: red;"> do not have to add up to 100%</span>, as they<strong> do
-                                        NOT
-                                        represent share of deaths by condition. </strong></p>
+                                        <table class="table table-hover table-bordered table-condensed table-list">
+                                            <tbody>
+                                                <tr class="scrollable bordered" bgcolor="#FCF8F8">
+                                                    <td height="33">
+                                                        <div>SEX</div>
+                                                    </td>
+                                                    <td>DEATH RATE<br> confirmed cases <br></td>
+                                                    <td>DEATH RATE<br> all cases</td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td width="209">
+                                                        <div><strong>Male</strong></div>
+                                                    </td>
+                                                    <td width="151">
+                                                        <div><strong>4.7%</strong></div>
+                                                    </td>
+                                                    <td width="142">
+                                                        <div><strong>2.8%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td>
+                                                        <div><strong>Female</strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>2.8%</strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>1.7%</strong></div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table><br><br>
+                                        <p>*<strong>Death Rate</strong> = (number of deaths / number of cases) =
+                                            probability
+                                            of
+                                            dying if infected
+                                            by the virus (%). The percentages do not have to add up to 100%, as they do
+                                            NOT
+                                            represent share of deaths by sex.</p><br><br>
+                                    </div>
+                                    <div class="row" id="by-comorbidity">
+                                        <h2>Pre-existing medical conditions (comorbidities)</h2>
+                                        <p>Patients who reported no pre-existing ("comorbid") medical conditions had a
+                                            case
+                                            fatality rate of 0.9%. Pre-existing illnesses that put patients at higher
+                                            risk
+                                            of
+                                            dying from a COVID-19 infection are:
+                                        </p><br>
+                                        <h2>COVID-19 Fatality Rate by COMORBIDITY: </h2>
+                                        <p> <strong>*Death Rate</strong> = (number of deaths / number of cases) =
+                                            <strong>probability of
+                                                dying if infected
+                                                by the virus (%).</strong> This probability differs depending on
+                                            pre-existing
+                                            condition. The
+                                            percentage shown below does <strong> NOT represent in any way the share of
+                                                deaths by
+                                                pre-existing condition.</strong> Rather, it represents, for a patient
+                                            with a
+                                            given
+                                            pre-existing condition, the <strong> risk of dying</strong> if infected by
+                                            COVID-19.
+                                        </p>
+                                        <table class="table table-hover table-bordered table-condensed table-list">
+                                            <tbody>
+                                                <tr class="scrollable bordered" bgcolor="#FCF8F8">
+                                                    <td height="33">
+                                                        <div>PRE-EXISTING CONDITION</div>
+                                                    </td>
+                                                    <td>DEATH RATE<br> confirmed cases <br></td>
+                                                    <td>DEATH RATE<br> all cases</td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td width="252">
+                                                        <div><strong><span class="story-body__list-item">Cardiovascular
+                                                                    disease</span></strong></div>
+                                                    </td>
+                                                    <td width="141">
+                                                        <div><strong>13.2%</strong></div>
+                                                    </td>
+                                                    <td width="122">
+                                                        <div><strong>10.5%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td>
+                                                        <div><strong><span
+                                                                    class="story-body__list-item">Diabetes</span></strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>9.2%</strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>7.3%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td>
+                                                        <div><span class="story-body__list-item"><strong>Chronic
+                                                                    respiratory disease</strong></span></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>8.0%</strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>6.3%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td>
+                                                        <div><strong><span
+                                                                    class="story-body__list-item">Hypertension</span></strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>8.4%</strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>6.0%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered">
+                                                    <td>
+                                                        <div><strong>Cancer</strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>7.6%</strong></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>5.6%</strong></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scrollable bordered" bgcolor="#F9F9F9">
+                                                    <td>
+                                                        <div><strong><em>no pre-existing conditions </em></strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div></div>
+                                                    </td>
+                                                    <td>
+                                                        <div><strong>0.9%</strong></div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>*<strong>Death Rate</strong> = (number of deaths / number of cases) =
+                                            <strong>probability of dying if infected by the virus</strong> (%). The
+                                            percentages
+                                            <span style="color: red;"> do not have to add up to 100%</span>, as
+                                            they<strong>
+                                                do
+                                                NOT
+                                                represent share of deaths by condition. </strong></p>
 
 
 
 
 
-                            </div>
+                                    </div>
 
 
 
@@ -647,10 +716,16 @@
 
 
 
+                                </div>
+                            </section>
+                            <!-- fatality table ending -->
                         </div>
-                    </section>
-                    <!-- fatality table ending -->
 
+                        <div class="tab-pane fade show " id="corona-mapview" role="tabpane02"
+                            aria-labelledby="corona-mapview-tab">
+                            <h1>HERE COMES THE MAP</h1>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -1562,13 +1637,13 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
 
 
     <!--Custom Page JS-->
