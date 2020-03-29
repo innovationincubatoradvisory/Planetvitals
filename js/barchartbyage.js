@@ -15,8 +15,9 @@ new Chart(document.getElementById("bar-chart-byage"), {
     options: {
       legend: { display: true },
       title: {
-        display: true,
-        text: 'number of deaths/number of cases in percentage'
+        display: false,
+        text: 'Number of deaths/Number of cases in percentage'
       }
     }
 });
+

@@ -725,8 +725,27 @@
                             <div class="row">
                                 <iframe src="https://planetvitals.com/map.html" width="100%" height="450px"></iframe>
                             </div>
+                            <div class="row py-5">
+                            <h3 style="color:grey;">
+                                Corona Virus Confirmed Fatality Rate by Age
+                            </h3>
                             <canvas id="bar-chart-byage" width="100%"></canvas>
-
+                            <p style="color:grey;">*Death Rate = (number of deaths / number of cases) = probability of dying if infected by the virus (%). The percentages do not have to add up to 100%, as they do NOT represent share of deaths by age group.</p>
+                        </div>
+                        <div class="row py-5>">
+                            <h3 style="color:grey;">
+                                Corona Virus Confirmed Fatality Rate by SEX
+                            </h3>
+                            <canvas id="bar-chart-bysex" width="100%"></canvas>
+                            <p style="color:grey;">*Death Rate = (number of deaths / number of cases) = probability of dying if infected by the virus (%). The percentages do not have to add up to 100%, as they do NOT represent share of deaths by sex.</p>
+                        </div>
+                        <div class="row py-5>">
+                            <h3 style="color:grey;">
+                                Corona Virus Confirmed Fatality Rate by COMORBIDITY
+                            </h3>
+                            <canvas id="bar-chart-bycomorbidity" width="100%"></canvas>
+                            <p style="color:grey;">*Death Rate = (number of deaths / number of cases) = probability of dying if infected by the virus (%). The percentages do not have to add up to 100%, as they do NOT represent share of deaths by condition.</p>
+                        </div>
                         </div>
                         </div>
                     </div>
@@ -1660,6 +1679,8 @@
     <script src="js/region-all-yesterday.js"></script>
     <script src="js/Region-all.js"></script>
 <script src="js/barchartbyage.js"></script>
+<script src="js/barchartbysex.js"></script>
+<script src="js/barchartbycomorbidity.js"></script>
 
     <!--search Script-->
     <script>
