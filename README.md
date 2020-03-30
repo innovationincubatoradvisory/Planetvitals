@@ -1,7 +1,6 @@
 # Planet Vitals
 > Planet vitals is a website/App initiative powered by Innovation Incubator to ensure all the happenings around the world are captured statistically and systematically and represented to end users in understandable and the most meaningful ways.
 
-[![Website planetvitals.com](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)](https://planetvitals.com/)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/innovationincubatoradvisory/Planetvitals/blob/master/holaa/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/innovationincubatoradvisory/Planetvitals/pulls)
 
