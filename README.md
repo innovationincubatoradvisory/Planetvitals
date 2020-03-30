@@ -13,7 +13,7 @@ Planet vitals is a bootstrapped website build using a python backend serving all
 <li>mapbox.js for all maps
 <ul>
 
-![](header.png)
+![](Planetvitals.png)
 
 # Why Contribute
 
