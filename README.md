@@ -50,7 +50,7 @@ There is a lot happening across the globe but bringing all of them to a single p
 
 ## Meta
 
-Your Name – [@InnovationIncu](https://twitter.com/InnovationIncu) – info@iinerds.com
+Powered by Innovation Incubator – [@InnovationIncu](https://twitter.com/InnovationIncu) – info@iinerds.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
