@@ -23,3 +23,6 @@ fetch('https://planetvitals-backend-py.iinerds.com/prevday')
     .catch(err => {
         // Do something for an error here
     })
+    $(document).ready( function () {
+        $('#country-table-1').DataTable();
+    } );

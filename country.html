@@ -16,13 +16,11 @@
     <meta property="og:description"
         content="Live statistics tracking the number of confirmed cases, recovered patients, and death toll by country due to the novel coronavirus from Wuhan, China." />
 
-    <title>Corona Dashboard</title>
+    <title>Corona Country View</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!--mapbox gl-->
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css' rel='stylesheet' />
+    
     <!--google analytics-->
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -125,7 +123,7 @@
                 </div>
                 <div class="row">
                     <div class="chart-area h-80" style="height:300px;width: 100%;">
-                        <canvas id="myAreaChart" class="darkmode-ignore"></canvas>
+                        <canvas id="line-chart" class="darkmode-ignore"></canvas>
                     </div>
                 </div>
                 <div class="chart-subtitle row px-5">
@@ -614,7 +612,7 @@
 
 
 
-    </div> -->
+    </div>
     <!--HELP TAB ENDS-->
 
 
@@ -665,10 +663,6 @@
 
 
     <!--Custom Page JS-->
-    <!--FAQ Script-->
-    <script src="js/faq.min.js"></script>
-    <!--news Script-->
-    <script src="js/news_corona_all.min.js"></script>
     <!--content Script-->
    <script src="js/country.js"></script>
 
