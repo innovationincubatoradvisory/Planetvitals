@@ -115,7 +115,7 @@
                     </div>
                     <div class="row">
                         <div class="chart-area h-80" style="height:300px;width: 100%;">
-                            <canvas id="myAreaChart"></canvas>
+                            <canvas id="myAreaChart" class="darkmode-ignore"></canvas>
                         </div>
                     </div>
                     <div class="chart-subtitle row px-5">
@@ -144,21 +144,21 @@
                         </div>
                     </div>
                     <div class="row counts">
-                        <div class="card col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                        <div class=" col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
                             <h4>Confirmed Cases</h4>
                             <p id="totalConfirmed" class="pt-3" style="color: #aaa;font-weight: 700;font-size: 54px;">
                             </p>
                         </div>
-                        <div class="card col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                        <div class=" col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
                             <h4>Confirmed Death</h4>
                             <p id="totalDeaths" class="pt-3" style="color:red;font-weight: 700;font-size: 54px;"></p>
                         </div>
-                        <div class="card col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                        <div class=" col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
                             <h4>Recovered</h4>
                             <p id="totalRecovered" class="pt-3" style="color:green;font-weight: 700;font-size: 54px;">
                             </p>
                         </div>
-                        <div class="card col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                        <div class=" col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
                             <h4>Active Cases</h4>
                             <p id="totalSick" class="pt-3" style="color:orange;font-weight: 700;font-size: 54px;"></p>
                         </div>
@@ -245,8 +245,7 @@
                             <div class="row d-flex justify-content-center py-4" id="country">
                                 <div class="col-sm-12 col-md-12 ">
                                     <nav id="third-nav">
-                                        <div class="nav nav-pills pl-3 py-3" style="background: white;" id="nav-tab"
-                                            role="tablist">
+                                        <div class="nav nav-pills pl-3 py-3" id="nav-tab" role="tablist">
                                             <a class="nav-item nav-link active" id="corona-todaytable-tab"
                                                 data-toggle="tab" href="#corona-todaytable" role="tab"
                                                 aria-controls="corona-todaytable" aria-selected="true">Today</a>
@@ -314,7 +313,7 @@
                                                             </th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody id="tb-content-1">
+                                                    <tbody id="tb-content-1" style="color: #5b646e;">
                                                     </tbody>
                                                 </table>
                                             </div>
