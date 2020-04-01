@@ -261,9 +261,6 @@
                                         <div class="tab-pane fade show active" id="corona-todaytable" role="tabpanel"
                                             aria-labelledby="corona-todaytable-tab">
                                             <div class="container">
-                                                <div class="row float-right mr-1 mb-1"><input id="myInput-1" type="text"
-                                                        placeholder="Search by location">
-                                                </div>
                                                 <table
                                                     class="table text-center table-striped table-bordered table-responsive-sm"
                                                     id="country-table-1">
@@ -324,9 +321,6 @@
                                         <div class="tab-pane fade" id="corona-ystrdytable" role="tabpanel"
                                             aria-labelledby="corona-ystrdytable-tab">
                                             <div class="container">
-                                                <div class="row float-right mr-1 mb-1"><input id="myInput-2" type="text"
-                                                        placeholder="Search by location">
-                                                </div>
                                                 <table
                                                     class="table text-center table-striped table-bordered table-responsive-sm"
                                                     id="country-table-2">
@@ -1712,35 +1706,6 @@
     <script src="js/barchartbyage.min.js"></script>
     <script src="js/barchartbysex.min.js"></script>
     <script src="js/barchartbycomorbidity.min.js"></script>
-
-    <!--search Script-->
-    <script>
-        $(document).ready(function () {
-            $("#myInput-1").on("keyup", function () {
-                var value = $(this).val().toLowerCase();
-                $("#tb-content-1 tr").filter(function () {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            $("#myInput-2").on("keyup", function () {
-                var value = $(this).val().toLowerCase();
-                $("#tb-content-2 tr").filter(function () {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-            });
-        });
-
-    </script>
-<script>
-    $(document).ready( function () {
-    $('#country-table-1').DataTable();
-} );
-    </script>
-
 </body>
 
 </html>

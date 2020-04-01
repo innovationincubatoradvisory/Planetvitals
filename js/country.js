@@ -106,6 +106,6 @@ fetch('https://planetvitals-backend-py.iinerds.com/data/' + a)
     .catch(err => {
         // Do something for an error here
     })
-console.log(confirmedChartValues)
-console.log(time_seriesValues)
+    console.log(confirmedChartValues)
+    console.log(time_seriesValues)
     countryallchart();

@@ -18,11 +18,10 @@ fetch('https://planetvitals-backend-py.iinerds.com/prevday')
 
             });
         }
-        new Tablesort(document.getElementById('country-table-2'));
+        $(document).ready( function () {
+            $('#country-table-2').DataTable();
+        } );
     })
     .catch(err => {
         // Do something for an error here
     })
-    $(document).ready( function () {
-        $('#country-table-1').DataTable();
-    } );
