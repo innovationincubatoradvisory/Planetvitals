@@ -22,7 +22,9 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--google analytics-->
     <!-- Template Main CSS File -->
+    
     <link href="assets/css/style.min.css" rel="stylesheet">
+    
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
@@ -46,7 +48,6 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
         gtag('config', 'UA-158798381-1');
     </script>
 </head>
@@ -1672,7 +1673,7 @@
     <!--FAQ Script-->
     <script src="js/faq.min.js"></script>
     <!--news Script-->
-    <script src="js/news_corona_all.min.js"></script>
+    <script src="js/news_corona_all.js"></script>
     <!--content Script-->
     <script src="js/stat-all.min.js"></script>
     <script src="js/region-all-yesterday.min.js"></script>
@@ -1680,7 +1681,7 @@
 <script src="js/barchartbyage.min.js"></script>
 <script src="js/barchartbysex.min.js"></script>
 <script src="js/barchartbycomorbidity.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
     <!--search Script-->
     <script>
         $(document).ready(function () {
@@ -1701,7 +1702,10 @@
                 });
             });
         });
+        lazyload();
     </script>
+    
+    
 </body>
 
 </html>
