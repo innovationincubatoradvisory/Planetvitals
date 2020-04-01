@@ -5,6 +5,11 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 a=getUrlParameter('country');
+let Countrylabels=[]
+let confirmedChartValues = []
+let diedChartValues = []
+let recoveredChartValues = []
+let activeChartValues = []
 
 //Old Data
 fetch('https://planetvitals-backend-py.iinerds.com/history/'+a)
@@ -16,7 +21,11 @@ fetch('https://planetvitals-backend-py.iinerds.com/history/'+a)
         dt = data.data
         if (dt && dt.length) {
             dt.forEach(item => {
-               console.log(item)
+                Countrylabels.push(item.country.slice(5,16))
+                confirmedChartValues.push(item.confirmed)
+                diedChartValues.push(item.deaths)
+                recoveredChartValues.push(item.recovered)
+                activeChartValues.push(item.confirmed-item.deaths-item.recovered)
             });
         }
     })
@@ -34,7 +43,11 @@ fetch('https://planetvitals-backend-py.iinerds.com/data/'+a)
     dt = data.data
     if (dt && dt.length) {
         dt.forEach(item => {
-           console.log(item)
+            Countrylabels.push(item.country.slice(5,16))
+            confirmedChartValues.push(item.confirmed)
+            diedChartValues.push(item.deaths)
+            recoveredChartValues.push(item.recovered)
+            activeChartValues.push(item.confirmed-item.deaths-item.recovered)
         });
     }
 })
