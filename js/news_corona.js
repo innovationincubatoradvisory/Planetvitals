@@ -7,7 +7,7 @@ fetch('https://newsapi.org/v2/top-headlines?q=corona&sources=bbc-news&apiKey=5b6
     articles = data.articles
     if (articles && articles.length) {
       articles.forEach(item => {
-        document.getElementById("news-row").innerHTML += dt + '<span><img class="lazyload" data-src="' + item.urlToImage + '"width="80%"><h4>' + item.title + "</h4><p>" + item.description + '<a href="' + item.url + '">Read More</a></p></div>';
+        document.getElementById("news-row").innerHTML += dt + '<span><img src="' + item.urlToImage + '"width="80%"><h4>' + item.title + "</h4><p>" + item.description + '<a href="' + item.url + '">Read More</a></p></div>';
       });
     }
 
