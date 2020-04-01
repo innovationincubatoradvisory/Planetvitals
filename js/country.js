@@ -43,11 +43,23 @@ fetch('https://planetvitals-backend-py.iinerds.com/data/'+a)
     dt = data.data
     if (dt && dt.length) {
         dt.forEach(item => {
+            confirmedCount =item.confirmed;
+        deathsCount = item.deaths;
+        recoverdCount = item.recovered;
+        seriouscount=item.serious_cases;
+        case_ppcount=item.totalcases_pp;
+        closedCount=deathsCount+recoverdCount;
+        activeCount=confirmedCount - closedCount;
+        mildCount=activeCount-seriouscount;
             Countrylabels.push(item.country.slice(5,16))
             confirmedChartValues.push(item.confirmed)
             diedChartValues.push(item.deaths)
             recoveredChartValues.push(item.recovered)
             activeChartValues.push(item.confirmed-item.deaths-item.recovered)
+            document.getElementById("totalConfirmed").innerHTML = confirmedCount;
+            document.getElementById("totalDeaths").innerHTML = deathsCount;
+            document.getElementById("totalRecovered").innerHTML = recoverdCount;
+            document.getElementById("totalSick").innerHTML =  activeCount;
         });
     }
 })
