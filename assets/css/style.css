@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444;
+  color: #614f4f;
 }
 
 a {
@@ -1506,10 +1506,10 @@ section {
   color: #9eccf4;
 }
 @media (max-width: 400px) {
-  #second-nav{
-    top: 85px!important;
+  #second-nav {
+    top: 85px !important;
   }
-  #header{
-    height:85px;
+  #header {
+    height: 85px;
   }
 }
