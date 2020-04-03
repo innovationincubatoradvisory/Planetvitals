@@ -35,7 +35,7 @@ fetch('https://planetvitals-backend-py.iinerds.com/')
         drawAreaChart(areaChartLabels.slice(0, 10), confirmedChartValues.slice(0, 10), diedChartValues.slice(0, 10), recoveredChartValues.slice(0, 10),activeChartValues.slice(0,10))
         document.getElementById("count-country").innerHTML +=affected+" countries and territories";
         $(document).ready( function () {
-            $('#country-table-1').DataTable({"order": [[ 2, "desc" ]]});
+            $('#country-table-1').DataTable({"order": [[ 1, "desc" ]]});
         } );
     })
     .catch(err => {
