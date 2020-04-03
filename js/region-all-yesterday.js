@@ -17,7 +17,9 @@ fetch('https://planetvitals-backend-py.iinerds.com/prevday')
             });
         }
         $(document).ready( function () {
-            $('#country-table-2').DataTable();
+            $('#country-table-2').DataTable({
+                "order": [[ 3, "desc" ]]
+            });
         } );
     })
     .catch(err => {
