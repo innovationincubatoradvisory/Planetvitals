@@ -17,6 +17,9 @@
         content="Live statistics tracking the number of confirmed cases, recovered patients, and death toll by country due to the novel coronavirus from Wuhan, China." />
 
     <title>Corona Dashboard</title>
+    <!-- <link rel="stylesheet" href="assets/css/tb-corected.min.css"> -->
+    <link rel="stylesheet" href="assets/css/tb-corected.min0.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -97,6 +100,8 @@
                     aria-controls="corona-news" aria-selected="false">News</a>
                 <a class="nav-item nav-link" id="corona-news-tab" data-toggle="tab" href="#corona-video" role="tab"
                     aria-controls="corona-video" aria-selected="false">Videos</a>
+                <a class="nav-item nav-link" id="corona-infographics-tab" data-toggle="tab" href="#corona-infographics"
+                    role="tab" aria-controls="corona-infographics" aria-selected="false">Infographics</a>
                 <a class="nav-item nav-link" id="corona-help-tab" data-toggle="tab" href="#corona-help" role="tab"
                     aria-controls="corona-help" aria-selected="false">Help</a>
 
@@ -262,7 +267,7 @@
                                             aria-labelledby="corona-todaytable-tab">
                                             <div class="container">
                                                 <table
-                                                    class="table text-center table-striped table-bordered table-responsive-sm"
+                                                    class="table text-center table-dark table-bordered table-responsive-sm"
                                                     id="country-table-1">
 
                                                     <thead class="thead-dark">
@@ -689,22 +694,7 @@
                                                     do
                                                     NOT
                                                     represent share of deaths by condition. </strong></p>
-
-
-
-
-
                                         </div>
-
-
-
-
-
-
-
-
-
-
                                     </div>
                                 </div>
                             </section>
@@ -1444,23 +1434,463 @@
                         </div>
                     </div>
 
-                    <!-- <div class="container my-3">
-                        <div class="row" id="youtube-row">
 
-
-                            <div class="col-md-4 video-box no-gutters">
-                                <img src="assets/img/thumb.jpg" class="img-fluid" alt="">
-                                <a href="https://www.facebook.com/What.If.science/videos/623759241800631/"
-                                    class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-                                <p>Surgeon General Social Distancing</p>
-                            </div>
-                        </div>
-                    </div> -->
-                </section>
 
 
             </div>
             <!--VIDEO TAB ENDS-->
+
+
+            <!-- infographics  tab BEGINS-->
+            <div class="tab-pane fade" id="corona-infographics" role="tabpanel"
+                aria-labelledby="corona-infographics-tab">
+
+                <!-- =======  Portfolio Section ======= -->
+                <section id="portfolio" class="portfolio section-bg">
+                    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                        <div class="section-title">
+                            <!-- <h2>Our Portfolio</h2>
+                         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
+                             quidem. Sit sint
+                             consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+                             ea. Quia fugiat sit
+                             in iste officiis commodi quidem hic quas.</p> -->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul id="portfolio-flters">
+                                    <li data-filter="*" class="filter-active"> Show All</li>
+                                    <!-- <li data-filter=".filter-app">App</li>
+                                 <li data-filter=".filter-card">Card</li>
+                                 <li data-filter=".filter-web">Web</li> -->
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row portfolio-container">
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/1.JPEG" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>App 1</h4>
+                                     <p>App</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/1.JPEG" data-gall="portfolioGallery"
+                                                class="venobox" title="App 1"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/5.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Web 3</h4>
+                                     <p>Web</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/5.jpg" data-gall="portfolioGallery" class="venobox"
+                                                title="Web 3"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/2.JPEG" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>App 2</h4>
+                                     <p>App</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/2.JPEG" data-gall="portfolioGallery"
+                                                class="venobox" title="App 2"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/10.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Card 2</h4>
+                                     <p>Card</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/10.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="Card 2"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/4.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Web 2</h4>
+                                     <p>Web</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/4.jpg" data-gall="portfolioGallery" class="venobox"
+                                                title="Web 2"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/3.png" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>App 3</h4>
+                                     <p>App</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/3.png" data-gall="portfolioGallery" class="venobox"
+                                                title="App 3"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/8.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Card 1</h4>
+                                     <p>Card</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/8.jpg" data-gall="portfolioGallery" class="venobox"
+                                                title="Card 1"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/9.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Card 3</h4>
+                                     <p>Card</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/9.jpg" data-gall="portfolioGallery" class="venobox"
+                                                title="Card 3"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/6.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Web 3</h4>
+                                     <p>Web</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/6.jpg" data-gall="portfolioGallery" class="venobox"
+                                                title="Web 3"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- second section -->
+
+
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/11.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>App 1</h4>
+         <p>App</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/11.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="App 1"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/15.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Web 3</h4>
+         <p>Web</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/15.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/16.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>App 2</h4>
+         <p>App</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/16.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="App 2"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/17.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Card 2</h4>
+         <p>Card</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/17.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="Card 2"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/18.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Web 2</h4>
+         <p>Web</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/18.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="Web 2"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/19.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>App 3</h4>
+         <p>App</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/19.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="App 3"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/21.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Card 1</h4>
+         <p>Card</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/21.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="Card 1"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/22.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Card 3</h4>
+         <p>Card</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/22.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="Card 3"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/23.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                       
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/23.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+                            <!-- third section -->
+
+
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/24.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>App 1</h4>
+         <p>App</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/24.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="App 1"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/25.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Web 3</h4>
+         <p>Web</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/25.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/26.png" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>App 2</h4>
+         <p>App</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/26.png" data-gall="portfolioGallery"
+                                                class="venobox" title="App 2"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/27.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/27.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="Card 2"><i class="icofont-eye"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/7.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>Web 2</h4>
+         <p>Web</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/7.jpg" data-gall="portfolioGallery" class="venobox"
+                                                title="Web 2"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/12.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <!-- <h4>App 3</h4>
+         <p>App</p> -->
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/12.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="App 3"><i class="icofont-eye"></i></a>
+                                            <!-- <a href="#" title="More Details"><i class="icofont-external-link"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/13.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                       
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/13.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="Card 1"><i class="icofont-eye"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/14.png" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                       
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/14.png" data-gall="portfolioGallery"
+                                                class="venobox" title="Card 3"><i class="icofont-eye"></i></a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/food/.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>Web 3</h4>
+         <p>Web</p>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/food/.jpg" data-gall="portfolioGallery"
+                                                class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
+                                            <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+                </section><!-- End  Portfolio Section -->
+
+
+            </div>
+            <!--infographics TAB ENDS-->
 
 
 
@@ -1623,9 +2053,6 @@
                     <!-- </section> -->
 
             </div><br><br><br>
-
-
-
         </div>
         <!--HELP TAB ENDS-->
 
@@ -1673,8 +2100,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
         </script>
- <link rel="stylesheet" href="assets/css/tb-corected.min.css">
- <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+
 
     <!--Custom Page JS-->
     <!--FAQ Script-->
