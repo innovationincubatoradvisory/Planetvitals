@@ -210,6 +210,10 @@ h6,
   background: #629fd3;
   transition: background 0.2s ease-in-out;
 }
+.logo-new
+{
+  filter: invert();
+}
 
 /*--------------------------------------------------------------
 # Top Bar
@@ -268,7 +272,10 @@ h6,
 #header.header-scrolled {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
-
+#header-logo.header-scrolled-dark
+{
+filter:invert();
+}
 #header .logo h1 {
   font-size: 28px;
   margin: 0;
@@ -1351,6 +1358,8 @@ section {
 .contact .php-email-form button[type="submit"]:hover {
   background: #6aa3d5;
 }
+
+
 
 @-webkit-keyframes animate-loading {
   0% {
