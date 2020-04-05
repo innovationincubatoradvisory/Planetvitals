@@ -51,22 +51,22 @@
 
         gtag('config', 'UA-158798381-1');
     </script>
-     <script>
+    <script>
         var x = document.getElementById("demo");
-          if (navigator.geolocation) {
+        if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
-          } else {
+        } else {
             x.innerHTML = "Geolocation is not supported by this browser.";
-          }
-        
+        }
+
         function showPosition(position) {
-          x.innerHTML = "Latitude: " + position.coords.latitude +
-          "<br>Longitude: " + position.coords.longitude;
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
             console.log(position.coords.latitude);
             console.log(position.coords.longitude);
         }
-         
-        </script> 
+
+    </script>
 </head>
 
 <body>
@@ -232,7 +232,9 @@
                             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </div>
                         <div class="col-md-4">
-                            <a class="twitter-timeline" href="https://twitter.com/TIME?ref_src=twsrc%5Etfw">Tweets by TIME</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                            <a class="twitter-timeline" href="https://twitter.com/TIME?ref_src=twsrc%5Etfw">Tweets by
+                                TIME</a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </div>
                     </div>
                 </div>
@@ -864,13 +866,13 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
 
 
     <!--Custom Page JS-->
