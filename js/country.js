@@ -14,9 +14,6 @@ document.getElementById("country-display").innerHTML=a.toUpperCase();
 //line chart
 
 
-
-
-
 //Old Data
 fetch('https://planetvitals-backend-py.iinerds.com/history/' + a)
     .then(response => {
@@ -31,10 +28,10 @@ fetch('https://planetvitals-backend-py.iinerds.com/history/' + a)
                 confirmedChartValues.push(item.confirmed)
                 diedChartValues.push(item.deaths)
                 recoveredChartValues.push(item.recovered)
-                activeChartValues.push(item.confirmed - item.deaths - item.recovered)
+                activeChartValues.push(item.activecases)
+                document.getElementById("tb-content-1").innerHTML +="<tr><td>"+item.time_series.slice(5,16)+"</td><td>"+item.confirmed+'<td style="color:darkred;">'+item.deaths+"</td>"+'<td style="color:orange;">'+item.activecases+"</td>"+'<td style="color:green;">'+item.recovered+"</td>"+"</td></tr>";             
             });
         }
-        Newdata();
     })
     .catch(err => {
         // Do something for an error here
@@ -55,25 +52,25 @@ fetch('https://planetvitals-backend-py.iinerds.com/data/' + a)
                 recoverdCount = item.recovered;
                 seriouscount = item.serious_cases;
                 case_ppcount = item.totalcases_pp;
-                closedCount = deathsCount + recoverdCount;
-                activeCount = confirmedCount - closedCount;
-                mildCount = activeCount - seriouscount;
                 time_seriesValues.push(item.time_series.slice(5, 16))
                 confirmedChartValues.push(item.confirmed)
                 diedChartValues.push(item.deaths)
                 recoveredChartValues.push(item.recovered)
-                activeChartValues.push(item.confirmed - item.deaths - item.recovered)
+                activeChartValues.push(item.activecases)
                 document.getElementById("last-updated").innerHTML=item.time_series;                
                 document.getElementById("totalConfirmed").innerHTML = confirmedCount;
                 document.getElementById("totalDeaths").innerHTML = deathsCount;
                 document.getElementById("totalRecovered").innerHTML = recoverdCount;
-                document.getElementById("totalSick").innerHTML = activeCount;
-                document.getElementById("tb-content-1").innerHTML += "<tr>"  + "<td>" + item.time_series + "</td>" + '<td>' + item.confirmed + "</td>" + '<td style="color:darkred;">' + item.deaths +  '<td style="color:red;">' + item.serious_cases + "</td>" +'<td style="color:orange;">' + itemactive + "</td>" +'<td style="color:green;">'  + item.recovered + "</td>" + "<td>" + item.deaths_pp + "</td>"  +"</tr>";
+                document.getElementById("totalSick").innerHTML = item.activecases;
+                document.getElementById("tb-content-1").innerHTML +="<tr><td>"+item.time_series.slice(5,16)+"</td><td>"+item.confirmed+'<td style="color:darkred;">'+item.deaths+"</td>"+'<td style="color:orange;">'+item.activecases+"</td>"+'<td style="color:green;">'+item.recovered+"</td>"+"</td></tr>";
+                $(document).ready( function () {
+                    $('#country-table-1').DataTable({"order": [[ 1, "desc" ]]});
+                } );
+            
             });
         }
     })
     .catch(err => {
         // Do something for an error here
     })
-
     

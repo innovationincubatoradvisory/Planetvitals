@@ -32,11 +32,7 @@
     <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <!--table sort Js files-->
-    <script src="assets/vendor/tablesort/tablesort.min.js"></script>
-    <script src="assets/vendor/tablesort/tablesort.number.min.js"></script>
-    <script src="assets/vendor/tablesort/tablesort.date.min.js"></script>
-    <!--table sort js ends-->
+ 
     <!--youtube script-->
     <!--youtube script ends-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158798381-1"></script>
@@ -116,26 +112,6 @@
 
         <div class="tab-pane fade show active" id="corona-stats" role="tabpanel" aria-labelledby="corona-stats-tab">
             <div class="container-fluid">
-                <div class="row pt-5 px-5">
-                    <h3 style="color: slategrey;">
-                        Countries with highest no of confirmed cases
-                    </h3>
-                </div>
-                <div class="row">
-                    <div class="chart-area h-80" style="height:300px;width: 100%;">
-                        <canvas id="line-chart" class="darkmode-ignore"></canvas>
-                    </div>
-                </div>
-                <div class="chart-subtitle row px-5">
-                    <p style="color: lightgrey;">*The above chart is being updated based on hourly curated data from
-                        multiple sources.
-                    </p>
-                </div>
-                <div class="row pt-2 px-5">
-                    <h3 style="color:grey;">
-                        Corona Virus Cases:
-                    </h3>
-                </div>
 
 
                 <nav id="fourth-nav">
@@ -161,9 +137,6 @@
                                         aria-labelledby="corona-todaytable-tab">
                                         <div class="container">
                                             <h1>Daily Update Table</h1>
-                                            <div class="row float-right mr-1 mb-1"><input id="myInput-1" type="text"
-                                                    placeholder="Search by location">
-                                            </div>
                                             <table
                                                 class="table text-center table-striped table-bordered table-responsive-sm"
                                                 id="country-table-1">
@@ -176,33 +149,13 @@
                                                                 class="icofont-sort"></i>Confirmed
                                                             Cases
                                                         </th>
-                                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>New
-                                                            cases
-                                                        </th>
                                                         <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total
                                                             Deaths
                                                         </th>
-                                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>New
-                                                            Deaths
+                                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>Active Cases
                                                         </th>
-                                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>Serious
+                                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>Recovered
                                                             Cases
-                                                        </th>
-                                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>Active
-                                                            Cases
-                                                        </th>
-                                                        <th style="color:whitesmoke;"><i class="icofont-sort"></i>Total
-                                                            Recovered
-                                                        </th>
-                                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>Cases/M
-                                                            Population
-                                                        </th>
-                                                        <th style="color:whitesmoke"><i
-                                                                class="icofont-sort"></i>Deaths/M
-                                                            Population
-                                                        </th>
-                                                        <th style="color:whitesmoke"><i class="icofont-sort"></i>First
-                                                            Case
                                                         </th>
                                                     </tr>
                                                 </thead>
@@ -261,7 +214,11 @@
     <script src="assets/vendor/counterup/counterup.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
 
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
 
     <!-- dark mode -->
