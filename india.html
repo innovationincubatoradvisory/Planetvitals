@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>IIA-Planet Vitals</title>
+    <meta name="description"
+        content="Day by day there is a lot going on around the globe in multiple domains which requires attention and vital analysis. We at Innovation Incubator believe in representing the right data, in best capturable and understandable representations, while ensuring they are validated and usable to researchers, public and companies alike. Lets change the world with these insights and analysis.">
+    <meta name="keywords"
+        content="planetvitals,innovation incubator,corona death count,coronavirus update, corona virus india, corona virus symptoms,coronavirus latest news,coronavirus china,corona virus news,corona optus,corona effect,corona beer price,corona beer,corona alcohol,corona alcohol percentage,corona beer price in india, corona beer stock,coronavirus death toll,coronavirus oregon,coronavirus italy,corona california,corona spread,corona latest update,corona virus death rate,coronavirus cure,corona virus mexico, corona virus kerala, latest corona reports,corona virus brazil,corona virus australia,corona virus vaccine,corona virus air born ">
+    <meta name="author" content="innovation incubator">
+
+    <!-- Favicons -->
+    <link href="assets/img/fav-icon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+
+
+    <!-- planetvitals bot -->
+    <link rel="stylesheet" href="chatbot/botui/build/botui.min.css">
+    <link rel="stylesheet" href="chatbot/botui/build/botui-theme-default.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/chatbot.css">
+
+
+
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.min.css" rel="stylesheet">
+
+    <!--Holaa Bot-->
+    <!-- <script id="unique-embedder-id" type="text/javascript">
+    (function () { var widget_token_val = 'token'; var widget_id_val = '5e653b37843734e711fd59ee'; var WidgetSettings = { widget_token: widget_token_val, widget_id: widget_id_val }; function async_load() { var s = document.createElement('script'); var d = document.createElement('div'); d.id = 'app'; document.getElementsByTagName('body')[0].appendChild(d); s.setAttribute('widget_id', WidgetSettings['widget_id'] && WidgetSettings['widget_id']); s.setAttribute('welcome-msg', WidgetSettings['welcome-msg'] && WidgetSettings['welcome-msg']); s.setAttribute('auto-invoke', WidgetSettings['auto-invoke'] && WidgetSettings['auto-invoke']); s.setAttribute('app-color', WidgetSettings['app-color'] && WidgetSettings['app-color']); s.setAttribute('widget_token', WidgetSettings['widget_token'] && WidgetSettings['widget_token']); s.setAttribute('app-name', WidgetSettings['app-name'] && WidgetSettings['app-name']); s.type = 'text/javascript'; s.async = true; s.id = 'app-hola-owl'; var theUrl = 'https://prod.holaa.ai/build.js'; s.src = theUrl; var embedder = document.getElementById('unique-embedder-id'); embedder.parentNode.insertBefore(s, embedder) } (window.attachEvent) ? window.attachEvent('onload', async_load) : window.addEventListener('load', async_load, false) })();  
+  </script> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158798381-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158798381-1');
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <button type="button" class=" float icofont-wechat my-float" style="font-size: 3rem;"
+                    data-toggle="modal" data-target="#myModal"></button>
+
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Vital-Bot</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="botui-app-container" id="chat-bot">
+
+                                    <bot-ui class="scrollbar"></bot-ui>
+
+                                </div>
+
+                            </div>
+                            <!-- <div class="modal-footer"> -->
+                            <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- ======= Top Bar ======= -->
+    <section id="topbar" class="d-none d-lg-block">
+        <div class="container clearfix">
+            <div class="contact-info float-left">
+                <i class="icofont-envelope"></i><a href="mailto:contact@example.com"></a>info@iinerds.com
+            </div>
+            <div class="social-links float-right">
+                <a href="https://twitter.com/InnovationIncu" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="https://www.facebook.com/innovationincubatorholding" class="facebook"><i
+                        class="icofont-facebook"></i></a>
+                <a href="https://www.instagram.com/innovationincubator/" class="instagram"><i
+                        class="icofont-instagram"></i></a>
+                <!-- <a href="#" class="skype"><i class="icofont-skype"></i></a> -->
+                <a href="https://www.linkedin.com/company/innovation-incubator-inc-/" class="linkedin"><i
+                        class="icofont-linkedin"></i></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="container">
+
+            <div class="logo float-left">
+
+                <h1 class="text-light"> <a href="index.html"><span>PLANET VITALS</span> </a> <a
+                        href="https://innovationincubator.com/"><img src="assets/img/iia-black.png"
+                            style="float:right;"></a>
+                </h1>
+
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav class="nav-menu float-right d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li class="drop-down"><a href="">Health</a>
+                        <ul>
+                            <li><a href="health.html">Info</a></li>
+                            <li><a href="corona.html">Corona</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="agriculture.html">Agriculture</a></li>
+                    <!-- <li><a href="#team">Politics</a></li> -->
+                    <li><a href="education.html">Education</a></li>
+                </ul>
+            </nav>
+            <!-- .nav-menu -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active" style="background-image: url('assets/img/slide/slide-4.png');">
+                        <div class="carousel-container">
+                            <div class="carousel-content container">
+                                <h2 class="animated fadeInDown">CORONA/COVID'19</h2>
+                                <p class="animated fadeInUp" style="font-size: 24px;"> Curated, Uptodate Data of
+                                    CORONA/COVID'19
+                                    including analytics and
+                                    scientific representations.There are no vaccines or antiviral drugs to prevent or
+                                    treat human
+                                    coronavirus infections.</p>
+
+                                <a href="corona.html">
+                                    <button type="button" class="btn btn-outline-primary" style="color: white;background: transparent;
+                  border-color: white;">know more <span style="font-size: 9pt;"> >> </span> </button></a>
+                                <!-- <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item" style="background-image: url('assets/img/slide/slide-5.png');">
+                        <div class="carousel-container">
+                            <div class="carousel-content container">
+                                <h2 class="animated fadeInDown">Vitals of "Planet Earth" </h2>
+                                <p class="animated fadeInUp" style="font-size: 24px;">We curate and represent the vitals
+                                    of planet
+                                    earth scientifically and meaningfully in a single platform realtime with least
+                                    errors utilising
+                                    Innovation
+                                    Incubators Data Analytics, AI/ML and Development capabilities.</p>
+                                <a href="#about">
+                                    <button type="button" class="btn btn-outline-primary" style="color: white;background: transparent;
+                    border-color: white;">know more <span style="font-size: 9pt;"> >> </span> </button></a>
+                                <!-- <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon icofont-rounded-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon icofont-rounded-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <section>
+        <div class="container">
+            <h2 class="text-center"><strong>State Wise Corona Cases:</strong> </h2><br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://maps.mapmyindia.com/corona"></iframe>
+            </div>
+        </div> <br><br>
+
+
+        <div class="container">
+            <h2 class="text-center"><strong>Corona Treatment Centers</strong> </h2><br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item"
+                    src="https://maps.mapmyindia.com/corona?corona_treatment_centre"></iframe>
+            </div>
+        </div> <br><br>
+
+        <div class="container">
+            <h2 class="text-center"><strong>Corona Testing Labs</strong> </h2><br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item"
+                    src="https://maps.mapmyindia.com/corona?corona_testing_centre"></iframe>
+            </div>
+        </div> <br><br>
+
+        <div class="container">
+            <h2 class="text-center"><strong>Corona Sample Collection Center</strong> </h2><br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item"
+                    src="https://maps.mapmyindia.com/corona?corona_sample_collection_centre"></iframe>
+            </div>
+        </div> <br><br>
+
+        <div class="container">
+            <h2 class="text-center"><strong>Corona Isolation Centers </strong> </h2><br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item"
+                    src="https://maps.mapmyindia.com/corona?corona_isolation_ward"></iframe>
+            </div>
+        </div> <br><br>
+
+        <div class="container">
+            <h2 class="text-center"><strong>Relief Camps for Migrant Workers | Source NDMA </strong> </h2><br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item"
+                    src="https://maps.mapmyindia.com/corona?relief_centers_ndma"></iframe>
+            </div>
+        </div> <br><br>
+
+        <div class="container">
+            <h2 class="text-center"><strong>Delhi Government Ration Shops</strong> </h2><br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item"
+                    src="https://maps.mapmyindia.com/corona?government_ration_distribution"></iframe>
+            </div>
+        </div> <br><br>
+
+
+
+    </section>
+
+
+    <main id="main">
+
+        <!-- ======= Counts Section ======= -->
+        <!-- <section class="counts section-bg">
+            <div class="container">
+                <h1 class="text-center">Corona / Covid-19 Live Statistics</h1>
+                <div class="row">
+
+
+                    <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+                        <div class="count-box">
+                            <i class="icofont-icu" style="color: #aaa;"></i>
+                            <span data-toggle="counter-up" id="totalConfirmed"></span>
+                            <p><strong>CONFIRMED CASES</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="count-box">
+                            <i class="icofont-stretcher" style="color: red;"></i>
+                            <span id="totalDeaths" data-toggle="counter-up"></span>
+                            <p><strong>DEATH</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="count-box">
+                            <i class="icofont-operation-theater"" style=" color: orange"></i>
+                            <span id="totalSick" data-toggle="counter-up"></span>
+                            <p><strong>ACTIVE</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
+                        <div class="count-box">
+                            <i class="icofont-surgeon" style="color: green"></i>
+                            <span id="totalRecovered" data-toggle="counter-up"></span>
+                            <p><strong>RECOVERED </strong></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-center">
+                    <a href="corona.html">
+                        <button type="button" class="btn btn-outline-primary text-center" style="color: #1c5c93;background: transparent;
+            border-color: #1c5c93;">know more <span style="font-size: 9pt;"> >> </span> </button></a>
+                </div>
+
+            </div>
+        </section> -->
+        <!-- End Counts Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row d-flex justify-content-around">
+
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <h3>Contact Information</h3>
+                        <p>
+                            Innovation Incubator <br>L-1 Thejaswini, Technopark
+                            Campus<br> Kazhakkutam Kerala, India<br><br>
+                            <strong>Email:</strong> info@iinerds.com<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="https://twitter.com/InnovationIncu" class="twitter"><i
+                                    class="bx bxl-twitter"></i></a>
+                            <a href="https://www.facebook.com/innovationincubatorholding" class="facebook"><i
+                                    class="bx bxl-facebook"></i></a>
+                            <a href="https://www.instagram.com/innovationincubator/" class="instagram"><i
+                                    class="bx bxl-instagram"></i></a>
+                            <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+                            <a href="https://www.linkedin.com/company/innovation-incubator-inc-/" class="linkedin"><i
+                                    class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-links">
+                        <ul>
+                            <li><a href="index.html"><img src="assets/img/planetvital.png" width="100%"></a></li>
+                            <li> <a href="https://innovationincubator.com/"><img src="assets/img/iia-white.png"
+                                        width="80%"></a></li>
+                    </div>
+
+                    <!-- <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div> -->
+
+                    <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>this is a para</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div> -->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                Copyright &copy;2020. Innovation Incubator. All rights reserved.
+            </div>
+            <div class="credits">
+                Designed by Team X
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+
+
+    <!-- dark mode -->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+    <script src="assets/js/darkmode.js"></script>
+
+
+    <!-- planetvitals bot -->
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="chatbot/botui/build/botui.min.js"></script>
+    <script src="js/chatbot.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.min.js"></script>
+    <!--news script-->
+    <script src="js/news_corona.min.js"></script>
+    <!--COunt Script-->
+    <script src="js/stat-all.min.js"> </script>
+</body>
+
+</html>
