@@ -29,13 +29,26 @@
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
+
+
+  <!-- planetvitals bot -->
+  <link rel="stylesheet" href="chatbot/botui/build/botui.min.css">
+  <link rel="stylesheet" href="chatbot/botui/build/botui-theme-default.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/chatbot.css">
+
+
+
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.min.css" rel="stylesheet">
 
   <!--Holaa Bot-->
-  <script id="unique-embedder-id" type="text/javascript">
+  <!-- <script id="unique-embedder-id" type="text/javascript">
     (function () { var widget_token_val = 'token'; var widget_id_val = '5e653b37843734e711fd59ee'; var WidgetSettings = { widget_token: widget_token_val, widget_id: widget_id_val }; function async_load() { var s = document.createElement('script'); var d = document.createElement('div'); d.id = 'app'; document.getElementsByTagName('body')[0].appendChild(d); s.setAttribute('widget_id', WidgetSettings['widget_id'] && WidgetSettings['widget_id']); s.setAttribute('welcome-msg', WidgetSettings['welcome-msg'] && WidgetSettings['welcome-msg']); s.setAttribute('auto-invoke', WidgetSettings['auto-invoke'] && WidgetSettings['auto-invoke']); s.setAttribute('app-color', WidgetSettings['app-color'] && WidgetSettings['app-color']); s.setAttribute('widget_token', WidgetSettings['widget_token'] && WidgetSettings['widget_token']); s.setAttribute('app-name', WidgetSettings['app-name'] && WidgetSettings['app-name']); s.type = 'text/javascript'; s.async = true; s.id = 'app-hola-owl'; var theUrl = 'https://prod.holaa.ai/build.js'; s.src = theUrl; var embedder = document.getElementById('unique-embedder-id'); embedder.parentNode.insertBefore(s, embedder) } (window.attachEvent) ? window.attachEvent('onload', async_load) : window.addEventListener('load', async_load, false) })();  
-  </script>
+  </script> -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158798381-1"></script>
   <script>
@@ -50,6 +63,47 @@
 </head>
 
 <body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+
+        <button type="button" class=" float icofont-wechat my-float" style="font-size: 3rem;" data-toggle="modal"
+          data-target="#myModal"></button>
+
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Vital-Bot</h4>
+              </div>
+              <div class="modal-body">
+                <div class="botui-app-container" id="chat-bot">
+
+                  <bot-ui class="scrollbar"></bot-ui>
+
+                </div>
+
+              </div>
+              <!-- <div class="modal-footer"> -->
+              <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-none d-lg-block">
@@ -452,7 +506,7 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -472,6 +526,10 @@
   <script src="assets/js/darkmode.js"></script>
 
 
+  <!-- planetvitals bot -->
+  <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+  <script src="chatbot/botui/build/botui.min.js"></script>
+  <script src="js/chatbot.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.min.js"></script>
