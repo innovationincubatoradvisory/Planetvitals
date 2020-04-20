@@ -80,7 +80,11 @@
                     </div>
 
                     <div class="row d-flex justify-content-center pt-2">
-                        <div class="col-md-4">
+
+                        <div class="col-md-12 p-0 m-0">
+                            <canvas id="doughnut-chart" width="100%"></canvas>
+                        </div><br>
+                        <div class="col-md-6">
                             <div class="dupcard" style="visibility: hidden;">
                                 <div class=" text-center">
                                     <strong>ACTIVE CASES: </strong>
@@ -103,10 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 p-0 m-0">
-                            <canvas id="doughnut-chart" width="100%"></canvas>
-                        </div><br>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="dupcard" style="visibility: hidden;">
                                 <div class=" text-center">
                                     <strong> CLOSED CASES: </strong>
@@ -131,7 +132,7 @@
                         </div>
                     </div>
                     <div class="row counts" style="visibility: hidden;">
-                        <div class=" col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                        <div class=" col-md-12 pt-3 col-sm-12 text-center" style="border: none;">
                             <h4>Confirmed Cases</h4>
                             <p id="totalConfirmed" class="pt-3" style="color: #aaa;font-weight: 700;font-size: 54px;">
                             </p>
