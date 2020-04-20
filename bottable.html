@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Curated, Uptodate Data of CORONA/COVID'19 including analytics and scientific representations. Day by day there is a lot going on around the globe in multiple domains which requires attention and vital analysis. We at Innovation Incubator believe in representing the right data, in best capturable and understandable representations, while ensuring they are validated and usable to researchers, public and companies alike. Lets change the world with these insights and analysis.">
+    <meta name="keywords"
+        content="planetvitals,innovation incubator,corona death count,coronavirus update, covid-19, corona virus india, corona virus symptoms,coronavirus latest news,coronavirus china,corona virus news,corona optus,corona effect,coronavirus death toll,coronavirus oregon,coronavirus italy,corona california,corona spread,corona latest update,corona virus death rate,coronavirus cure,corona virus mexico, corona virus kerala, latest corona reports,corona virus brazil,corona virus australia,corona virus vaccine,corona virus air born,corona FAQ,corona help,corona support,corona world ">
+    <meta name="author" content="innovation incubator">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <meta property="og:title" content="Corona Statistics" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://planetvitals.iinerds.com/corona.html" />
+    <meta property="og:image" content="https://planetvitals.iinerds.com/assets/img/coronavirus_640.jpg" />
+    <meta property="og:description"
+        content="Live statistics tracking the number of confirmed cases, recovered patients, and death toll by country due to the novel coronavirus from Wuhan, China." />
+
+    <title>Corona Dashboard</title>
+    <!-- <link rel="stylesheet" href="assets/css/tb-corected.min.css"> -->
+    <link rel="stylesheet" href="assets/css/tb-corected.min0.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--google analytics-->
+    <!-- Template Main CSS File -->
+
+    <link href="assets/css/style.css" rel="stylesheet">
+
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!--youtube script-->
+    <!--youtube script ends-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158798381-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-158798381-1');
+    </script>
+</head>
+
+<body id="body-main">
+    <!-- <header id="header" style="background: #212121;" class="darkmode-ignore"> -->
+
+    </header><br><br><br>
+
+    <div class="container">
+
+
+        <!--TABs BEGIN-->
+        <div class="tab-content" id="nav-tabContent">
+            <!--STATS TAB BEGIN-->
+            <div class="tab-pane fade show active" id="corona-stats" role="tabpanel" aria-labelledby="corona-stats-tab">
+                <div class="container-fluid">
+                    <div class="row pt-5 px-5">
+                        <h3 style="color: slategrey;">
+                            Countries with highest no of confirmed cases
+                        </h3>
+                    </div>
+                    <div class="row">
+                        <div class="chart-area h-80" style="height:300px;width: 100%;">
+                            <canvas id="myAreaChart" class="darkmode-ignore"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-subtitle row px-5">
+                        <p style="color: lightgrey;">*The above chart is being updated based on hourly curated data from
+                            multiple sources.
+                        </p>
+                    </div>
+                    <div class="row pt-2 px-5">
+                        <h3 style="color:grey;">
+                            Corona Virus Cases:
+                        </h3>
+                    </div>
+
+                    <div class="row counts">
+                        <div class=" col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                            <h4>Confirmed Cases</h4>
+                            <p id="totalConfirmed" class="pt-3" style="color: #aaa;font-weight: 700;font-size: 54px;">
+                            </p>
+                        </div>
+                        <div class=" col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                            <h4>Confirmed Death</h4>
+                            <p id="totalDeaths" class="pt-3" style="color:red;font-weight: 700;font-size: 54px;"></p>
+                        </div>
+                        <div class=" col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                            <h4>Recovered</h4>
+                            <p id="totalRecovered" class="pt-3" style="color:green;font-weight: 700;font-size: 54px;">
+                            </p>
+                        </div>
+                        <div class=" col-md-3 pt-3 col-sm-12 text-center" style="border: none;">
+                            <h4>Active Cases</h4>
+                            <p id="totalSick" class="pt-3" style="color:orange;font-weight: 700;font-size: 54px;"></p>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center pt-2">
+                        <div class="col-md-4">
+                            <div class="dupcard">
+                                <div class=" text-center">
+                                    <strong>ACTIVE CASES: </strong>
+                                </div>
+                                <div class="card-body text">
+                                    <h3 class="card-title text-center" id="card-infected-count" style="color:orange;">
+                                    </h3>
+                                    <p class="card-text text-center">Currently Infected patients</p>
+                                    <div class="row">
+                                        <div class="float-left col-md-6">
+                                            <h6 class="text-center" id="card-infected-mild" style="color:lawngreen">
+                                            </h6>
+                                            <p class="text-center">in mild condition</p>
+                                        </div>
+                                        <div class="float-right col-md-6">
+                                            <h6 class="text-center" id="card-infected-serious" style="color:red;"></h6>
+                                            <p class="text-center">in critical condition</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 p-0 m-0">
+                            <canvas id="doughnut-chart" width="100%"></canvas>
+                        </div><br>
+                        <div class="col-md-4">
+                            <div class="dupcard">
+                                <div class=" text-center">
+                                    <strong> CLOSED CASES: </strong>
+                                </div>
+                                <div class="card-body text">
+                                    <h3 class="card-title text-center" id="card-closed-count" style="color:orange;">
+                                    </h3>
+                                    <p class="card-text text-center">cases with outcomes</p>
+                                    <div class="row">
+                                        <div class="float-left col-md-6">
+                                            <h6 class="text-center" id="card-closed-recovered" style="color:green">
+                                            </h6>
+                                            <p class="text-center">Recovered</p>
+                                        </div>
+                                        <div class="float-right col-md-6">
+                                            <h6 class="text-center" id="card-closed-death" style="color:darkred;"></h6>
+                                            <p class="text-center">in critical condition</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--table Headline-->
+                    <div class="row pt-5 px-5">
+                        <h3 style="color:grey;">
+                            Corona Virus Confirmed Cases & Deaths by Country/Territory and Conveyances
+                        </h3>
+                        <p>Corona virus is affecting <strong><span id="count-country"
+                                    style="color:darkred;"></span></strong> around the world and the Diamond Princess
+                            cruise ship harbored in Yokohama, Japan </p>
+                    </div>
+
+                    <nav id="fourth-nav">
+                        <div class="nav nav-pills pl-3 py-3 d-flex justify-content-center" style="background: white;"
+                            id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="corona-tableview-tab" data-toggle="tab"
+                                href="#corona-tableview" role="tab" aria-controls="corona-tableview"
+                                aria-selected="true">Table view</a>
+                            <a class="nav-item nav-link" id="corona-mapview-tab" data-toggle="tab"
+                                href="#corona-mapview" role="tab" aria-controls="corona-mapview"
+                                aria-selected="false">Graphical/Map view</a>
+                        </div>
+                    </nav>
+
+
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="corona-tableview" role="tabpane01"
+                            aria-labelledby="corona-tableview-tab">
+
+                            <!-- STATS table start -->
+                            <div class="row d-flex justify-content-center py-4" id="country">
+                                <div class="col-sm-12 col-md-12 ">
+                                    <nav id="third-nav">
+                                        <div class="nav nav-pills pl-3 py-3" id="nav-tab" role="tablist">
+                                            <a class="nav-item nav-link active" id="corona-todaytable-tab"
+                                                data-toggle="tab" href="#corona-todaytable" role="tab"
+                                                aria-controls="corona-todaytable" aria-selected="true">Today</a>
+                                            <a class="nav-item nav-link" id="corona-ystrdytable-tab" data-toggle="tab"
+                                                href="#corona-ystrdytable" role="tab" aria-controls="corona-ystrdytable"
+                                                aria-selected="false">Yesterday</a>
+                                        </div>
+
+
+                                    </nav>
+                                    <!--Table TABs  BEGIN-->
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="corona-todaytable" role="tabpanel"
+                                            aria-labelledby="corona-todaytable-tab">
+                                            <div class="container">
+                                                <table
+                                                    class="table text-center table-striped table-bordered table-responsive-sm"
+                                                    id="country-table-1">
+
+                                                    <thead class="thead-dark">
+                                                        <tr class="text-center">
+                                                            <th style="color:whitesmoke">Country
+                                                            </th>
+                                                            <th style="color:whitesmoke">Confirmed
+                                                                Cases
+                                                            </th>
+                                                            <th style="color:whitesmoke">New
+                                                                cases
+                                                            </th>
+                                                            <th style="color:whitesmoke;">Total
+                                                                Deaths
+                                                            </th>
+                                                            <th style="color:whitesmoke">New
+                                                                Deaths
+                                                            </th>
+                                                            <th style="color:whitesmoke">Serious
+                                                                Cases
+                                                            </th>
+                                                            <th style="color:whitesmoke">Active
+                                                                Cases
+                                                            </th>
+                                                            <th style="color:whitesmoke;">Total
+                                                                Recovered
+                                                            </th>
+                                                            <th style="color:whitesmoke">Cases/M
+                                                                Population
+                                                            </th>
+                                                            <th style="color:whitesmoke">Deaths/M
+                                                                Population
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="tb-content-1" style="color: #5b646e;">
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="tab-pane fade" id="corona-ystrdytable" role="tabpanel"
+                                            aria-labelledby="corona-ystrdytable-tab">
+                                            <div class="container">
+                                                <table
+                                                    class="table text-center table-striped table-bordered table-responsive-sm"
+                                                    id="country-table-2">
+
+                                                    <thead class="thead-dark">
+                                                        <tr class="text-center">
+                                                            <th style="color:whitesmoke">Country
+                                                            </th>
+                                                            <th style="color:whitesmoke">Confirmed
+                                                                Cases
+                                                            </th>
+                                                            <th style="color:whitesmoke">New
+                                                                cases
+                                                            </th>
+                                                            <th style="color:whitesmoke;">Total
+                                                                Deaths</th>
+                                                            <th style="color:whitesmoke">New
+                                                                Deaths
+                                                            </th>
+                                                            <th style="color:whitesmoke">>Serious
+                                                                Cases</th>
+                                                            <th style="color:whitesmoke">Active
+                                                                Cases</th>
+                                                            <th style="color:whitesmoke;">Total
+                                                                Recovered
+                                                            </th>
+                                                            <th style="color:whitesmoke">Cases/M
+                                                                Population
+                                                            </th>
+                                                            <th style="color:whitesmoke">Deaths/M
+                                                                Population
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="tb-content-2">
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <p style="background-color: #bee5eb;">*Highlighted in green all cases have had an
+                                        outcome.</p>
+                                    <p style="color: lightgrey;">*The above table is being updated based on hourly
+                                        curated data from multiple sources and new cases are computed based on changes
+                                        from previous day and are updated at GMT +0</p>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <!--STATS table END-->
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <!--TABs END-->
+    </div>
+    <!-- Theme JavaScript -->
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+
+
+    <!-- dark mode -->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+    <script src="assets/js/darkmode.js"></script>
+
+
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="js/chart.js/Chart.min.js"></script>
+    <script src="js/helper1.min.js"></script>
+    <script src="js/areachart.min.js"></script>
+    <!-- Theme JavaScript ends-->
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+
+
+    <!--Custom Page JS-->
+    <!--FAQ Script-->
+    <script src="js/faq.min.js"></script>
+    <!--news Script-->
+    <script src="js/news_corona_all.js"></script>
+    <!--content Script-->
+    <script src="js/stat-all.min.js"></script>
+    <script src="js/region-all-yesterday.min.js"></script>
+    <script src="js/Region-all.min.js"></script>
+    <script src="js/barchartbyage.min.js"></script>
+    <script src="js/barchartbysex.min.js"></script>
+    <script src="js/barchartbycomorbidity.min.js"></script>
+</body>
+
+</html>
