@@ -30,14 +30,15 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
 
-
-  <!-- planetvitals bot -->
-  <link rel="stylesheet" href="chatbot/botui/build/botui.min.css">
-  <link rel="stylesheet" href="chatbot/botui/build/botui-theme-default.css">
+  <!-- chat bot  -->
+  <link rel="stylesheet" href="./botui/build/botui.min.css" />
+  <link rel="stylesheet" href="./botui/build/botui-theme-default.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="./chatbot.css" />
+
+
 
 
 
@@ -64,41 +65,34 @@
 
 <body>
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
 
-        <button type="button" class=" float icofont-wechat my-float" style="font-size: 3rem;" data-toggle="modal"
-          data-target="#myModal"></button>
+  <!-- bot section -->
+  <button type="button" class=" float fa fa-commenting my-float" style="font-size: 2rem;" data-toggle="modal"
+    data-target="#myModal"></button>
 
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Vital-Bot</h4>
-              </div>
-              <div class="modal-body">
-                <div class="botui-app-container" id="chat-bot">
-
-                  <bot-ui class="scrollbar"></bot-ui>
-
-                </div>
-
-              </div>
-              <!-- <div class="modal-footer"> -->
-              <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-              <!-- </div> -->
-            </div>
-          </div>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <!-- <h4 class="modal-title text-center">Vital-Bot</h4> -->
         </div>
+        <div class="modal-body">
+          <div class="botui-app-container" id="chat-bot">
 
+            <bot-ui class="scrollbar"></bot-ui>
 
+          </div>
 
-
+        </div>
+        <!-- <div class="modal-footer"> -->
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <!-- </div> -->
       </div>
     </div>
   </div>
+
+
 
 
 
@@ -521,15 +515,17 @@
   <script src="assets/vendor/aos/aos.js"></script>
 
 
+  <!-- chat bot  -->
+  <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+  <script src="./botui/build/botui.min.js"></script>
+  <script src="./chatbot.js"></script>
+
   <!-- dark mode -->
   <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
   <script src="assets/js/darkmode.js"></script>
 
 
-  <!-- planetvitals bot -->
-  <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
-  <script src="chatbot/botui/build/botui.min.js"></script>
-  <script src="js/chatbot.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.min.js"></script>
