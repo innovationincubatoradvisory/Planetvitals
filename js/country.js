@@ -29,9 +29,13 @@ fetch('https://planetvitals-backend-py.iinerds.com/history/' + a)
                 diedChartValues.push(item.deaths)
                 recoveredChartValues.push(item.recovered)
                 activeChartValues.push(item.activecases)
-                document.getElementById("tb-content-1").innerHTML +="<tr><td>"+item.time_series.slice(5,16)+"</td><td>"+item.confirmed+'<td style="color:darkred;">'+item.deaths+"</td>"+'<td style="color:orange;">'+item.activecases+"</td>"+'<td style="color:green;">'+item.recovered+"</td>"+"</td></tr>";             
+                document.getElementById("tb-content-1").innerHTML +='<tr><td style="color:#5b646e">'+item.time_series.slice(5,16)+'</td><td style="color:#5b646e">'+item.confirmed+'<td style="color:darkred;">'+item.deaths+"</td>"+'<td style="color:orange;">'+item.activecases+"</td>"+'<td style="color:green;">'+item.recovered+"</td>"+"</td></tr>";             
+                
             });
         }
+        $(document).ready( function () {
+            $('#country-table-1').DataTable({"order": [[ 1, "desc" ]]});
+        } );
     })
     .catch(err => {
         // Do something for an error here
@@ -62,15 +66,11 @@ fetch('https://planetvitals-backend-py.iinerds.com/data/' + a)
                 document.getElementById("totalDeaths").innerHTML = deathsCount;
                 document.getElementById("totalRecovered").innerHTML = recoverdCount;
                 document.getElementById("totalSick").innerHTML = item.activecases;
-                document.getElementById("tb-content-1").innerHTML +="<tr><td>"+item.time_series.slice(5,16)+"</td><td>"+item.confirmed+'<td style="color:darkred;">'+item.deaths+"</td>"+'<td style="color:orange;">'+item.activecases+"</td>"+'<td style="color:green;">'+item.recovered+"</td>"+"</td></tr>";
-                $(document).ready( function () {
-                    $('#country-table-1').DataTable({"order": [[ 1, "desc" ]]});
-                } );
-            
+                document.getElementById("tb-content-1").innerHTML +='<tr><td style="color:#5b646e">'+item.time_series.slice(5,16)+'</td><td style="color:#5b646e">'+item.confirmed+'<td style="color:darkred;">'+item.deaths+"</td>"+'<td style="color:orange;">'+item.activecases+"</td>"+'<td style="color:green;">'+item.recovered+"</td>"+"</td></tr>";
             });
         }
     })
     .catch(err => {
         // Do something for an error here
     })
-    
+   
