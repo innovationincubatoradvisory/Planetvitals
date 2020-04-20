@@ -36,6 +36,27 @@ fetch('https://planetvitals-backend-py.iinerds.com/history/' + a)
         $(document).ready( function () {
             $('#country-table-1').DataTable({"order": [[ 1, "desc" ]]});
         } );
+        var trace1 = {
+            x: time_seriesValues,
+            y: confirmedChartValues,
+            type: 'line',
+            name: 'Confirmed'
+          };
+          var trace2 = {
+            x: time_seriesValues,
+            y: diedChartValues,
+            type: 'line',
+            name: 'Deaths'
+          };
+          var trace3 ={
+            x: time_seriesValues,
+            y: recoveredChartValues,
+            type: 'line',
+            name: 'Recovered'
+          };
+          var data = [trace1, trace2, trace3];
+
+          Plotly.newPlot('myDiv', data);
     })
     .catch(err => {
         // Do something for an error here
@@ -55,12 +76,7 @@ fetch('https://planetvitals-backend-py.iinerds.com/data/' + a)
                 deathsCount = item.deaths;
                 recoverdCount = item.recovered;
                 seriouscount = item.serious_cases;
-                case_ppcount = item.totalcases_pp;
-                time_seriesValues.push(item.time_series.slice(5, 16))
-                confirmedChartValues.push(item.confirmed)
-                diedChartValues.push(item.deaths)
-                recoveredChartValues.push(item.recovered)
-                activeChartValues.push(item.activecases)
+                case_ppcount = item.totalcases_pp;               
                 document.getElementById("last-updated").innerHTML=item.time_series;                
                 document.getElementById("totalConfirmed").innerHTML = confirmedCount;
                 document.getElementById("totalDeaths").innerHTML = deathsCount;
@@ -73,4 +89,5 @@ fetch('https://planetvitals-backend-py.iinerds.com/data/' + a)
     .catch(err => {
         // Do something for an error here
     })
+
    
