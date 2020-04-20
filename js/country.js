@@ -10,43 +10,9 @@ let confirmedChartValues = []
 let diedChartValues = []
 let recoveredChartValues = []
 let activeChartValues = []
-
+document.getElementById("country-display").innerHTML=a.toUpperCase();
 //line chart
-function countryallchart() {
-    new Chart(document.getElementById("line-chart"), {
-        type: 'line',
-        data: {
-            labels: time_seriesValues,
-            datasets: [{
-                data: confirmedChartValues,
-                label: "Confirmed",
-                borderColor: "#A9A9A9",
-                fill: false
-            }, {
-                data: diedChartValues,
-                label: "Died",
-                borderColor: "#FF0000",
-                fill: false
-            }, {
-                data: recoveredChartValues,
-                label: "Recovered",
-                borderColor: "#008000",
-                fill: false
-            }, {
-                data: activeChartValues,
-                label: "Active",
-                borderColor: "#FFA500",
-                fill: false
-            }]
-        },
-        options: {
-            title: {
-                display: false,
-                text: ''
-            }
-        }
-    });
-}
+
 
 
 
@@ -68,6 +34,7 @@ fetch('https://planetvitals-backend-py.iinerds.com/history/' + a)
                 activeChartValues.push(item.confirmed - item.deaths - item.recovered)
             });
         }
+        Newdata();
     })
     .catch(err => {
         // Do something for an error here
@@ -96,16 +63,17 @@ fetch('https://planetvitals-backend-py.iinerds.com/data/' + a)
                 diedChartValues.push(item.deaths)
                 recoveredChartValues.push(item.recovered)
                 activeChartValues.push(item.confirmed - item.deaths - item.recovered)
+                document.getElementById("last-updated").innerHTML=item.time_series;                
                 document.getElementById("totalConfirmed").innerHTML = confirmedCount;
                 document.getElementById("totalDeaths").innerHTML = deathsCount;
                 document.getElementById("totalRecovered").innerHTML = recoverdCount;
                 document.getElementById("totalSick").innerHTML = activeCount;
+                document.getElementById("tb-content-1").innerHTML += "<tr>"  + "<td>" + item.time_series + "</td>" + '<td>' + item.confirmed + "</td>" + '<td style="color:darkred;">' + item.deaths +  '<td style="color:red;">' + item.serious_cases + "</td>" +'<td style="color:orange;">' + itemactive + "</td>" +'<td style="color:green;">'  + item.recovered + "</td>" + "<td>" + item.deaths_pp + "</td>"  +"</tr>";
             });
         }
     })
     .catch(err => {
         // Do something for an error here
     })
-    console.log(confirmedChartValues)
-    console.log(time_seriesValues)
-    countryallchart();
+
+    
