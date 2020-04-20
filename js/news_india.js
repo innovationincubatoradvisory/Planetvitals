@@ -1,6 +1,6 @@
 let dt = '<div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">';
 fetch(
-  "https://newsapi.org/v2/top-headlines?q=corona&language=en&apiKey=5b67480ba15d44889bbfcbf108d596ef"
+  "https://newsapi.org/v2/top-headlines?q=india&language=en&apiKey=5b67480ba15d44889bbfcbf108d596ef"
 )
   .then((response) => {
     return response.json();
