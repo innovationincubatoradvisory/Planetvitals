@@ -6,9 +6,9 @@ phases:
       - apt-get update -y
   post_build:
     commands:
-      - aws s3 rm s3://planetvitals.com --recursive
-      - aws s3 sync . s3://planetvitals.com/ 
-      - aws cloudfront create-invalidation --distribution-id E3VICLJ9EAARCL --paths '/*'
+      - aws s3 rm s3://planetvitals-web --recursive
+      - aws s3 sync . s3://planetvitals-web/ 
+      - aws cloudfront create-invalidation --distribution-id E3P5KXI322H27E --paths '/*'
 #artifacts:
 #  files:
 #    - ./*
